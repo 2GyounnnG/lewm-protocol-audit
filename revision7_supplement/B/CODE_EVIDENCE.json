@@ -1,0 +1,425 @@
+{
+  "dm_control:dm_control/rl/control.py:98-129": {
+    "repo": "dm_control",
+    "path": "dm_control/rl/control.py",
+    "start": 98,
+    "end": 129,
+    "url": "https://github.com/google-deepmind/dm_control/blob/c22ec28159c541c8c6b6546cd56d41dcaf7fb33b/dm_control/rl/control.py#L98-L129",
+    "sha256": "3ac4b726242ea31f28235cfc94ff87ebbd7238bc71a673024281c74b9aef1606",
+    "excerpt": "98: \n99:   def step(self, action):\n100:     \"\"\"Updates the environment using the action and returns a `TimeStep`.\"\"\"\n101: \n102:     if self._reset_next_step:\n103:       return self.reset()\n104: \n105:     self._task.before_step(action, self._physics)\n106:     self._physics.step(self._n_sub_steps)\n107:     self._task.after_step(self._physics)\n108: \n109:     reward = self._task.get_reward(self._physics)\n110:     observation = self._task.get_observation(self._physics)\n111:     if self._flat_observation:\n112:       observation = flatten_observation(observation)\n113: \n114:     self._step_count += 1\n115:     if self._step_count >= self._step_limit:\n116:       discount = 1.0\n117:     else:\n118:       discount = self._task.get_termination(self._physics)\n119: \n120:     episode_over = discount is not None\n121: \n122:     if episode_over:\n123:       self._reset_next_step = True\n124:       return dm_env.TimeStep(\n125:           dm_env.StepType.LAST, reward, discount, observation)\n126:     else:\n127:       return dm_env.TimeStep(dm_env.StepType.MID, reward, 1.0, observation)\n128: \n129:   def action_spec(self):"
+  },
+  "stable_worldmodel_63988116:stable_worldmodel/world/world.py:210-250": {
+    "repo": "stable_worldmodel_63988116",
+    "path": "stable_worldmodel/world/world.py",
+    "start": 210,
+    "end": 250,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/63988116d34cde56aea1240d5e58eb158ac67dc0/stable_worldmodel/world/world.py#L210-L250",
+    "sha256": "3392bd31159daab859f2d73e5a52e59ac898259f829c9d1363e64eef151b91b3",
+    "excerpt": "210:         * **Dataset-driven**: pass ``dataset`` with ``episodes_idx`` /\n211:           ``start_steps`` / ``goal_offset`` / ``eval_budget``. Each env\n212:           is seeded from one dataset episode, starts at\n213:           ``start_steps[i]`` and targets the state at\n214:           ``start_steps[i] + goal_offset``. Run length is capped at\n215:           ``eval_budget`` steps. Requires ``num_envs == len(episodes_idx)``.\n216: \n217:         Args:\n218:             episodes: Total episodes to roll out (episodic mode).\n219:             seed: Base seed. Per-env seeds are derived by offsetting it.\n220:             options: Reset options forwarded to ``envs.reset``.\n221:             video: Directory to write one mp4 per episode/env (optional).\n222:             reset_mode: ``'auto'`` (reset terminated envs) or ``'wait'``\n223:                 (freeze terminated envs and stop when all are done).\n224:                 Defaults to ``'auto'`` for episodic eval and ``'wait'``\n225:                 for dataset eval.\n226:             dataset: Source dataset for dataset-driven eval.\n227:             episodes_idx: Dataset episode indices, one per env.\n228:             start_steps: Starting step within each dataset episode.\n229:             goal_offset: Offset from each start step that defines the goal.\n230:             eval_budget: Max env steps per episode in dataset mode.\n231:             callables: Per-env setup calls applied on the unwrapped env\n232:                 after reset. Each spec is\n233:                 ``{'method': name, 'args': {arg_name: {'value': ...,\n234:                 'in_dataset': bool}}}``; if ``in_dataset`` is True, the\n235:                 ``value`` names a key in the sliced dataset state and the\n236:                 per-env value is deep-copied in.\n237: \n238:         Returns:\n239:             A dict with ``'success_rate'`` (percent), ``'episode_successes'``\n240:             (per-episode bool/uint array), and ``'seeds'`` used for reset.\n241:         \"\"\"\n242:         if dataset is not None:\n243:             mode = reset_mode or 'wait'\n244:             return self._evaluate_from_dataset(\n245:                 dataset,\n246:                 episodes_idx,\n247:                 start_steps,\n248:                 goal_offset,\n249:                 eval_budget,\n250:                 callables,"
+  },
+  "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480": {
+    "repo": "stable_worldmodel_63988116",
+    "path": "stable_worldmodel/world/world.py",
+    "start": 430,
+    "end": 480,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/63988116d34cde56aea1240d5e58eb158ac67dc0/stable_worldmodel/world/world.py#L430-L480",
+    "sha256": "3392bd31159daab859f2d73e5a52e59ac898259f829c9d1363e64eef151b91b3",
+    "excerpt": "430:         alive = np.ones(self.num_envs, dtype=bool)\n431:         next_seed = seed + self.num_envs if seed is not None else None\n432:         ep_count = 0\n433: \n434:         for t in range(max_steps if max_steps is not None else 2**63):\n435:             actions = self._get_actions()\n436: \n437:             mask = alive if not alive.all() else None\n438:             _, self.rewards, self.terminateds, self.truncateds, self.infos = (\n439:                 self.envs.step(actions, mask=mask)\n440:             )\n441: \n442:             if on_step:\n443:                 on_step(self, mask=mask if mask is not None else alive)\n444: \n445:             done = alive & (self.terminateds | self.truncateds)\n446:             if not done.any():\n447:                 continue\n448: \n449:             budget_reached = False\n450:             for i in np.where(done)[0]:\n451:                 yield int(i), ep_count\n452:                 ep_count += 1\n453:                 if episodes is not None and ep_count >= episodes:\n454:                     budget_reached = True\n455:                     break\n456: \n457:             # Always reset the done envs before stopping. Returning straight\n458:             # from the loop above would leave the env that completed the final\n459:             # episode in its terminal state, so the next _run_iter/collect call\n460:             # steps a dead env and records a spurious length-1 episode.\n461:             if mode == 'auto':\n462:                 seeds = [None] * self.num_envs\n463:                 if next_seed is not None:\n464:                     base = ep_count - int(done.sum())\n465:                     for rank, i in enumerate(np.where(done)[0]):\n466:                         seeds[i] = next_seed + base + rank\n467:                 _, self.infos = self.envs.reset(\n468:                     seed=seeds, options=options, mask=done\n469:                 )\n470:                 self.terminateds[done] = False\n471:                 self.truncateds[done] = False\n472:                 self.infos['_needs_flush'] = done\n473:                 if on_step:\n474:                     on_step(self, mask=done)\n475:             elif mode == 'wait':\n476:                 alive[done] = False\n477: \n478:             if budget_reached or (mode == 'wait' and not alive.any()):\n479:                 return\n480: "
+  },
+  "stable_worldmodel_63988116:stable_worldmodel/world/env_pool.py:118-142": {
+    "repo": "stable_worldmodel_63988116",
+    "path": "stable_worldmodel/world/env_pool.py",
+    "start": 118,
+    "end": 142,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/63988116d34cde56aea1240d5e58eb158ac67dc0/stable_worldmodel/world/env_pool.py#L118-L142",
+    "sha256": "b6e73253199e1a39f0fcadfad7dbea09270cbd559e366d1bc9bf09c9e7da0606",
+    "excerpt": "118:     def step(\n119:         self, actions: np.ndarray, mask: np.ndarray | None = None\n120:     ) -> tuple[None, np.ndarray, np.ndarray, np.ndarray, dict]:\n121:         \"\"\"Step envs and return ``(None, rewards, terminateds, truncateds, infos)``.\n122: \n123:         Args:\n124:             actions: Array of shape ``(num_envs, ...)`` — one action per env.\n125:             mask: If provided, only envs where ``mask[i]`` is truthy are\n126:                 stepped. Masked envs contribute zero reward and ``False``\n127:                 termination/truncation, and their slot in the stacked\n128:                 info buffer is left unchanged.\n129:         \"\"\"\n130:         rewards = np.zeros(self.num_envs, dtype=np.float32)\n131:         terminateds = np.zeros(self.num_envs, dtype=bool)\n132:         truncateds = np.zeros(self.num_envs, dtype=bool)\n133: \n134:         for i, env in enumerate(self.envs):\n135:             if mask is not None and not mask[i]:\n136:                 continue\n137:             _, rewards[i], terminateds[i], truncateds[i], info = env.step(\n138:                 actions[i]\n139:             )\n140:             _write_env_info(self._stacked_infos, i, info)\n141: \n142:         return None, rewards, terminateds, truncateds, self._stacked_infos"
+  },
+  "stable_worldmodel_63988116:stable_worldmodel/envs/dmcontrol/dmcontrol.py:98-127": {
+    "repo": "stable_worldmodel_63988116",
+    "path": "stable_worldmodel/envs/dmcontrol/dmcontrol.py",
+    "start": 98,
+    "end": 127,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/63988116d34cde56aea1240d5e58eb158ac67dc0/stable_worldmodel/envs/dmcontrol/dmcontrol.py#L98-L127",
+    "sha256": "13d55bf73f9b7f8a9b5a2b380e12750e253a391716e64e65f795b1c9fff8bc08",
+    "excerpt": "98:     def _is_terminated(self, step) -> bool:\n99:         \"\"\"Return True if the current step should end the episode as a success.\n100: \n101:         Override in subclasses to implement custom termination conditions.\n102:         The base implementation always returns False (no early termination).\n103: \n104:         Args:\n105:             step: The dm_control TimeStep returned by the environment.\n106:         \"\"\"\n107:         return False\n108: \n109:     def step(self, action):\n110:         reward = 0\n111:         action = action.astype(self.action_spec_dtype)\n112:         terminated = False\n113:         for _ in range(self.action_repeat):\n114:             step = self.env.step(action)\n115:             reward += step.reward or 0\n116:             if self._is_terminated(step):\n117:                 terminated = True\n118:                 break\n119:         self._cumulative_reward += reward\n120: \n121:         return (\n122:             self._obs_to_array(step.observation),\n123:             reward,\n124:             terminated,\n125:             False,\n126:             self.info,\n127:         )"
+  },
+  "stable_worldmodel_63988116:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33": {
+    "repo": "stable_worldmodel_63988116",
+    "path": "stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py",
+    "start": 7,
+    "end": 33,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/63988116d34cde56aea1240d5e58eb158ac67dc0/stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py#L7-L33",
+    "sha256": "e5e2e82c0621efca7b4c3c194f422c946db59edb12db7735fbe8bdcf12e37e7c",
+    "excerpt": "7: class ReacherQPosMatchTask(reacher.Reacher):\n8:     \"\"\"Reacher task that terminates (success) when qpos matches a target qpos.\n9: \n10:     The target qpos is set externally via the env's `set_target_qpos()`. Until\n11:     it is set, the task never terminates early.\n12: \n13:     Args:\n14:         target_size: Tolerance radius for the standard finger-to-target reward.\n15:         random: Random seed or RandomState.\n16:         qpos_threshold: Per-joint absolute tolerance (in radians) used to\n17:             determine whether the current qpos matches the target qpos.\n18:     \"\"\"\n19: \n20:     def __init__(\n21:         self, target_size, random=None, qpos_threshold=_DEFAULT_QPOS_THRESHOLD\n22:     ):\n23:         super().__init__(target_size=target_size, random=random)\n24:         self.target_qpos = None\n25:         self.qpos_threshold = qpos_threshold\n26: \n27:     def get_termination(self, physics):\n28:         if self.target_qpos is None:\n29:             return None\n30:         diff = np.abs(physics.data.qpos - self.target_qpos)\n31:         if np.all(diff < self.qpos_threshold):\n32:             return 0.0\n33:         return None"
+  },
+  "stable_worldmodel_63988116:stable_worldmodel/envs/pusht/env.py:318-372": {
+    "repo": "stable_worldmodel_63988116",
+    "path": "stable_worldmodel/envs/pusht/env.py",
+    "start": 318,
+    "end": 372,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/63988116d34cde56aea1240d5e58eb158ac67dc0/stable_worldmodel/envs/pusht/env.py#L318-L372",
+    "sha256": "6b71f441a72ae94e631fc80c756717e8c5b229b964a9b197e2962675fae6f864",
+    "excerpt": "318:     def step(self, action):\n319:         self.n_contact_points = 0\n320:         n_steps = int(1 / (self.dt * self.control_hz))\n321: \n322:         self.latest_action = action\n323: \n324:         if self.relative:\n325:             action = self.agent.position + action * self.action_scale\n326:             # action = np.clip(action, 0, self.window_size)\n327: \n328:         for _ in range(n_steps):\n329:             # Step PD control.\n330:             acceleration = self.k_p * (\n331:                 action - self.agent.position\n332:             ) + self.k_v * (Vec2d(0, 0) - self.agent.velocity)\n333:             self.agent.velocity += acceleration * self.dt\n334: \n335:             # Step physics.\n336:             self.space.step(self.dt)\n337: \n338:         # make the observation\n339:         state = self._get_obs()\n340:         proprio = np.concatenate((state[:2], state[-2:]))\n341:         observation = {'proprio': proprio, 'state': state}\n342: \n343:         # collect info\n344:         info = self._get_info()\n345: \n346:         # compute reward and termination\n347:         terminated, distance = self.eval_state(self.goal_state, state)\n348:         reward = -distance  # the closer the better\n349: \n350:         truncated = False\n351:         return observation, reward, terminated, truncated, info\n352: \n353:     def eval_state(self, goal_state, cur_state):\n354:         # success if position difference is < 20, and angle difference < np.pi/9\n355:         goal_state = np.asarray(goal_state, dtype=np.float64)\n356:         cur_state = np.asarray(cur_state, dtype=np.float64)\n357:         pos_diff = np.linalg.norm(goal_state[:4] - cur_state[:4])\n358: \n359:         # Compare angles modulo the block's rotational symmetry: square/+ match\n360:         # every 90 degrees, and Z/I match every 180 degrees. Other shapes use\n361:         # a full rotation, preserving the original orientation check.\n362:         block_shape = self.shapes[\n363:             int(self.variation_space['block']['shape'].value)\n364:         ]\n365:         symmetry = self.shape_symmetry_angles.get(block_shape, 2 * np.pi)\n366:         angle_diff = np.abs(goal_state[4] - cur_state[4]) % symmetry\n367:         angle_diff = np.minimum(angle_diff, symmetry - angle_diff)\n368: \n369:         success = pos_diff < 20 and angle_diff < np.pi / 9\n370:         state_dist = np.linalg.norm(goal_state - cur_state)\n371: \n372:         return success, state_dist"
+  },
+  "stable_worldmodel_63988116:stable_worldmodel/envs/two_room/env.py:262-280": {
+    "repo": "stable_worldmodel_63988116",
+    "path": "stable_worldmodel/envs/two_room/env.py",
+    "start": 262,
+    "end": 280,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/63988116d34cde56aea1240d5e58eb158ac67dc0/stable_worldmodel/envs/two_room/env.py#L262-L280",
+    "sha256": "5e1d392de5b02472062dbe872aded67fd465fcc8f7eaa1c02a753b2fc31c61f0",
+    "excerpt": "262:     def step(self, action):\n263:         action_t = torch.as_tensor(action, dtype=torch.float32)\n264:         action_t = torch.clamp(action_t, -1.0, 1.0)\n265: \n266:         speed = float(self.variation_space['agent']['speed'].value.item())\n267:         pos_next = self.agent_position + action_t * speed\n268: \n269:         pos_new = self._apply_collisions(self.agent_position, pos_next)\n270:         self.agent_position = pos_new\n271: \n272:         dist = float(torch.norm(self.agent_position - self.target_position))\n273:         terminated = dist < 16.0  # ~4.5 * 3.5 scale\n274:         truncated = False\n275:         reward = 0.0\n276: \n277:         obs = self._get_obs()\n278:         info = self._get_info()\n279:         info['distance_to_target'] = dist\n280:         return obs, reward, terminated, truncated, info"
+  },
+  "stable_worldmodel_63988116:stable_worldmodel/envs/ogbench/cube_env.py:34-53": {
+    "repo": "stable_worldmodel_63988116",
+    "path": "stable_worldmodel/envs/ogbench/cube_env.py",
+    "start": 34,
+    "end": 53,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/63988116d34cde56aea1240d5e58eb158ac67dc0/stable_worldmodel/envs/ogbench/cube_env.py#L34-L53",
+    "sha256": "143e5e81f424ff7a4d7fdde287dee88b722c09082a6fc9e68721839788e94c19",
+    "excerpt": "34: import numpy as np\n35: from dm_control import mjcf\n36: from ogbench.manipspace import lie\n37: from ogbench.manipspace.envs.manipspace_env import ManipSpaceEnv\n38: \n39: from stable_worldmodel import spaces as swm_spaces\n40: from stable_worldmodel.envs.utils import perturb_camera_angle\n41: \n42: DEFAULT_VARIATIONS = (\n43:     'cube.start_position',\n44:     'cube.start_yaw',\n45:     'cube.goal_position',\n46:     'cube.goal_yaw',\n47: )\n48: \n49: \n50: class CubeEnv(ManipSpaceEnv):\n51:     \"\"\"Robotic manipulation environment with cube objects and multiple task variants.\n52: \n53:     This environment provides a suite of manipulation tasks involving 1-8 colored cubes"
+  },
+  "ogbench:ogbench/manipspace/envs/manipspace_env.py:20-49": {
+    "repo": "ogbench",
+    "path": "ogbench/manipspace/envs/manipspace_env.py",
+    "start": 20,
+    "end": 49,
+    "url": "https://github.com/seohongpark/ogbench/blob/a977253ce5b88434f4e4f531c50047cc95993a51/ogbench/manipspace/envs/manipspace_env.py#L20-L49",
+    "sha256": "03524eb1c95155bbc2ec3d29e9836fccffe8eb9fce1be15b6f0e7062cc1bb5fd",
+    "excerpt": "20:     - 1-D relative gripper opening.\n21:     \"\"\"\n22: \n23:     def __init__(\n24:         self,\n25:         ob_type='states',\n26:         physics_timestep=0.002,\n27:         control_timestep=0.05,\n28:         terminate_at_goal=True,\n29:         success_timing='post',\n30:         mode='task',\n31:         visualize_info=True,\n32:         pixel_transparent_arm=True,\n33:         reward_task_id=None,\n34:         use_oracle_rep=False,\n35:         **kwargs,\n36:     ):\n37:         \"\"\"Initialize the ManipSpace environment.\n38: \n39:         Args:\n40:             ob_type: Observation type. Either 'states' or 'pixels'.\n41:             physics_timestep: Physics timestep.\n42:             control_timestep: Control timestep.\n43:             terminate_at_goal: Whether to terminate the episode when the goal is reached.\n44:             success_timing: When to compute the success and terminated flags and the reward. Either 'pre' (before taking\n45:                 the action) or 'post' (after taking the action).\n46:             mode: Mode of the environment. Either 'task' or 'data_collection'. In 'task' mode, the environment is used\n47:                 for training and evaluation. In 'data_collection' mode, the environment is used for collecting offline\n48:                 data.\n49:             visualize_info: Whether to visualize the task information (e.g., success status)."
+  },
+  "ogbench:ogbench/manipspace/envs/manipspace_env.py:496-501": {
+    "repo": "ogbench",
+    "path": "ogbench/manipspace/envs/manipspace_env.py",
+    "start": 496,
+    "end": 501,
+    "url": "https://github.com/seohongpark/ogbench/blob/a977253ce5b88434f4e4f531c50047cc95993a51/ogbench/manipspace/envs/manipspace_env.py#L496-L501",
+    "sha256": "03524eb1c95155bbc2ec3d29e9836fccffe8eb9fce1be15b6f0e7062cc1bb5fd",
+    "excerpt": "496:     def terminate_episode(self):\n497:         if self._terminate_at_goal:\n498:             return self._success\n499:         else:\n500:             return False\n501: "
+  },
+  "stable_worldmodel_main:stable_worldmodel/world/world.py:210-250": {
+    "repo": "stable_worldmodel_main",
+    "path": "stable_worldmodel/world/world.py",
+    "start": 210,
+    "end": 250,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/world/world.py#L210-L250",
+    "sha256": "3392bd31159daab859f2d73e5a52e59ac898259f829c9d1363e64eef151b91b3",
+    "excerpt": "210:         * **Dataset-driven**: pass ``dataset`` with ``episodes_idx`` /\n211:           ``start_steps`` / ``goal_offset`` / ``eval_budget``. Each env\n212:           is seeded from one dataset episode, starts at\n213:           ``start_steps[i]`` and targets the state at\n214:           ``start_steps[i] + goal_offset``. Run length is capped at\n215:           ``eval_budget`` steps. Requires ``num_envs == len(episodes_idx)``.\n216: \n217:         Args:\n218:             episodes: Total episodes to roll out (episodic mode).\n219:             seed: Base seed. Per-env seeds are derived by offsetting it.\n220:             options: Reset options forwarded to ``envs.reset``.\n221:             video: Directory to write one mp4 per episode/env (optional).\n222:             reset_mode: ``'auto'`` (reset terminated envs) or ``'wait'``\n223:                 (freeze terminated envs and stop when all are done).\n224:                 Defaults to ``'auto'`` for episodic eval and ``'wait'``\n225:                 for dataset eval.\n226:             dataset: Source dataset for dataset-driven eval.\n227:             episodes_idx: Dataset episode indices, one per env.\n228:             start_steps: Starting step within each dataset episode.\n229:             goal_offset: Offset from each start step that defines the goal.\n230:             eval_budget: Max env steps per episode in dataset mode.\n231:             callables: Per-env setup calls applied on the unwrapped env\n232:                 after reset. Each spec is\n233:                 ``{'method': name, 'args': {arg_name: {'value': ...,\n234:                 'in_dataset': bool}}}``; if ``in_dataset`` is True, the\n235:                 ``value`` names a key in the sliced dataset state and the\n236:                 per-env value is deep-copied in.\n237: \n238:         Returns:\n239:             A dict with ``'success_rate'`` (percent), ``'episode_successes'``\n240:             (per-episode bool/uint array), and ``'seeds'`` used for reset.\n241:         \"\"\"\n242:         if dataset is not None:\n243:             mode = reset_mode or 'wait'\n244:             return self._evaluate_from_dataset(\n245:                 dataset,\n246:                 episodes_idx,\n247:                 start_steps,\n248:                 goal_offset,\n249:                 eval_budget,\n250:                 callables,"
+  },
+  "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480": {
+    "repo": "stable_worldmodel_main",
+    "path": "stable_worldmodel/world/world.py",
+    "start": 430,
+    "end": 480,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/world/world.py#L430-L480",
+    "sha256": "3392bd31159daab859f2d73e5a52e59ac898259f829c9d1363e64eef151b91b3",
+    "excerpt": "430:         alive = np.ones(self.num_envs, dtype=bool)\n431:         next_seed = seed + self.num_envs if seed is not None else None\n432:         ep_count = 0\n433: \n434:         for t in range(max_steps if max_steps is not None else 2**63):\n435:             actions = self._get_actions()\n436: \n437:             mask = alive if not alive.all() else None\n438:             _, self.rewards, self.terminateds, self.truncateds, self.infos = (\n439:                 self.envs.step(actions, mask=mask)\n440:             )\n441: \n442:             if on_step:\n443:                 on_step(self, mask=mask if mask is not None else alive)\n444: \n445:             done = alive & (self.terminateds | self.truncateds)\n446:             if not done.any():\n447:                 continue\n448: \n449:             budget_reached = False\n450:             for i in np.where(done)[0]:\n451:                 yield int(i), ep_count\n452:                 ep_count += 1\n453:                 if episodes is not None and ep_count >= episodes:\n454:                     budget_reached = True\n455:                     break\n456: \n457:             # Always reset the done envs before stopping. Returning straight\n458:             # from the loop above would leave the env that completed the final\n459:             # episode in its terminal state, so the next _run_iter/collect call\n460:             # steps a dead env and records a spurious length-1 episode.\n461:             if mode == 'auto':\n462:                 seeds = [None] * self.num_envs\n463:                 if next_seed is not None:\n464:                     base = ep_count - int(done.sum())\n465:                     for rank, i in enumerate(np.where(done)[0]):\n466:                         seeds[i] = next_seed + base + rank\n467:                 _, self.infos = self.envs.reset(\n468:                     seed=seeds, options=options, mask=done\n469:                 )\n470:                 self.terminateds[done] = False\n471:                 self.truncateds[done] = False\n472:                 self.infos['_needs_flush'] = done\n473:                 if on_step:\n474:                     on_step(self, mask=done)\n475:             elif mode == 'wait':\n476:                 alive[done] = False\n477: \n478:             if budget_reached or (mode == 'wait' and not alive.any()):\n479:                 return\n480: "
+  },
+  "stable_worldmodel_main:stable_worldmodel/world/env_pool.py:118-142": {
+    "repo": "stable_worldmodel_main",
+    "path": "stable_worldmodel/world/env_pool.py",
+    "start": 118,
+    "end": 142,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/world/env_pool.py#L118-L142",
+    "sha256": "b6e73253199e1a39f0fcadfad7dbea09270cbd559e366d1bc9bf09c9e7da0606",
+    "excerpt": "118:     def step(\n119:         self, actions: np.ndarray, mask: np.ndarray | None = None\n120:     ) -> tuple[None, np.ndarray, np.ndarray, np.ndarray, dict]:\n121:         \"\"\"Step envs and return ``(None, rewards, terminateds, truncateds, infos)``.\n122: \n123:         Args:\n124:             actions: Array of shape ``(num_envs, ...)`` — one action per env.\n125:             mask: If provided, only envs where ``mask[i]`` is truthy are\n126:                 stepped. Masked envs contribute zero reward and ``False``\n127:                 termination/truncation, and their slot in the stacked\n128:                 info buffer is left unchanged.\n129:         \"\"\"\n130:         rewards = np.zeros(self.num_envs, dtype=np.float32)\n131:         terminateds = np.zeros(self.num_envs, dtype=bool)\n132:         truncateds = np.zeros(self.num_envs, dtype=bool)\n133: \n134:         for i, env in enumerate(self.envs):\n135:             if mask is not None and not mask[i]:\n136:                 continue\n137:             _, rewards[i], terminateds[i], truncateds[i], info = env.step(\n138:                 actions[i]\n139:             )\n140:             _write_env_info(self._stacked_infos, i, info)\n141: \n142:         return None, rewards, terminateds, truncateds, self._stacked_infos"
+  },
+  "stable_worldmodel_main:stable_worldmodel/envs/dmcontrol/dmcontrol.py:98-127": {
+    "repo": "stable_worldmodel_main",
+    "path": "stable_worldmodel/envs/dmcontrol/dmcontrol.py",
+    "start": 98,
+    "end": 127,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/dmcontrol/dmcontrol.py#L98-L127",
+    "sha256": "13d55bf73f9b7f8a9b5a2b380e12750e253a391716e64e65f795b1c9fff8bc08",
+    "excerpt": "98:     def _is_terminated(self, step) -> bool:\n99:         \"\"\"Return True if the current step should end the episode as a success.\n100: \n101:         Override in subclasses to implement custom termination conditions.\n102:         The base implementation always returns False (no early termination).\n103: \n104:         Args:\n105:             step: The dm_control TimeStep returned by the environment.\n106:         \"\"\"\n107:         return False\n108: \n109:     def step(self, action):\n110:         reward = 0\n111:         action = action.astype(self.action_spec_dtype)\n112:         terminated = False\n113:         for _ in range(self.action_repeat):\n114:             step = self.env.step(action)\n115:             reward += step.reward or 0\n116:             if self._is_terminated(step):\n117:                 terminated = True\n118:                 break\n119:         self._cumulative_reward += reward\n120: \n121:         return (\n122:             self._obs_to_array(step.observation),\n123:             reward,\n124:             terminated,\n125:             False,\n126:             self.info,\n127:         )"
+  },
+  "stable_worldmodel_main:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33": {
+    "repo": "stable_worldmodel_main",
+    "path": "stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py",
+    "start": 7,
+    "end": 33,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py#L7-L33",
+    "sha256": "e5e2e82c0621efca7b4c3c194f422c946db59edb12db7735fbe8bdcf12e37e7c",
+    "excerpt": "7: class ReacherQPosMatchTask(reacher.Reacher):\n8:     \"\"\"Reacher task that terminates (success) when qpos matches a target qpos.\n9: \n10:     The target qpos is set externally via the env's `set_target_qpos()`. Until\n11:     it is set, the task never terminates early.\n12: \n13:     Args:\n14:         target_size: Tolerance radius for the standard finger-to-target reward.\n15:         random: Random seed or RandomState.\n16:         qpos_threshold: Per-joint absolute tolerance (in radians) used to\n17:             determine whether the current qpos matches the target qpos.\n18:     \"\"\"\n19: \n20:     def __init__(\n21:         self, target_size, random=None, qpos_threshold=_DEFAULT_QPOS_THRESHOLD\n22:     ):\n23:         super().__init__(target_size=target_size, random=random)\n24:         self.target_qpos = None\n25:         self.qpos_threshold = qpos_threshold\n26: \n27:     def get_termination(self, physics):\n28:         if self.target_qpos is None:\n29:             return None\n30:         diff = np.abs(physics.data.qpos - self.target_qpos)\n31:         if np.all(diff < self.qpos_threshold):\n32:             return 0.0\n33:         return None"
+  },
+  "stable_worldmodel_main:stable_worldmodel/envs/pusht/env.py:318-372": {
+    "repo": "stable_worldmodel_main",
+    "path": "stable_worldmodel/envs/pusht/env.py",
+    "start": 318,
+    "end": 372,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/pusht/env.py#L318-L372",
+    "sha256": "6b71f441a72ae94e631fc80c756717e8c5b229b964a9b197e2962675fae6f864",
+    "excerpt": "318:     def step(self, action):\n319:         self.n_contact_points = 0\n320:         n_steps = int(1 / (self.dt * self.control_hz))\n321: \n322:         self.latest_action = action\n323: \n324:         if self.relative:\n325:             action = self.agent.position + action * self.action_scale\n326:             # action = np.clip(action, 0, self.window_size)\n327: \n328:         for _ in range(n_steps):\n329:             # Step PD control.\n330:             acceleration = self.k_p * (\n331:                 action - self.agent.position\n332:             ) + self.k_v * (Vec2d(0, 0) - self.agent.velocity)\n333:             self.agent.velocity += acceleration * self.dt\n334: \n335:             # Step physics.\n336:             self.space.step(self.dt)\n337: \n338:         # make the observation\n339:         state = self._get_obs()\n340:         proprio = np.concatenate((state[:2], state[-2:]))\n341:         observation = {'proprio': proprio, 'state': state}\n342: \n343:         # collect info\n344:         info = self._get_info()\n345: \n346:         # compute reward and termination\n347:         terminated, distance = self.eval_state(self.goal_state, state)\n348:         reward = -distance  # the closer the better\n349: \n350:         truncated = False\n351:         return observation, reward, terminated, truncated, info\n352: \n353:     def eval_state(self, goal_state, cur_state):\n354:         # success if position difference is < 20, and angle difference < np.pi/9\n355:         goal_state = np.asarray(goal_state, dtype=np.float64)\n356:         cur_state = np.asarray(cur_state, dtype=np.float64)\n357:         pos_diff = np.linalg.norm(goal_state[:4] - cur_state[:4])\n358: \n359:         # Compare angles modulo the block's rotational symmetry: square/+ match\n360:         # every 90 degrees, and Z/I match every 180 degrees. Other shapes use\n361:         # a full rotation, preserving the original orientation check.\n362:         block_shape = self.shapes[\n363:             int(self.variation_space['block']['shape'].value)\n364:         ]\n365:         symmetry = self.shape_symmetry_angles.get(block_shape, 2 * np.pi)\n366:         angle_diff = np.abs(goal_state[4] - cur_state[4]) % symmetry\n367:         angle_diff = np.minimum(angle_diff, symmetry - angle_diff)\n368: \n369:         success = pos_diff < 20 and angle_diff < np.pi / 9\n370:         state_dist = np.linalg.norm(goal_state - cur_state)\n371: \n372:         return success, state_dist"
+  },
+  "stable_worldmodel_main:stable_worldmodel/envs/two_room/env.py:262-280": {
+    "repo": "stable_worldmodel_main",
+    "path": "stable_worldmodel/envs/two_room/env.py",
+    "start": 262,
+    "end": 280,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/two_room/env.py#L262-L280",
+    "sha256": "5e1d392de5b02472062dbe872aded67fd465fcc8f7eaa1c02a753b2fc31c61f0",
+    "excerpt": "262:     def step(self, action):\n263:         action_t = torch.as_tensor(action, dtype=torch.float32)\n264:         action_t = torch.clamp(action_t, -1.0, 1.0)\n265: \n266:         speed = float(self.variation_space['agent']['speed'].value.item())\n267:         pos_next = self.agent_position + action_t * speed\n268: \n269:         pos_new = self._apply_collisions(self.agent_position, pos_next)\n270:         self.agent_position = pos_new\n271: \n272:         dist = float(torch.norm(self.agent_position - self.target_position))\n273:         terminated = dist < 16.0  # ~4.5 * 3.5 scale\n274:         truncated = False\n275:         reward = 0.0\n276: \n277:         obs = self._get_obs()\n278:         info = self._get_info()\n279:         info['distance_to_target'] = dist\n280:         return obs, reward, terminated, truncated, info"
+  },
+  "stable_worldmodel_main:stable_worldmodel/envs/ogbench/cube_env.py:34-53": {
+    "repo": "stable_worldmodel_main",
+    "path": "stable_worldmodel/envs/ogbench/cube_env.py",
+    "start": 34,
+    "end": 53,
+    "url": "https://github.com/galilai-group/stable-worldmodel/blob/21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/ogbench/cube_env.py#L34-L53",
+    "sha256": "143e5e81f424ff7a4d7fdde287dee88b722c09082a6fc9e68721839788e94c19",
+    "excerpt": "34: import numpy as np\n35: from dm_control import mjcf\n36: from ogbench.manipspace import lie\n37: from ogbench.manipspace.envs.manipspace_env import ManipSpaceEnv\n38: \n39: from stable_worldmodel import spaces as swm_spaces\n40: from stable_worldmodel.envs.utils import perturb_camera_angle\n41: \n42: DEFAULT_VARIATIONS = (\n43:     'cube.start_position',\n44:     'cube.start_yaw',\n45:     'cube.goal_position',\n46:     'cube.goal_yaw',\n47: )\n48: \n49: \n50: class CubeEnv(ManipSpaceEnv):\n51:     \"\"\"Robotic manipulation environment with cube objects and multiple task variants.\n52: \n53:     This environment provides a suite of manipulation tasks involving 1-8 colored cubes"
+  },
+  "swm006:stable_worldmodel/world.py:950-965": {
+    "repo": "swm006",
+    "path": "stable_worldmodel/world.py",
+    "start": 950,
+    "end": 965,
+    "url": "https://files.pythonhosted.org/packages/77/ac/9618ee77bf0ed0180c67a0645dfb42215f54197de347235c831f65ea6363/stable_worldmodel-0.0.6-py3-none-any.whl",
+    "sha256": "15fc9e4a69d2ad81d29ca8fedd689b53e96887f7614fa98223ef5ddee37bbda6",
+    "excerpt": "950:         target_frames = torch.stack([ep['pixels'] for ep in data]).numpy()\n951:         video_frames = np.empty(\n952:             (self.num_envs, eval_budget, *self.infos['pixels'].shape[-3:]),\n953:             dtype=np.uint8,\n954:         )\n955: \n956:         # run normal evaluation for eval_budget and record video\n957:         for i in range(eval_budget):\n958:             video_frames[:, i] = self.infos['pixels'][:, -1]\n959:             self.infos.update(deepcopy(goal_step))\n960:             self.step()\n961:             results['episode_successes'] = np.logical_or(\n962:                 results['episode_successes'], self.terminateds\n963:             )\n964:             # for auto-reset\n965:             self.envs.unwrapped._autoreset_envs = np.zeros((self.num_envs,))"
+  },
+  "swm006:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33": {
+    "repo": "swm006",
+    "path": "stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py",
+    "start": 7,
+    "end": 33,
+    "url": "https://files.pythonhosted.org/packages/77/ac/9618ee77bf0ed0180c67a0645dfb42215f54197de347235c831f65ea6363/stable_worldmodel-0.0.6-py3-none-any.whl",
+    "sha256": "e5e2e82c0621efca7b4c3c194f422c946db59edb12db7735fbe8bdcf12e37e7c",
+    "excerpt": "7: class ReacherQPosMatchTask(reacher.Reacher):\n8:     \"\"\"Reacher task that terminates (success) when qpos matches a target qpos.\n9: \n10:     The target qpos is set externally via the env's `set_target_qpos()`. Until\n11:     it is set, the task never terminates early.\n12: \n13:     Args:\n14:         target_size: Tolerance radius for the standard finger-to-target reward.\n15:         random: Random seed or RandomState.\n16:         qpos_threshold: Per-joint absolute tolerance (in radians) used to\n17:             determine whether the current qpos matches the target qpos.\n18:     \"\"\"\n19: \n20:     def __init__(\n21:         self, target_size, random=None, qpos_threshold=_DEFAULT_QPOS_THRESHOLD\n22:     ):\n23:         super().__init__(target_size=target_size, random=random)\n24:         self.target_qpos = None\n25:         self.qpos_threshold = qpos_threshold\n26: \n27:     def get_termination(self, physics):\n28:         if self.target_qpos is None:\n29:             return None\n30:         diff = np.abs(physics.data.qpos - self.target_qpos)\n31:         if np.all(diff < self.qpos_threshold):\n32:             return 0.0\n33:         return None"
+  },
+  "lewm:eval.py:136-152": {
+    "repo": "lewm",
+    "path": "eval.py",
+    "start": 136,
+    "end": 152,
+    "url": "https://github.com/lucas-maes/le-wm/blob/8edfeb336732b5f3ce7b8b210d0ba370a09e2cac/eval.py#L136-L152",
+    "sha256": "6584f009b40550fa0df2f8dee22b9329fbfacdfaf74464aa4fd105f464795245",
+    "excerpt": "136:     if len(eval_episodes) < cfg.eval.num_eval:\n137:         raise ValueError(\"Not enough episodes with sufficient length for evaluation.\")\n138: \n139:     world.set_policy(policy)\n140: \n141:     results_path.mkdir(parents=True, exist_ok=True)\n142: \n143:     start_time = time.time()\n144:     metrics = world.evaluate(\n145:         dataset=dataset,\n146:         start_steps=eval_start_idx.tolist(),\n147:         goal_offset=cfg.eval.goal_offset_steps,\n148:         eval_budget=cfg.eval.eval_budget,\n149:         episodes_idx=eval_episodes.tolist(),\n150:         callables=OmegaConf.to_container(cfg.eval.get(\"callables\"), resolve=True),\n151:         video=results_path,\n152:     )"
+  },
+  "ap:code/ap/anchored_planning/runtime.py:240-284": {
+    "repo": "ap",
+    "path": "code/ap/anchored_planning/runtime.py",
+    "start": 240,
+    "end": 284,
+    "url": "https://github.com/daybraeklaxry/Aim-Short-to-Reach-Far/blob/984327424ca7a2e52c75a8279197750d9d0b7c8e/code/ap/anchored_planning/runtime.py#L240-L284",
+    "sha256": "601fd7423ae05fe3ece694d7470b489d374937fc3ce8968d5dd5d2c5b18527ad",
+    "excerpt": "240:                             generator = torch.Generator(device=device).manual_seed(query_seed(args.task, ordinal))\n241:                             success, stopped = prelude[\"success\"], prelude[\"terminal_without_success\"]\n242:                             actions, decisions = [], []\n243:                             started = time.perf_counter()\n244:                             with torch.inference_mode():\n245:                                 while not success and not stopped and len(actions) < selected[\"budget\"]:\n246:                                     step = len(actions)\n247:                                     if step:\n248:                                         rgb = np.ascontiguousarray(env.render())\n249:                                     current = encode_retrieval(model, rgb[None], device)\n250:                                     remaining = max(5, int(row[\"horizon\"]) - step)\n251:                                     support, costs = bank.nearest_topk(current, goal, remaining, 8)\n252:                                     support = support[0]\n253:                                     counter.reset()\n254:                                     if arm in (\"direct\", \"ap_observed\", \"ap_final\"):\n255:                                         raw = np.stack([np.asarray(handle[\"action\"][int(i):int(i)+5], np.float32) for i in support])\n256:                                         effective, normalized, projection = prepare_candidates(raw, low, high, native.scaler)\n257:                                         rank, detail = scorer.choose(arm, rgb, support, normalized, row[\"global_goal\"])\n258:                                         proposed = effective[rank]\n259:                                         detail.update(selected_rank=rank, action_projection=projection)\n260:                                         expected_calls, expected_blocks = (0, 0) if arm == \"direct\" else (1, 8)\n261:                                     else:\n262:                                         proposed, detail = gaussian.choose(arm, rgb, support, generator, row[\"global_goal\"])\n263:                                         expected_calls, expected_blocks = 31, 9002\n264:                                     assert (counter.calls, counter.candidates) == (expected_calls, expected_blocks)\n265:                                     detail.update(t=step, remaining=remaining, retrieved_sources=support.tolist(),\n266:                                         retrieval_cost=costs[0].tolist(), predictor_calls=counter.calls,\n267:                                         predictor_candidate_blocks=counter.candidates)\n268:                                     for action in proposed:\n269:                                         obs, _, terminated, truncated, info = env.step(action.copy())\n270:                                         success = bool(environments._success_now(args.task, obs, info, true_goal, False, False))\n271:                                         stopped = bool((terminated or truncated) and not success)\n272:                                         actions.append(action.tolist())\n273:                                         if success or stopped or len(actions) >= selected[\"budget\"]:\n274:                                             break\n275:                                     detail[\"executed_actions\"] = len(actions) - step\n276:                                     decisions.append(detail)\n277:                             compact = dict(study=study, task=args.task, identity=row, condition=condition, arm=arm,\n278:                                 completed=True, success=bool(success), primitive_steps=len(actions), decisions=len(decisions),\n279:                                 budget=selected[\"budget\"], horizon=row[\"horizon\"], prelude=prelude,\n280:                                 predictor_calls=sum(d[\"predictor_calls\"] for d in decisions),\n281:                                 predictor_candidate_blocks=sum(d[\"predictor_candidate_blocks\"] for d in decisions),\n282:                                 source_prediction_misses=0, optimizer_seed=query_seed(args.task, ordinal),\n283:                                 query_ordinal=ordinal, profile_censored=False, terminal_without_success=bool(stopped),\n284:                                 stop_reason=\"success\" if success else \"termination\" if stopped else \"budget\","
+  },
+  "ap:code/ap/anchored_planning/environments.py:116-126": {
+    "repo": "ap",
+    "path": "code/ap/anchored_planning/environments.py",
+    "start": 116,
+    "end": 126,
+    "url": "https://github.com/daybraeklaxry/Aim-Short-to-Reach-Far/blob/984327424ca7a2e52c75a8279197750d9d0b7c8e/code/ap/anchored_planning/environments.py#L116-L126",
+    "sha256": "446736bcf4b6820df012d1137cba52aea813bf6d383b0bdb97e617b4e8453f82",
+    "excerpt": "116: def _success(\n117:     task: str,\n118:     info: dict[str, Any],\n119:     observation: np.ndarray,\n120:     threshold: float,\n121:     goal_state: np.ndarray,\n122: ) -> bool:\n123:     if task == \"tworoom\":\n124:         return float(info.get(\"distance_to_target\", np.inf)) < 16.0\n125:     if task == \"cube\":\n126:         return bool(info.get(\"success\", False))"
+  },
+  "fast_lewm:eval.py:390-408": {
+    "repo": "fast_lewm",
+    "path": "eval.py",
+    "start": 390,
+    "end": 408,
+    "url": "https://github.com/Yuntian-Gao/Fast-LeWorldModel/blob/2fc3bcafa4396804b0a747878dfe0ebcf14b3fcd/eval.py#L390-L408",
+    "sha256": "36ab8a59aed8e31fdd56bbb92b4ee720830ff6d92b87d03c33ddf6cd039e1f30",
+    "excerpt": "390:                     )\n391:             except Exception as exc:\n392:                 print(f\"[warn] failed to record CEM latent cost: {exc}\")\n393: \n394:             return outputs\n395: \n396:         solver.solve = _wrapped_solve\n397: \n398:     try:\n399:         metrics = world.evaluate_from_dataset(\n400:             dataset,\n401:             start_steps=eval_start_idx.tolist(),\n402:             goal_offset_steps=cfg.eval.goal_offset_steps,\n403:             eval_budget=cfg.eval.eval_budget,\n404:             episodes_idx=eval_episodes.tolist(),\n405:             callables=OmegaConf.to_container(cfg.eval.get(\"callables\"), resolve=True),\n406:             video_path=results_path,\n407:         )\n408:     finally:"
+  },
+  "fast_lewm:requirements.txt:1-12": {
+    "repo": "fast_lewm",
+    "path": "requirements.txt",
+    "start": 1,
+    "end": 12,
+    "url": "https://github.com/Yuntian-Gao/Fast-LeWorldModel/blob/2fc3bcafa4396804b0a747878dfe0ebcf14b3fcd/requirements.txt#L1-L12",
+    "sha256": "78b00d29cfa42f7c68407e51d27aaf761b4a586adc19e027403d6f4b1f1939a4",
+    "excerpt": "1: --extra-index-url https://download.pytorch.org/whl/cu128\n2: \n3: torch==2.10.0+cu128\n4: torchvision==0.25.0+cu128\n5: torchaudio==2.10.0+cu128\n6: \n7: stable-worldmodel[train,env]==0.0.6\n8: stable-pretraining==0.1.6\n9: \n10: mujoco==3.6.0\n11: dm-control==1.0.38\n12: stable-baselines3==2.7.1"
+  },
+  "adwm:eval.py:1329-1351": {
+    "repo": "adwm",
+    "path": "eval.py",
+    "start": 1329,
+    "end": 1351,
+    "url": "https://github.com/ad-wm/ad-wm-code/blob/7c27ebfdc4a2ba8e5a16268f2e4aa852fda72144/eval.py#L1329-L1351",
+    "sha256": "36bdb261196daa6a067fe33147735d6827d686d6822df676711054107d551090",
+    "excerpt": "1329:             dtype=np.uint8,\n1330:         )\n1331: \n1332:     for i in range(cfg.eval.eval_budget):\n1333:         if i in handoff_steps:\n1334:             handoff_snapshots[i] = collect_world_step_arrays(world)\n1335:         if save_video:\n1336:             video_frames[:, i] = world.infos[\"pixels\"][:, -1]\n1337:         if rolling_goal_enabled:\n1338:             goal_offset = get_rolling_goal_offset(cfg, i, target_len)\n1339:             planner_goal_step = broadcast_step(\n1340:                 extract_goal_step_at(data, goal_keys, goal_offset),\n1341:                 shape_prefix,\n1342:             )\n1343:         else:\n1344:             planner_goal_step = final_goal_step\n1345:         world.infos.update(deepcopy(planner_goal_step))\n1346:         world.step()\n1347:         results[\"episode_successes\"] = np.logical_or(\n1348:             results[\"episode_successes\"], world.terminateds\n1349:         )\n1350:         world.envs.unwrapped._autoreset_envs = np.zeros((world.num_envs,))\n1351: "
+  },
+  "adwm:requirements.txt:1-14": {
+    "repo": "adwm",
+    "path": "requirements.txt",
+    "start": 1,
+    "end": 14,
+    "url": "https://github.com/ad-wm/ad-wm-code/blob/7c27ebfdc4a2ba8e5a16268f2e4aa852fda72144/requirements.txt#L1-L14",
+    "sha256": "d946be97dfa7fc8760782ae788fd5d7ed28531863ebe6680aa66c43a06f8fc61",
+    "excerpt": "1: # Versions used for the simulation runs; install a CUDA-compatible PyTorch build\n2: # for your platform before installing these packages.\n3: torch==2.6.0\n4: torchvision==0.21.0\n5: stable-worldmodel[train,env]==0.0.6\n6: stable-pretraining==0.1.6\n7: datasets==4.0.0\n8: lightning==2.6.1\n9: hydra-core==1.3.2\n10: omegaconf==2.3.0\n11: transformers==5.5.4\n12: gymnasium==1.2.3\n13: ogbench==1.2.1\n14: mujoco==3.7.0"
+  },
+  "dino_wm:planning/evaluator.py:111-127": {
+    "repo": "dino_wm",
+    "path": "planning/evaluator.py",
+    "start": 111,
+    "end": 127,
+    "url": "https://github.com/gaoyuezhou/dino_wm/blob/0a9492fa12044b852ae9e001cc74604b79c8bb0c/planning/evaluator.py#L111-L127",
+    "sha256": "072b1f51fb3581e76c08aa838badfb893ba56bc3bc935ad887e842a96d7647a7",
+    "excerpt": "111:         # rollout in env\n112:         exec_actions = rearrange(\n113:             actions.cpu(), \"b t (f d) -> b (t f) d\", f=self.frameskip\n114:         )\n115:         exec_actions = self.preprocessor.denormalize_actions(exec_actions).numpy()\n116:         e_obses, e_states = self.env.rollout(self.seed, self.state_0, exec_actions)\n117:         e_visuals = e_obses[\"visual\"]\n118:         e_final_obs = self._get_trajdict_last(e_obses, action_len * self.frameskip + 1)\n119:         e_final_state = self._get_traj_last(e_states, action_len * self.frameskip + 1)[\n120:             :, 0\n121:         ]  # reduce dim back\n122: \n123:         # compute eval metrics\n124:         logs, successes = self._compute_rollout_metrics(\n125:             e_state=e_final_state,\n126:             e_obs=e_final_obs,\n127:             i_z_obs=i_final_z_obs,"
+  },
+  "dino_wm:env/pusht/pusht_wrapper.py:84-119": {
+    "repo": "dino_wm",
+    "path": "env/pusht/pusht_wrapper.py",
+    "start": 84,
+    "end": 119,
+    "url": "https://github.com/gaoyuezhou/dino_wm/blob/0a9492fa12044b852ae9e001cc74604b79c8bb0c/env/pusht/pusht_wrapper.py#L84-L119",
+    "sha256": "b285f3cb8fdecd831341187ea2ac93def0d9a574d863aa7c2ddc5b50c4be8896",
+    "excerpt": "84:     def step_multiple(self, actions):\n85:         \"\"\"\n86:         infos: dict, each key has shape (T, ...)\n87:         \"\"\"\n88:         obses = []\n89:         rewards = []\n90:         dones = []\n91:         infos = []\n92:         for action in actions:\n93:             o, r, d, info = self.step(action)\n94:             obses.append(o)\n95:             rewards.append(r)\n96:             dones.append(d)\n97:             infos.append(info)\n98:         obses = aggregate_dct(obses)\n99:         rewards = np.stack(rewards)\n100:         dones = np.stack(dones)\n101:         infos = aggregate_dct(infos)\n102:         return obses, rewards, dones, infos\n103: \n104:     def rollout(self, seed, init_state, actions):\n105:         \"\"\"\n106:         only returns np arrays of observations and states\n107:         seed: int\n108:         init_state: (state_dim, )\n109:         actions: (T, action_dim)\n110:         obses: dict (T, H, W, C)\n111:         states: (T, D)\n112:         \"\"\"\n113:         obs, state = self.prepare(seed, init_state)\n114:         obses, rewards, dones, infos = self.step_multiple(actions)\n115:         for k in obses.keys():\n116:             obses[k] = np.vstack([np.expand_dims(obs[k], 0), obses[k]])\n117:         states = np.vstack([np.expand_dims(state, 0), infos[\"state\"]])\n118:         states = np.stack(states)\n119:         return obses, states"
+  },
+  "dino_wm:env/pusht/pusht_env.py:506-537": {
+    "repo": "dino_wm",
+    "path": "env/pusht/pusht_env.py",
+    "start": 506,
+    "end": 537,
+    "url": "https://github.com/gaoyuezhou/dino_wm/blob/0a9492fa12044b852ae9e001cc74604b79c8bb0c/env/pusht/pusht_env.py#L506-L537",
+    "sha256": "1aaac87d49b619eed2370297d5393cd3e22e22f08bbfb2870ee1422e86ef4c3a",
+    "excerpt": "506:         # compute reward\n507:         goal_body = self._get_goal_pose_body(self.goal_pose)\n508:         goal_geom = pymunk_to_shapely(goal_body, self.block.shapes)\n509:         block_geom = pymunk_to_shapely(self.block, self.block.shapes)\n510: \n511:         intersection_area = goal_geom.intersection(block_geom).area\n512:         goal_area = goal_geom.area\n513:         coverage = intersection_area / goal_area\n514:         reward = np.clip(coverage / self.success_threshold, 0, 1)\n515:         done = False  # coverage > self.success_threshold\n516: \n517:         self.coverage_arr.append(coverage)\n518: \n519:         state = self._get_obs()\n520:         # visual = self._render_frame(\"rgb_array\")\n521:         visual = self._render_frame(\"rgb_array\")\n522:         proprio = state[:2]\n523:         if self.with_velocity:\n524:             proprio = np.concatenate((proprio, state[5:]))\n525:         observation = {\n526:             \"visual\": visual,\n527:             \"proprio\": proprio\n528:         }\n529:         # observation = (\n530:         #     einops.rearrange(observation, \"H W C -> 1 C H W\") / 255.0\n531:         # )  # VCHW, range [0, 1]\n532:         info = self._get_info()\n533:         info[\"state\"] = state\n534:         info[\"max_coverage\"] = max(self.coverage_arr)\n535:         info[\"final_coverage\"] = self.coverage_arr[-1]\n536: \n537:         return observation, reward, done, info"
+  },
+  "tdmpc2:tdmpc2/envs/dmcontrol.py:50-61": {
+    "repo": "tdmpc2",
+    "path": "tdmpc2/envs/dmcontrol.py",
+    "start": 50,
+    "end": 61,
+    "url": "https://github.com/nicklashansen/tdmpc2/blob/e9f59321933cbc8e11a002b842adc7d4ffae8ff1/tdmpc2/envs/dmcontrol.py#L50-L61",
+    "sha256": "ec61b4b90b2c14f281446c4146146753b9fbd95657e205dd09f30a6ab47c85b2",
+    "excerpt": "50: \t\n51: \tdef reset(self):\n52: \t\treturn self._obs_to_array(self.env.reset().observation)\n53: \n54: \tdef step(self, action):\n55: \t\treward = 0\n56: \t\taction = action.astype(self.action_spec_dtype)\n57: \t\tfor _ in range(2):\n58: \t\t\tstep = self.env.step(action)\n59: \t\t\treward += step.reward\n60: \t\treturn self._obs_to_array(step.observation), reward, False, defaultdict(float)\n61: \t"
+  },
+  "tdmpc2:tdmpc2/evaluate.py:74-88": {
+    "repo": "tdmpc2",
+    "path": "tdmpc2/evaluate.py",
+    "start": 74,
+    "end": 88,
+    "url": "https://github.com/nicklashansen/tdmpc2/blob/e9f59321933cbc8e11a002b842adc7d4ffae8ff1/tdmpc2/evaluate.py#L74-L88",
+    "sha256": "d25fc8f011c3f1ca664db81320f86c4b62fd47e9a10e4657563cab2674fffd20",
+    "excerpt": "74: \t\tep_rewards, ep_successes = [], []\n75: \t\tfor i in range(cfg.eval_episodes):\n76: \t\t\tobs, done, ep_reward, t = env.reset(task_idx=task_idx), False, 0, 0\n77: \t\t\tif cfg.save_video:\n78: \t\t\t\tframes = [env.render()]\n79: \t\t\twhile not done:\n80: \t\t\t\taction = agent.act(obs, t0=t==0, task=task_idx)\n81: \t\t\t\tobs, reward, done, info = env.step(action)\n82: \t\t\t\tep_reward += reward\n83: \t\t\t\tt += 1\n84: \t\t\t\tif cfg.save_video:\n85: \t\t\t\t\tframes.append(env.render())\n86: \t\t\tep_rewards.append(ep_reward)\n87: \t\t\tep_successes.append(info['success'])\n88: \t\t\tif cfg.save_video:"
+  },
+  "tdmpc2:tdmpc2/envs/dmcontrol.py:96-110": {
+    "repo": "tdmpc2",
+    "path": "tdmpc2/envs/dmcontrol.py",
+    "start": 96,
+    "end": 110,
+    "url": "https://github.com/nicklashansen/tdmpc2/blob/e9f59321933cbc8e11a002b842adc7d4ffae8ff1/tdmpc2/envs/dmcontrol.py#L96-L110",
+    "sha256": "ec61b4b90b2c14f281446c4146146753b9fbd95657e205dd09f30a6ab47c85b2",
+    "excerpt": "96: \t\"\"\"\n97: \tdomain, task = cfg.task.replace('-', '_').split('_', 1)\n98: \tdomain = dict(cup='ball_in_cup', pointmass='point_mass').get(domain, domain)\n99: \tif (domain, task) not in suite.ALL_TASKS:\n100: \t\traise ValueError('Unknown task:', task)\n101: \tassert cfg.obs in {'state', 'rgb'}, 'This task only supports state and rgb observations.'\n102: \tenv = suite.load(domain,\n103: \t\t\t\t\t task,\n104: \t\t\t\t\t task_kwargs={'random': cfg.seed},\n105: \t\t\t\t\t visualize_reward=False)\n106: \tenv = action_scale.Wrapper(env, minimum=-1., maximum=1.)\n107: \tenv = DMControlWrapper(env, domain)\n108: \tif cfg.obs == 'rgb':\n109: \t\tenv = Pixels(env, cfg)\n110: \tenv = Timeout(env, max_episode_steps=500)"
+  },
+  "dreamerv3:embodied/envs/from_dm.py:51-77": {
+    "repo": "dreamerv3",
+    "path": "embodied/envs/from_dm.py",
+    "start": 51,
+    "end": 77,
+    "url": "https://github.com/danijar/dreamerv3/blob/e01491fad6434b2245a3b8ca201dd7faedcc458c/embodied/envs/from_dm.py#L51-L77",
+    "sha256": "9eda0fd7046a033f07b10832319496a6996af6d5a1327689f5f4a6d49827a7e7",
+    "excerpt": "51:   def step(self, action):\n52:     action = action.copy()\n53:     reset = action.pop('reset')\n54:     if reset or self._done:\n55:       time_step = self._env.reset()\n56:     else:\n57:       action = action if self._act_dict else action[self._act_key]\n58:       time_step = self._env.step(action)\n59:     self._done = time_step.last()\n60:     return self._obs(time_step)\n61: \n62:   def _obs(self, time_step):\n63:     if not time_step.first():\n64:       assert time_step.discount in (0, 1), time_step.discount\n65:     obs = time_step.observation\n66:     obs = dict(obs) if self._obs_dict else {self._obs_key: obs}\n67:     if 'reward' in obs:\n68:       obs['obs_reward'] = obs.pop('reward')\n69:     for key in self._obs_empty:\n70:       del obs[key]\n71:     obs = {k.replace('/', '_'): v for k, v in obs.items()}\n72:     return dict(\n73:         reward=np.float32(0.0 if time_step.first() else time_step.reward),\n74:         is_first=time_step.first(),\n75:         is_last=time_step.last(),\n76:         is_terminal=False if time_step.first() else time_step.discount == 0,\n77:         **obs,"
+  },
+  "dreamerv3:embodied/core/driver.py:67-82": {
+    "repo": "dreamerv3",
+    "path": "embodied/core/driver.py",
+    "start": 67,
+    "end": 82,
+    "url": "https://github.com/danijar/dreamerv3/blob/e01491fad6434b2245a3b8ca201dd7faedcc458c/embodied/core/driver.py#L67-L82",
+    "sha256": "f8397df5e3fccfb3d6079b224dfe4b15281587a8754061af0d644bf4ded4157c",
+    "excerpt": "67:     logs = {k: v for k, v in obs.items() if k.startswith('log/')}\n68:     obs = {k: v for k, v in obs.items() if not k.startswith('log/')}\n69:     assert all(len(x) == self.length for x in obs.values()), obs\n70:     self.carry, acts, outs = policy(self.carry, obs, **self.kwargs)\n71:     assert all(k not in acts for k in outs), (\n72:         list(outs.keys()), list(acts.keys()))\n73:     if obs['is_last'].any():\n74:       mask = ~obs['is_last']\n75:       acts = {k: self._mask(v, mask) for k, v in acts.items()}\n76:     self.acts = {**acts, 'reset': obs['is_last'].copy()}\n77:     trans = {**obs, **acts, **outs, **logs}\n78:     for i in range(self.length):\n79:       trn = elements.tree.map(lambda x: x[i], trans)\n80:       [fn(trn, i, **self.kwargs) for fn in self.callbacks]\n81:     step += len(obs['is_first'])\n82:     episode += obs['is_last'].sum()"
+  },
+  "dreamerv3:embodied/core/wrappers.py:63-73": {
+    "repo": "dreamerv3",
+    "path": "embodied/core/wrappers.py",
+    "start": 63,
+    "end": 73,
+    "url": "https://github.com/danijar/dreamerv3/blob/e01491fad6434b2245a3b8ca201dd7faedcc458c/embodied/core/wrappers.py#L63-L73",
+    "sha256": "f6f5beab87109bc97c0bd3318bea637e8f91d43db5005075f61ab1c0be3a73e7",
+    "excerpt": "63:   def step(self, action):\n64:     if action['reset']:\n65:       return self.env.step(action)\n66:     reward = 0.0\n67:     for _ in range(self._repeat):\n68:       obs = self.env.step(action)\n69:       reward += obs['reward']\n70:       if obs['is_last'] or obs['is_terminal']:\n71:         break\n72:     obs['reward'] = np.float32(reward)\n73:     return obs"
+  },
+  "metaworld:metaworld/sawyer_xyz_env.py:629-643": {
+    "repo": "metaworld",
+    "path": "metaworld/sawyer_xyz_env.py",
+    "start": 629,
+    "end": 643,
+    "url": "https://github.com/Farama-Foundation/Metaworld/blob/c0dafaf1557f31cad3b96ba2b62462f45638f5a5/metaworld/sawyer_xyz_env.py#L629-L643",
+    "sha256": "4282580b80befc557f67d25acffffec737ad0dae2c440601be76fc09139f351d",
+    "excerpt": "629:         assert isinstance(self._last_stable_obs, np.ndarray)\n630:         reward, info = self.evaluate_state(self._last_stable_obs, action)\n631:         # step will never return a terminate==True if there is a success\n632:         # but we can return truncate=True if the current path length == max path length\n633:         truncate = False\n634:         if self.curr_path_length == self.max_path_length:\n635:             truncate = True\n636:         return (\n637:             np.array(self._last_stable_obs, dtype=np.float64),\n638:             reward,\n639:             False,\n640:             truncate,\n641:             info,\n642:         )\n643: "
+  },
+  "metaworld:metaworld/wrappers.py:217-230": {
+    "repo": "metaworld",
+    "path": "metaworld/wrappers.py",
+    "start": 217,
+    "end": 230,
+    "url": "https://github.com/Farama-Foundation/Metaworld/blob/c0dafaf1557f31cad3b96ba2b62462f45638f5a5/metaworld/wrappers.py#L217-L230",
+    "sha256": "43d9e436dfb4826c11f8afcfe2ba5642f67212996dfe48dd869b352094f5d89c",
+    "excerpt": "217:     terminate_on_success: bool = True\n218: \n219:     def __init__(self, env: Env):\n220:         super().__init__(env)\n221:         self.terminate_on_success = True\n222: \n223:     def toggle_terminate_on_success(self, on: bool):\n224:         self.terminate_on_success = on\n225: \n226:     def step(self, action):\n227:         obs, reward, terminated, truncated, info = self.env.step(action)\n228:         if self.terminate_on_success:\n229:             terminated = info[\"success\"] == 1.0\n230:         return obs, reward, terminated, truncated, info"
+  },
+  "metaworld:metaworld/evaluation.py:53-83": {
+    "repo": "metaworld",
+    "path": "metaworld/evaluation.py",
+    "start": 53,
+    "end": 83,
+    "url": "https://github.com/Farama-Foundation/Metaworld/blob/c0dafaf1557f31cad3b96ba2b62462f45638f5a5/metaworld/evaluation.py#L53-L83",
+    "sha256": "6c3fcaf4e814229e3b0b67085ccd311b85517ff9e26c8b7bd9fc3abe8fa8b5ad",
+    "excerpt": "53:     terminate_on_success = np.all(eval_envs.get_attr(\"terminate_on_success\")).item()\n54:     eval_envs.call(\"toggle_terminate_on_success\", True)\n55: \n56:     obs: npt.NDArray[np.float64]\n57:     obs, _ = eval_envs.reset()\n58:     agent.reset(np.ones(eval_envs.num_envs, dtype=np.bool_))\n59: \n60:     task_names = _get_task_names(eval_envs)\n61:     successes = {task_name: 0 for task_name in set(task_names)}\n62:     episodic_returns: dict[str, list[float]] = {\n63:         task_name: [] for task_name in set(task_names)\n64:     }\n65: \n66:     def eval_done(returns):\n67:         return all(len(r) >= num_episodes for _, r in returns.items())\n68: \n69:     while not eval_done(episodic_returns):\n70:         actions = agent.eval_action(obs)\n71:         obs, _, terminations, truncations, infos = eval_envs.step(actions)\n72: \n73:         dones = np.logical_or(terminations, truncations)\n74:         agent.reset(dones)\n75: \n76:         for i, env_ended in enumerate(dones):\n77:             if env_ended:\n78:                 episodic_returns[task_names[i]].append(\n79:                     float(infos[\"final_info\"][\"episode\"][\"r\"][i])\n80:                 )\n81:                 if len(episodic_returns[task_names[i]]) <= num_episodes:\n82:                     successes[task_names[i]] += int(infos[\"final_info\"][\"success\"][i])\n83: "
+  },
+  "metaworld:metaworld/__init__.py:455-468": {
+    "repo": "metaworld",
+    "path": "metaworld/__init__.py",
+    "start": 455,
+    "end": 468,
+    "url": "https://github.com/Farama-Foundation/Metaworld/blob/c0dafaf1557f31cad3b96ba2b62462f45638f5a5/metaworld/__init__.py#L455-L468",
+    "sha256": "8613586a1f5236a8c10079809d6ea94a2c2e597fcdb1fbd6241468419dba22d7",
+    "excerpt": "455:     if seed is not None:\n456:         env.action_space.seed(seed)\n457:     return env\n458: \n459: \n460: def make_mt_envs(\n461:     name: str,\n462:     seed: int | None = None,\n463:     num_tasks: int | None = None,\n464:     vector_strategy: Literal[\"sync\", \"async\"] = \"sync\",\n465:     autoreset_mode: gym.vector.AutoresetMode | str = gym.vector.AutoresetMode.SAME_STEP,\n466:     **kwargs,\n467: ) -> gym.Env | gym.vector.VectorEnv:\n468:     benchmark: Benchmark"
+  },
+  "ogbench:ogbench/manipspace/envs/manipspace_env.py:314-341": {
+    "repo": "ogbench",
+    "path": "ogbench/manipspace/envs/manipspace_env.py",
+    "start": 314,
+    "end": 341,
+    "url": "https://github.com/seohongpark/ogbench/blob/a977253ce5b88434f4e4f531c50047cc95993a51/ogbench/manipspace/envs/manipspace_env.py#L314-L341",
+    "sha256": "03524eb1c95155bbc2ec3d29e9836fccffe8eb9fce1be15b6f0e7062cc1bb5fd",
+    "excerpt": "314:     def step(self, action):\n315:         if self._reset_next_step:\n316:             return self.reset()\n317: \n318:         if self._success_timing == 'pre':\n319:             success = self._success\n320:             terminated = self.terminate_episode()\n321:             reward = self.compute_reward()\n322: \n323:         action = np.array(action)\n324:         self.set_control(action)\n325:         self.pre_step()\n326:         mujoco.mj_step(self._model, self._data, nstep=self._n_steps)\n327:         mujoco.mj_rnePostConstraint(self._model, self._data)  # Compute contact forces.\n328:         self.post_step()\n329: \n330:         if self._success_timing == 'post':\n331:             success = self._success\n332:             terminated = self.terminate_episode()\n333:             reward = self.compute_reward()\n334: \n335:         truncated = self.truncate_episode()\n336:         ob = self.compute_observation()\n337:         info = self.get_step_info()\n338: \n339:         info['success'] = success\n340: \n341:         return ob, reward, terminated, truncated, info"
+  },
+  "ogbench:impls/utils/evaluation.py:74-90": {
+    "repo": "ogbench",
+    "path": "impls/utils/evaluation.py",
+    "start": 74,
+    "end": 90,
+    "url": "https://github.com/seohongpark/ogbench/blob/a977253ce5b88434f4e4f531c50047cc95993a51/impls/utils/evaluation.py#L74-L90",
+    "sha256": "4d9a2732bc9ef89ce99fbc0f07a76d3f4d035783af3a658251709140ff9de3d5",
+    "excerpt": "74:         goal = info.get('goal')\n75:         goal_frame = info.get('goal_rendered')\n76:         done = False\n77:         step = 0\n78:         render = []\n79:         while not done:\n80:             action = actor_fn(observations=observation, goals=goal, temperature=eval_temperature)\n81:             action = np.array(action)\n82:             if not config.get('discrete'):\n83:                 if eval_gaussian is not None:\n84:                     action = np.random.normal(action, eval_gaussian)\n85:                 action = np.clip(action, -1, 1)\n86: \n87:             next_observation, reward, terminated, truncated, info = env.step(action)\n88:             done = terminated or truncated\n89:             step += 1\n90: "
+  },
+  "ogbench:ogbench/manipspace/envs/env.py:200-206": {
+    "repo": "ogbench",
+    "path": "ogbench/manipspace/envs/env.py",
+    "start": 200,
+    "end": 206,
+    "url": "https://github.com/seohongpark/ogbench/blob/a977253ce5b88434f4e4f531c50047cc95993a51/ogbench/manipspace/envs/env.py#L200-L206",
+    "sha256": "c656f4733a1ad4cb07289bc58ac1ac0f7da378e1f2714dc80a5ed8c0b3028c38",
+    "excerpt": "200:             self.compile_model_and_data()\n201:             self._never_compiled = False\n202:         else:\n203:             mujoco.mj_resetData(self._model, self._data)\n204:             mujoco.mj_forward(self._model, self._data)\n205:         self._reset_next_step = False\n206:         self.initialize_episode()"
+  },
+  "gymnasium:gymnasium/vector/sync_vector_env.py:78-95": {
+    "repo": "gymnasium",
+    "path": "gymnasium/vector/sync_vector_env.py",
+    "start": 78,
+    "end": 95,
+    "url": "https://github.com/Farama-Foundation/Gymnasium/blob/8b22ad4a6eeb55a67973d8143dec888efdc1660e/gymnasium/vector/sync_vector_env.py#L78-L95",
+    "sha256": "57d20351383e5376b700a742309176a01e392642acb74c935b3a568987079805",
+    "excerpt": "78: \n79:     def __init__(\n80:         self,\n81:         env_fns: Sequence[Callable[[], Env]],\n82:         copy: bool = True,\n83:         observation_mode: str | tuple[Space, Space] = \"same\",\n84:         autoreset_mode: str | AutoresetMode = AutoresetMode.NEXT_STEP,\n85:     ) -> None:\n86:         \"\"\"Vectorized environment that serially runs multiple environments.\n87: \n88:         Args:\n89:             env_fns: iterable of callable functions that create the environments.\n90:             copy: If ``True``, then the :meth:`reset` and :meth:`step` methods return a copy of the observations.\n91:             observation_mode: Defines how environment observation spaces should be batched. 'same' defines that there should be ``n`` copies of identical spaces.\n92:                 'different' defines that there can be multiple observation spaces with the same length but different high/low values batched together. Passing a ``Space`` object\n93:                 allows the user to set some custom observation space mode not covered by 'same' or 'different.'\n94:             autoreset_mode: The Autoreset Mode used, see https://farama.org/Vector-Autoreset-Mode for more information.\n95: "
+  },
+  "gymnasium:gymnasium/vector/async_vector_env.py:132-143": {
+    "repo": "gymnasium",
+    "path": "gymnasium/vector/async_vector_env.py",
+    "start": 132,
+    "end": 143,
+    "url": "https://github.com/Farama-Foundation/Gymnasium/blob/8b22ad4a6eeb55a67973d8143dec888efdc1660e/gymnasium/vector/async_vector_env.py#L132-L143",
+    "sha256": "8eecd09ee1312b463b7f2e3329c2b2733492fedf72f2605cead7782ec004e632",
+    "excerpt": "132:             Callable[\n133:                 [int, Callable[[], Env], Connection, Connection, bool, Queue], None\n134:             ]\n135:             | None\n136:         ) = None,\n137:         observation_mode: str | Space = \"same\",\n138:         autoreset_mode: str | AutoresetMode = AutoresetMode.NEXT_STEP,\n139:         max_concurrency: int | None = None,\n140:     ) -> None:\n141:         \"\"\"Vectorized environment that runs multiple environments in parallel.\n142: \n143:         Args:"
+  },
+  "gymnasium:gymnasium/vector/sync_vector_env.py:290-339": {
+    "repo": "gymnasium",
+    "path": "gymnasium/vector/sync_vector_env.py",
+    "start": 290,
+    "end": 339,
+    "url": "https://github.com/Farama-Foundation/Gymnasium/blob/8b22ad4a6eeb55a67973d8143dec888efdc1660e/gymnasium/vector/sync_vector_env.py#L290-L339",
+    "sha256": "57d20351383e5376b700a742309176a01e392642acb74c935b3a568987079805",
+    "excerpt": "290: \n291:         infos = {}\n292:         for i, (action, _) in enumerate(zip(actions_iter, self.envs, strict=True)):\n293:             if self.autoreset_mode == AutoresetMode.NEXT_STEP:\n294:                 if self._autoreset_envs[i]:\n295:                     self._env_obs[i], env_info = self.envs[i].reset()\n296: \n297:                     self._rewards[i] = 0.0\n298:                     self._terminations[i] = False\n299:                     self._truncations[i] = False\n300:                 else:\n301:                     (\n302:                         self._env_obs[i],\n303:                         self._rewards[i],\n304:                         self._terminations[i],\n305:                         self._truncations[i],\n306:                         env_info,\n307:                     ) = self.envs[i].step(action)\n308:             elif self.autoreset_mode == AutoresetMode.DISABLED:\n309:                 # assumes that the user has correctly autoreset\n310:                 assert not self._autoreset_envs[i], f\"{self._autoreset_envs=}\"\n311:                 (\n312:                     self._env_obs[i],\n313:                     self._rewards[i],\n314:                     self._terminations[i],\n315:                     self._truncations[i],\n316:                     env_info,\n317:                 ) = self.envs[i].step(action)\n318:             elif self.autoreset_mode == AutoresetMode.SAME_STEP:\n319:                 (\n320:                     self._env_obs[i],\n321:                     self._rewards[i],\n322:                     self._terminations[i],\n323:                     self._truncations[i],\n324:                     env_info,\n325:                 ) = self.envs[i].step(action)\n326: \n327:                 if self._terminations[i] or self._truncations[i]:\n328:                     infos = self._add_info(\n329:                         infos,\n330:                         {\"final_obs\": self._env_obs[i], \"final_info\": env_info},\n331:                         i,\n332:                     )\n333: \n334:                     self._env_obs[i], env_info = self.envs[i].reset()\n335:             else:\n336:                 raise ValueError(f\"Unexpected autoreset mode, {self.autoreset_mode}\")\n337: \n338:             infos = self._add_info(infos, env_info, i)\n339: "
+  }
+}

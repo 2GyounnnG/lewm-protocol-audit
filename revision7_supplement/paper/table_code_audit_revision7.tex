@@ -1,0 +1,18 @@
+\begin{table}[p]\centering\scriptsize
+\caption{Static continuation audit at pinned source versions. T: success can terminate; R: reset behavior; E: evaluation flow; H: boundary handling. Commits, exact paths, line ranges, and dependency qualifications for all 22 audit entries are supplied in the materials. The rows describe code paths, not measured errors in source-paper scores.}\label{tab:code-audit-r7}
+\begin{tabularx}{\linewidth}{p{0.21\linewidth}XXXX}\toprule
+Source/path & T & R & E & H\\\midrule
+stable-worldmodel 63988116 and main: Reacher, PushT, TwoRoom, Cube & Yes; Cube depends on ManipSpace & World auto resets; Reacher also has inner reset & Dataset evaluation defaults to wait & Completed slots frozen\\
+Other dm\_control wrappers & No shared success hook & Internal LAST resets next step & World sees outer flags & Not all internal LAST flags forwarded\\
+stable-worldmodel 0.0.6 & Reacher qpos match terminates & Inner reset independent of vector bit & Fixed budget & Clears only vector autoreset bit\\
+LeWM current eval & Dependency-defined & Dependency-defined & Calls World dataset evaluate & Default wait with audited modern World\\
+AP original entry & Reacher explicit predicate & Underlying dm\_control reset possible & Stops on success or done & Checks every primitive action\\
+Fast-LeWM / AD-WM & Pinned 0.0.6 tasks & Inner reset remains possible & Fixed-budget loops & Clear only outer vector bit\\
+DINO-WM PushT path & Success does not set done & No reset in traced rollout & Executes action sequence & No success-termination premise\\
+TD-MPC2 dm\_control & Task-dependent & Internal LAST resets next step & Outer timeout & Does not forward inner LAST\\
+DreamerV3 dm\_control & Native LAST/discount & Reset request or prior done & Episode driver & Explicit first/last/terminal labels\\
+Meta-World & Optional success termination & Benchmark vector SAME\_STEP & Evaluation enables success termination & Uses dones and final\_info\\
+OGBench ManipSpace & Default terminate-at-goal & No terminal-triggered pending reset in traced single-env step & Evaluation stops on done & Explicit next-episode reset\\
+Gymnasium vector envs & Subenvironment-defined & Default NEXT\_STEP & Caller-defined & Mode and final-observation handling required\\
+PPWM & \multicolumn{4}{l}{Author public code not found in the documented search.}\\\bottomrule
+\end{tabularx}\end{table}

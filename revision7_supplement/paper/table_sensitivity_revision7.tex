@@ -1,0 +1,26 @@
+\begin{table}[p]\centering\scriptsize
+\caption{Threshold and window sensitivity. Paired differences in percentage points with case-bootstrap 95\% intervals (5,000 draws, common indices). Reacher uses recomputed END predicates; PushT retains its saved predicate because physical states were not saved. F denotes final-step success; columns 5--20 give all-$K$ or mean-$K$ occupancy.}\label{tab:sensitivity-r7}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrr}\toprule
+Comparison / threshold & Metric & $K=5$ & $K=10$ & $K=15$ & $K=20$\\\midrule
+Reacher h3--AP / .03 & F & \multicolumn{4}{c}{+24.67 [15.00, 34.33]}\\
+ & All & -4.33 [-7.33, -1.67] & -0.67 [-1.67, 0.00] & +0.00 [0.00, 0.00] & +0.00 [0.00, 0.00]\\
+ & Mean & -5.87 [-10.07, -1.47] & -15.43 [-18.83, -11.90] & -17.33 [-20.27, -14.33] & -18.00 [-20.65, -15.28]\\
+\addlinespace
+Reacher h3--AP / .05 & F & \multicolumn{4}{c}{+19.67 [12.33, 27.33]}\\
+ & All & -21.33 [-27.67, -15.33] & -10.33 [-14.33, -6.67] & -5.67 [-8.67, -3.00] & -2.33 [-4.00, -1.00]\\
+ & Mean & -19.40 [-24.73, -14.00] & -33.33 [-37.80, -28.80] & -37.20 [-41.36, -33.07] & -37.70 [-41.40, -33.95]\\
+\addlinespace
+Reacher h3--AP / .08 & F & \multicolumn{4}{c}{+8.00 [4.00, 12.00]}\\
+ & All & -43.67 [-51.00, -36.33] & -51.67 [-58.01, -45.00] & -39.00 [-45.33, -32.67] & -26.00 [-31.67, -20.33]\\
+ & Mean & -23.93 [-28.53, -19.40] & -43.13 [-47.40, -38.77] & -49.91 [-54.13, -45.60] & -51.25 [-55.30, -47.05]\\
+\addlinespace
+PushT AP--h1 / 20 & F & \multicolumn{4}{c}{-21.67 [-31.33, -11.67]}\\
+ & All & +17.33 [8.33, 26.67] & +25.33 [17.33, 33.33] & +23.67 [16.33, 31.33] & +21.33 [14.67, 28.67]\\
+ & Mean & +5.40 [-3.00, 13.60] & +22.73 [14.63, 30.57] & +28.36 [20.60, 36.09] & +31.57 [23.93, 39.28]\\
+\addlinespace
+PushT Fast--h1 / 20 & F & \multicolumn{4}{c}{+24.00 [16.67, 31.33]}\\
+ & All & +18.00 [11.33, 25.00] & +11.00 [6.67, 16.00] & +7.00 [3.67, 10.67] & +7.00 [3.67, 10.67]\\
+ & Mean & +23.00 [16.93, 29.20] & +18.80 [13.83, 23.97] & +16.58 [11.93, 21.38] & +16.50 [11.73, 21.47]\\
+\addlinespace
+\bottomrule\end{tabular}\end{table}

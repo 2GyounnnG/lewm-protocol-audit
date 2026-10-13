@@ -1,0 +1,106 @@
+[
+  {
+    "name": "stable_worldmodel_main",
+    "url": "https://github.com/galilai-group/stable-worldmodel.git",
+    "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+    "utc": "2026-10-13T23:10:10.218598+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/stable_worldmodel_main"
+  },
+  {
+    "name": "stable_worldmodel_63988116",
+    "url": "https://github.com/galilai-group/stable-worldmodel.git",
+    "commit": "63988116d34cde56aea1240d5e58eb158ac67dc0",
+    "utc": "2026-10-13T23:09:56.358674+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/stable_worldmodel_63988116"
+  },
+  {
+    "name": "lewm",
+    "url": "https://github.com/lucas-maes/le-wm.git",
+    "commit": "8edfeb336732b5f3ce7b8b210d0ba370a09e2cac",
+    "utc": "2026-10-13T23:09:52.066610+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/lewm"
+  },
+  {
+    "name": "ap",
+    "url": "https://github.com/daybraeklaxry/Aim-Short-to-Reach-Far.git",
+    "commit": "984327424ca7a2e52c75a8279197750d9d0b7c8e",
+    "utc": "2026-10-13T23:09:53.649543+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/ap"
+  },
+  {
+    "name": "adwm",
+    "url": "https://github.com/ad-wm/ad-wm-code.git",
+    "commit": "7c27ebfdc4a2ba8e5a16268f2e4aa852fda72144",
+    "utc": "2026-10-13T23:09:53.399417+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/adwm"
+  },
+  {
+    "name": "fast_lewm",
+    "url": "https://github.com/Yuntian-Gao/Fast-LeWorldModel.git",
+    "commit": "2fc3bcafa4396804b0a747878dfe0ebcf14b3fcd",
+    "utc": "2026-10-13T23:09:54.673423+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/fast_lewm"
+  },
+  {
+    "name": "dino_wm",
+    "url": "https://github.com/gaoyuezhou/dino_wm.git",
+    "commit": "0a9492fa12044b852ae9e001cc74604b79c8bb0c",
+    "utc": "2026-10-13T23:09:55.420557+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/dino_wm"
+  },
+  {
+    "name": "tdmpc2",
+    "url": "https://github.com/nicklashansen/tdmpc2.git",
+    "commit": "e9f59321933cbc8e11a002b842adc7d4ffae8ff1",
+    "utc": "2026-10-13T23:09:56.049726+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/tdmpc2"
+  },
+  {
+    "name": "dreamerv3",
+    "url": "https://github.com/danijar/dreamerv3.git",
+    "commit": "e01491fad6434b2245a3b8ca201dd7faedcc458c",
+    "utc": "2026-10-13T23:09:56.652206+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/dreamerv3"
+  },
+  {
+    "name": "metaworld",
+    "url": "https://github.com/Farama-Foundation/Metaworld.git",
+    "commit": "c0dafaf1557f31cad3b96ba2b62462f45638f5a5",
+    "utc": "2026-10-13T23:10:13.276326+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/metaworld"
+  },
+  {
+    "name": "ogbench",
+    "url": "https://github.com/seohongpark/ogbench.git",
+    "commit": "a977253ce5b88434f4e4f531c50047cc95993a51",
+    "utc": "2026-10-13T23:09:58.064361+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/ogbench"
+  },
+  {
+    "name": "gymnasium",
+    "url": "https://github.com/Farama-Foundation/Gymnasium.git",
+    "commit": "8b22ad4a6eeb55a67973d8143dec888efdc1660e",
+    "utc": "2026-10-13T23:10:04.304140+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/gymnasium"
+  },
+  {
+    "name": "dm_control",
+    "url": "https://github.com/google-deepmind/dm_control.git",
+    "commit": "c22ec28159c541c8c6b6546cd56d41dcaf7fb33b",
+    "utc": "2026-10-13T23:10:04.439194+00:00",
+    "status": "CLONED_STATIC_ONLY",
+    "path": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/B/repos/dm_control"
+  }
+]

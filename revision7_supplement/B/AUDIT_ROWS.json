@@ -1,0 +1,582 @@
+[
+  {
+    "name": "stable_worldmodel_63988116 / Reacher qpos_match",
+    "repository": "stable_worldmodel_63988116",
+    "commit": "63988116d34cde56aea1240d5e58eb158ac67dc0",
+    "q1_success_terminates": "是：每关节误差阈值触发 dm_control LAST",
+    "q2_autoreset": "EnvPool 无隐式 reset；World auto 模式显式 reset；Reacher 另有 dm_control 内层自动 reset。",
+    "q3_eval_flow": "dataset evaluate 默认 wait：每个 done 槽冻结，未结束槽继续。",
+    "q4_termination_handling": "wait 屏蔽已结束槽；auto 是新 episode，不可当同条物理轨迹。",
+    "evidence": [
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/env_pool.py:118-142",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "仅外层清终止而绕过 wait 的续跑不充分；Reacher 必须同时处理内层终止。"
+  },
+  {
+    "name": "stable_worldmodel_63988116 / PushT",
+    "repository": "stable_worldmodel_63988116",
+    "commit": "63988116d34cde56aea1240d5e58eb158ac67dc0",
+    "q1_success_terminates": "是：位置与角度联合判据",
+    "q2_autoreset": "EnvPool 无隐式 reset；World auto 模式显式 reset；Reacher 另有 dm_control 内层自动 reset。",
+    "q3_eval_flow": "dataset evaluate 默认 wait：每个 done 槽冻结，未结束槽继续。",
+    "q4_termination_handling": "wait 屏蔽已结束槽；auto 是新 episode，不可当同条物理轨迹。",
+    "evidence": [
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/envs/pusht/env.py:318-372"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/env_pool.py:118-142",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "仅外层清终止而绕过 wait 的续跑不充分；Reacher 必须同时处理内层终止。"
+  },
+  {
+    "name": "stable_worldmodel_63988116 / TwoRoom",
+    "repository": "stable_worldmodel_63988116",
+    "commit": "63988116d34cde56aea1240d5e58eb158ac67dc0",
+    "q1_success_terminates": "是：距离小于16",
+    "q2_autoreset": "EnvPool 无隐式 reset；World auto 模式显式 reset；Reacher 另有 dm_control 内层自动 reset。",
+    "q3_eval_flow": "dataset evaluate 默认 wait：每个 done 槽冻结，未结束槽继续。",
+    "q4_termination_handling": "wait 屏蔽已结束槽；auto 是新 episode，不可当同条物理轨迹。",
+    "evidence": [
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/envs/two_room/env.py:262-280"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/env_pool.py:118-142",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "仅外层清终止而绕过 wait 的续跑不充分；Reacher 必须同时处理内层终止。"
+  },
+  {
+    "name": "stable_worldmodel_63988116 / Cube",
+    "repository": "stable_worldmodel_63988116",
+    "commit": "63988116d34cde56aea1240d5e58eb158ac67dc0",
+    "q1_success_terminates": "默认依赖 OGBench terminate_at_goal；Cube 继承 ManipSpaceEnv",
+    "q2_autoreset": "EnvPool 无隐式 reset；World auto 模式显式 reset；Reacher 另有 dm_control 内层自动 reset。",
+    "q3_eval_flow": "dataset evaluate 默认 wait：每个 done 槽冻结，未结束槽继续。",
+    "q4_termination_handling": "wait 屏蔽已结束槽；auto 是新 episode，不可当同条物理轨迹。",
+    "evidence": [
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/envs/ogbench/cube_env.py:34-53",
+        "ogbench:ogbench/manipspace/envs/manipspace_env.py:20-49",
+        "ogbench:ogbench/manipspace/envs/manipspace_env.py:496-501"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/env_pool.py:118-142",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "仅外层清终止而绕过 wait 的续跑不充分；Reacher 必须同时处理内层终止。"
+  },
+  {
+    "name": "stable_worldmodel_63988116 / 其余 dm_control 包装",
+    "repository": "stable_worldmodel_63988116",
+    "commit": "63988116d34cde56aea1240d5e58eb158ac67dc0",
+    "q1_success_terminates": "所列 acrobot, ball_in_cup, cartpole, cheetah, finger, hopper, humanoid, manipulator, pendulum, quadruped, walker 不覆写基类成功终止钩子；返回 False。",
+    "q2_autoreset": "dm_control 在内部 LAST（含时间上限）后下一步 reset。",
+    "q3_eval_flow": "默认 World wait 只看到外层 flags；基类 step 不把所有 dm_control LAST 向上传递。",
+    "q4_termination_handling": "没有额外成功终止需要清除；跨底层时间上限仍须检测内部 LAST。",
+    "evidence": [
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/envs/dmcontrol/dmcontrol.py:98-127"
+      ],
+      [
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/envs/dmcontrol/dmcontrol.py:98-127",
+        "stable_worldmodel_63988116:stable_worldmodel/world/world.py:210-250"
+      ],
+      [
+        "stable_worldmodel_63988116:stable_worldmodel/envs/dmcontrol/dmcontrol.py:98-127",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ]
+    ],
+    "interpretation": "不能把 qpos_match 特例推广为所有 dm_control 成功任务；同时不保证任意长预算跨时间上限连续。"
+  },
+  {
+    "name": "stable_worldmodel_main / Reacher qpos_match",
+    "repository": "stable_worldmodel_main",
+    "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+    "q1_success_terminates": "是：每关节误差阈值触发 dm_control LAST",
+    "q2_autoreset": "EnvPool 无隐式 reset；World auto 模式显式 reset；Reacher 另有 dm_control 内层自动 reset。",
+    "q3_eval_flow": "dataset evaluate 默认 wait：每个 done 槽冻结，未结束槽继续。",
+    "q4_termination_handling": "wait 屏蔽已结束槽；auto 是新 episode，不可当同条物理轨迹。",
+    "evidence": [
+      [
+        "stable_worldmodel_main:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/env_pool.py:118-142",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "仅外层清终止而绕过 wait 的续跑不充分；Reacher 必须同时处理内层终止。"
+  },
+  {
+    "name": "stable_worldmodel_main / PushT",
+    "repository": "stable_worldmodel_main",
+    "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+    "q1_success_terminates": "是：位置与角度联合判据",
+    "q2_autoreset": "EnvPool 无隐式 reset；World auto 模式显式 reset；Reacher 另有 dm_control 内层自动 reset。",
+    "q3_eval_flow": "dataset evaluate 默认 wait：每个 done 槽冻结，未结束槽继续。",
+    "q4_termination_handling": "wait 屏蔽已结束槽；auto 是新 episode，不可当同条物理轨迹。",
+    "evidence": [
+      [
+        "stable_worldmodel_main:stable_worldmodel/envs/pusht/env.py:318-372"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/env_pool.py:118-142",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "仅外层清终止而绕过 wait 的续跑不充分；Reacher 必须同时处理内层终止。"
+  },
+  {
+    "name": "stable_worldmodel_main / TwoRoom",
+    "repository": "stable_worldmodel_main",
+    "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+    "q1_success_terminates": "是：距离小于16",
+    "q2_autoreset": "EnvPool 无隐式 reset；World auto 模式显式 reset；Reacher 另有 dm_control 内层自动 reset。",
+    "q3_eval_flow": "dataset evaluate 默认 wait：每个 done 槽冻结，未结束槽继续。",
+    "q4_termination_handling": "wait 屏蔽已结束槽；auto 是新 episode，不可当同条物理轨迹。",
+    "evidence": [
+      [
+        "stable_worldmodel_main:stable_worldmodel/envs/two_room/env.py:262-280"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/env_pool.py:118-142",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "仅外层清终止而绕过 wait 的续跑不充分；Reacher 必须同时处理内层终止。"
+  },
+  {
+    "name": "stable_worldmodel_main / Cube",
+    "repository": "stable_worldmodel_main",
+    "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+    "q1_success_terminates": "默认依赖 OGBench terminate_at_goal；Cube 继承 ManipSpaceEnv",
+    "q2_autoreset": "EnvPool 无隐式 reset；World auto 模式显式 reset；Reacher 另有 dm_control 内层自动 reset。",
+    "q3_eval_flow": "dataset evaluate 默认 wait：每个 done 槽冻结，未结束槽继续。",
+    "q4_termination_handling": "wait 屏蔽已结束槽；auto 是新 episode，不可当同条物理轨迹。",
+    "evidence": [
+      [
+        "stable_worldmodel_main:stable_worldmodel/envs/ogbench/cube_env.py:34-53",
+        "ogbench:ogbench/manipspace/envs/manipspace_env.py:20-49",
+        "ogbench:ogbench/manipspace/envs/manipspace_env.py:496-501"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/env_pool.py:118-142",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "仅外层清终止而绕过 wait 的续跑不充分；Reacher 必须同时处理内层终止。"
+  },
+  {
+    "name": "stable_worldmodel_main / 其余 dm_control 包装",
+    "repository": "stable_worldmodel_main",
+    "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+    "q1_success_terminates": "所列 acrobot, ball_in_cup, cartpole, cheetah, finger, hopper, humanoid, manipulator, pendulum, quadruped, walker 不覆写基类成功终止钩子；返回 False。",
+    "q2_autoreset": "dm_control 在内部 LAST（含时间上限）后下一步 reset。",
+    "q3_eval_flow": "默认 World wait 只看到外层 flags；基类 step 不把所有 dm_control LAST 向上传递。",
+    "q4_termination_handling": "没有额外成功终止需要清除；跨底层时间上限仍须检测内部 LAST。",
+    "evidence": [
+      [
+        "stable_worldmodel_main:stable_worldmodel/envs/dmcontrol/dmcontrol.py:98-127"
+      ],
+      [
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/envs/dmcontrol/dmcontrol.py:98-127",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:210-250"
+      ],
+      [
+        "stable_worldmodel_main:stable_worldmodel/envs/dmcontrol/dmcontrol.py:98-127",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ]
+    ],
+    "interpretation": "不能把 qpos_match 特例推广为所有 dm_control 成功任务；同时不保证任意长预算跨时间上限连续。"
+  },
+  {
+    "name": "stable-worldmodel 0.0.6（依赖追溯）",
+    "repository": "swm006",
+    "commit": "PyPI 0.0.6 wheel SHA / see manifest",
+    "q1_success_terminates": "qpos_match 内部成功终止；其他四任务沿各环境定义。",
+    "q2_autoreset": "外层向量 reset 位被清零；内层 dm_control reset 状态独立存在。",
+    "q3_eval_flow": "evaluate_from_dataset 跑完整 eval_budget，累计 success OR。",
+    "q4_termination_handling": "仅清外层 _autoreset_envs；没有在该循环清内层终止。",
+    "evidence": [
+      [
+        "swm006:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33"
+      ],
+      [
+        "swm006:stable_worldmodel/world.py:950-965",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "swm006:stable_worldmodel/world.py:950-965"
+      ],
+      [
+        "swm006:stable_worldmodel/world.py:950-965",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ]
+    ],
+    "interpretation": "在 qpos_match 成功后继续调用时，具有内部 reset 的静态风险；这不是对文献数字的错误判定。"
+  },
+  {
+    "name": "LeWM 最新 eval",
+    "repository": "lewm",
+    "commit": "8edfeb336732b5f3ce7b8b210d0ba370a09e2cac",
+    "q1_success_terminates": "由所装 stable-worldmodel 的任务定义决定。",
+    "q2_autoreset": "由所装依赖及 reset_mode 决定。",
+    "q3_eval_flow": "调用 world.evaluate(dataset=...)；未显式覆盖 reset_mode。",
+    "q4_termination_handling": "与本次审计的 World 默认 wait 配对时终止槽冻结。",
+    "evidence": [
+      [
+        "lewm:eval.py:136-152",
+        "stable_worldmodel_main:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33"
+      ],
+      [
+        "lewm:eval.py:136-152",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:210-250"
+      ],
+      [
+        "lewm:eval.py:136-152"
+      ],
+      [
+        "lewm:eval.py:136-152",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:210-250",
+        "stable_worldmodel_main:stable_worldmodel/world/world.py:430-480"
+      ]
+    ],
+    "interpretation": "调用链与现代 World wait 保持 episode 边界；不可套用旧 0.0.6 evaluate_from_dataset 的实现。"
+  },
+  {
+    "name": "AP 原版 anchored_planning",
+    "repository": "ap",
+    "commit": "984327424ca7a2e52c75a8279197750d9d0b7c8e",
+    "q1_success_terminates": "Reacher 显式检查 qpos；同时读取 terminated/truncated。",
+    "q2_autoreset": "单环境逐步调用；依赖的 dm_control 有 LAST 后自动 reset。",
+    "q3_eval_flow": "while not success and not stopped；每个 primitive 后即检查并 break。",
+    "q4_termination_handling": "停止成功及非成功 termination，不把下一 episode 接到当前 case。",
+    "evidence": [
+      [
+        "ap:code/ap/anchored_planning/environments.py:116-126",
+        "ap:code/ap/anchored_planning/runtime.py:240-284"
+      ],
+      [
+        "ap:code/ap/anchored_planning/runtime.py:240-284",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "ap:code/ap/anchored_planning/runtime.py:240-284"
+      ],
+      [
+        "ap:code/ap/anchored_planning/runtime.py:240-284"
+      ]
+    ],
+    "interpretation": "原版这一评测入口没有成功后续跑段。"
+  },
+  {
+    "name": "Fast-LeWM eval",
+    "repository": "fast_lewm",
+    "commit": "2fc3bcafa4396804b0a747878dfe0ebcf14b3fcd",
+    "q1_success_terminates": "由 pin 的 stable-worldmodel 0.0.6 任务决定。",
+    "q2_autoreset": "0.0.6 外层 vector reset 位被清零，内层 dm_control 未因此禁用。",
+    "q3_eval_flow": "调用 evaluate_from_dataset，固定预算循环。",
+    "q4_termination_handling": "继承 0.0.6 清外层位做法，未在入口另改内部终止。",
+    "evidence": [
+      [
+        "fast_lewm:requirements.txt:1-12",
+        "swm006:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33"
+      ],
+      [
+        "swm006:stable_worldmodel/world.py:950-965",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "fast_lewm:eval.py:390-408",
+        "swm006:stable_worldmodel/world.py:950-965"
+      ],
+      [
+        "fast_lewm:eval.py:390-408",
+        "swm006:stable_worldmodel/world.py:950-965"
+      ]
+    ],
+    "interpretation": "与 qpos_match 内部成功终止组合时，固定预算轨迹存在边界处理风险；静态审计不重判已发表成功率。"
+  },
+  {
+    "name": "AD-WM eval",
+    "repository": "adwm",
+    "commit": "7c27ebfdc4a2ba8e5a16268f2e4aa852fda72144",
+    "q1_success_terminates": "依赖 stable-worldmodel 0.0.6 任务定义。",
+    "q2_autoreset": "外层 _autoreset_envs 清零；不等于消除 dm_control 内部 reset。",
+    "q3_eval_flow": "for eval_budget 调 world.step 并累计 terminated OR。",
+    "q4_termination_handling": "该循环只清外层向量 reset 位。",
+    "evidence": [
+      [
+        "adwm:requirements.txt:1-14",
+        "swm006:stable_worldmodel/envs/dmcontrol/custom_tasks/reacher.py:7-33"
+      ],
+      [
+        "adwm:eval.py:1329-1351",
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "adwm:eval.py:1329-1351"
+      ],
+      [
+        "adwm:eval.py:1329-1351"
+      ]
+    ],
+    "interpretation": "内部成功终止任务若继续取样，需单独处理内层边界。"
+  },
+  {
+    "name": "DINO-WM（追踪 PushT 路径）",
+    "repository": "dino_wm",
+    "commit": "0a9492fa12044b852ae9e001cc74604b79c8bb0c",
+    "q1_success_terminates": "PushT done 被显式置 False，成功另由 eval_state 计算。",
+    "q2_autoreset": "该 step_multiple/rollout 路径不调用 autoreset。",
+    "q3_eval_flow": "执行给定动作序列后计算 rollout 指标。",
+    "q4_termination_handling": "虽不按 done 截断，但此 PushT 底层没有成功终止。",
+    "evidence": [
+      [
+        "dino_wm:env/pusht/pusht_env.py:506-537"
+      ],
+      [
+        "dino_wm:env/pusht/pusht_wrapper.py:84-119"
+      ],
+      [
+        "dino_wm:planning/evaluator.py:111-127",
+        "dino_wm:env/pusht/pusht_wrapper.py:84-119"
+      ],
+      [
+        "dino_wm:env/pusht/pusht_wrapper.py:84-119",
+        "dino_wm:env/pusht/pusht_env.py:506-537"
+      ]
+    ],
+    "interpretation": "被追踪的 PushT 路径不具备成功终止引起自动 reset 的前提；其他环境需各自追踪。"
+  },
+  {
+    "name": "TD-MPC2 dm_control",
+    "repository": "tdmpc2",
+    "commit": "e9f59321933cbc8e11a002b842adc7d4ffae8ff1",
+    "q1_success_terminates": "没有统一 success→termination 钩子；奖励任务由 suite 定义。",
+    "q2_autoreset": "底层 dm_control 在 LAST 后下一步 reset。",
+    "q3_eval_flow": "每 action 两个 dm 步，外层返回 done=False；Timeout 限制 episode。",
+    "q4_termination_handling": "evaluate while not done；包装不转发内部 LAST，应检查任务是否会提前 LAST。",
+    "evidence": [
+      [
+        "tdmpc2:tdmpc2/envs/dmcontrol.py:50-61",
+        "tdmpc2:tdmpc2/envs/dmcontrol.py:96-110"
+      ],
+      [
+        "dm_control:dm_control/rl/control.py:98-129"
+      ],
+      [
+        "tdmpc2:tdmpc2/envs/dmcontrol.py:50-61",
+        "tdmpc2:tdmpc2/envs/dmcontrol.py:96-110",
+        "tdmpc2:tdmpc2/evaluate.py:74-88"
+      ],
+      [
+        "tdmpc2:tdmpc2/envs/dmcontrol.py:50-61",
+        "tdmpc2:tdmpc2/evaluate.py:74-88"
+      ]
+    ],
+    "interpretation": "在常规固定时限 reward 任务和另加提前终止任务之间需区分；不能从外层 False 推断物理连续。"
+  },
+  {
+    "name": "DreamerV3 dm_control",
+    "repository": "dreamerv3",
+    "commit": "e01491fad6434b2245a3b8ca201dd7faedcc458c",
+    "q1_success_terminates": "使用 native dm_control LAST/discount，不把所有奖励成功一概当终止。",
+    "q2_autoreset": "FromDM 在 reset 请求或 _done 时 reset。",
+    "q3_eval_flow": "driver 将 is_last 转为下一步 reset；以 episode 为单位推进。",
+    "q4_termination_handling": "显式 is_first/is_last/is_terminal；ActionRepeat 遇终止 break。",
+    "evidence": [
+      [
+        "dreamerv3:embodied/envs/from_dm.py:51-77"
+      ],
+      [
+        "dreamerv3:embodied/envs/from_dm.py:51-77"
+      ],
+      [
+        "dreamerv3:embodied/core/driver.py:67-82"
+      ],
+      [
+        "dreamerv3:embodied/envs/from_dm.py:51-77",
+        "dreamerv3:embodied/core/driver.py:67-82",
+        "dreamerv3:embodied/core/wrappers.py:63-73"
+      ]
+    ],
+    "interpretation": "记录边界后重开 episode，不把它宣称为同条成功后连续轨迹。"
+  },
+  {
+    "name": "Meta-World 基类与评测包装",
+    "repository": "metaworld",
+    "commit": "c0dafaf1557f31cad3b96ba2b62462f45638f5a5",
+    "q1_success_terminates": "基类成功不终止；TerminateOnSuccess 开关可改为 success→terminated，evaluation 会打开。",
+    "q2_autoreset": "benchmark vector 默认 SAME_STEP。",
+    "q3_eval_flow": "评测在 dones 处分 episode，按 final_info 计成功。",
+    "q4_termination_handling": "agent.reset(dones)，使用 final_info 而非重置后的 obs。",
+    "evidence": [
+      [
+        "metaworld:metaworld/sawyer_xyz_env.py:629-643",
+        "metaworld:metaworld/wrappers.py:217-230",
+        "metaworld:metaworld/evaluation.py:53-83"
+      ],
+      [
+        "metaworld:metaworld/__init__.py:455-468"
+      ],
+      [
+        "metaworld:metaworld/evaluation.py:53-83"
+      ],
+      [
+        "metaworld:metaworld/evaluation.py:53-83"
+      ]
+    ],
+    "interpretation": "同一库的训练/评测开关不同；官方评测显式处理 episode 边界。"
+  },
+  {
+    "name": "OGBench ManipSpace/Cube",
+    "repository": "ogbench",
+    "commit": "a977253ce5b88434f4e4f531c50047cc95993a51",
+    "q1_success_terminates": "terminate_at_goal 默认 True，成功→terminated。",
+    "q2_autoreset": "该 step 有初始 pending-reset 分支；返回 terminated 本身未将 _reset_next_step 重新置 True；外层 vector 可另 reset。",
+    "q3_eval_flow": "官方 evaluate 到 terminated or truncated 即结束。",
+    "q4_termination_handling": "while not done，下一 episode 显式 reset。",
+    "evidence": [
+      [
+        "ogbench:ogbench/manipspace/envs/manipspace_env.py:496-501",
+        "ogbench:ogbench/manipspace/envs/manipspace_env.py:20-49"
+      ],
+      [
+        "ogbench:ogbench/manipspace/envs/manipspace_env.py:314-341",
+        "ogbench:ogbench/manipspace/envs/env.py:200-206"
+      ],
+      [
+        "ogbench:impls/utils/evaluation.py:74-90"
+      ],
+      [
+        "ogbench:impls/utils/evaluation.py:74-90"
+      ]
+    ],
+    "interpretation": "单环境返回 terminated 与外层自动 reset 不能混为一谈；原评测未忽略边界。"
+  },
+  {
+    "name": "Gymnasium Sync/AsyncVectorEnv",
+    "repository": "gymnasium",
+    "commit": "8b22ad4a6eeb55a67973d8143dec888efdc1660e",
+    "q1_success_terminates": "由子环境提供 flags，vector 不定义任务成功。",
+    "q2_autoreset": "两者默认 NEXT_STEP；可选 SAME_STEP 或 DISABLED。",
+    "q3_eval_flow": "通用接口，无固定评价循环。",
+    "q4_termination_handling": "NEXT_STEP 返回 reset obs；SAME_STEP 提供 final_obs/final_info；DISABLED 要求调用方管理 reset。",
+    "evidence": [
+      [
+        "gymnasium:gymnasium/vector/sync_vector_env.py:78-95"
+      ],
+      [
+        "gymnasium:gymnasium/vector/sync_vector_env.py:78-95",
+        "gymnasium:gymnasium/vector/async_vector_env.py:132-143",
+        "gymnasium:gymnasium/vector/sync_vector_env.py:290-339"
+      ],
+      [
+        "gymnasium:gymnasium/vector/sync_vector_env.py:290-339"
+      ],
+      [
+        "gymnasium:gymnasium/vector/sync_vector_env.py:290-339"
+      ]
+    ],
+    "interpretation": "连续轨迹消费者必须选对模式并保留边界；默认不是关闭自动重置。"
+  },
+  {
+    "name": "PPWM",
+    "repository": "NOT_FOUND",
+    "commit": null,
+    "q1_success_terminates": "未找到",
+    "q2_autoreset": "未找到",
+    "q3_eval_flow": "未找到",
+    "q4_termination_handling": "未找到",
+    "evidence": [
+      [],
+      [],
+      [],
+      []
+    ],
+    "interpretation": "已查 arXiv 摘要/HTML及按标题和作者的 GitHub 搜索，未找到可核实的作者公开代码。"
+  }
+]

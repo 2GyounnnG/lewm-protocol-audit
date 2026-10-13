@@ -1,0 +1,6 @@
+{
+  "cases/main128.json": "a79ef9f1a98edd41acc75e2950d80cec2c50049b095be03b1c15ade3762da539",
+  "cases/lewm_official_repro_source.csv": "66f78fd3f9a96751d2563a25bc8c233c7bc59db741e5a21b095ac294fbd8af22",
+  "protocol_main128/protocols/main.json": "37d44f5f2ab99bbdc52966254d3efd3fc9abe029bfbf84011d3a5ea5bf5d9ea1",
+  "protocol_main128/protocols/scalers.json": "623d70c2b5e1b4f61ea5f647e0d2c639daa3fbe77f229547e1c52ae6c8e3b02a"
+}
