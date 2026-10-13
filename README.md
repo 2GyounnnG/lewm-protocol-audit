@@ -1,6 +1,6 @@
 # LeWM protocol audit
 
-The complete audit records are deposited in a **Zenodo draft**, reserved DOI **[10.5281/zenodo.23350373](https://doi.org/10.5281/zenodo.23350373)**, under CC BY 4.0; the author will publish the draft before submission. The DOI may not resolve until publication. Audit code is MIT. This repository is the small-file code and summary mirror. It contains no manuscript, model weights or input datasets.
+The complete audit records are archived at Zenodo, DOI **[10.5281/zenodo.23350373](https://doi.org/10.5281/zenodo.23350373)**, under CC BY 4.0. Audit code is MIT. This repository is the small-file code and summary mirror. It contains no manuscript, model weights or input datasets.
 
 
 
