@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "rows_checked": 32,
+  "numbers_checked": 131,
+  "checks": [
+    {
+      "check": "rate LeWM one-frame",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "rate LeWM three-frame",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "rate Fast-LeWM",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "rate AP",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "rate AD-WM",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "invalid/corrected LeWM one-frame",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "invalid/corrected LeWM three-frame",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "invalid/corrected Fast-LeWM",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "invalid/corrected AP",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "invalid/corrected AD-WM",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "terminal LeWM one-frame",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "terminal LeWM three-frame",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "terminal Fast-LeWM",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "terminal AP",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "terminal AD-WM",
+      "numbers": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "window LeWM one-frame",
+      "numbers": 4,
+      "status": "PASS"
+    },
+    {
+      "check": "window LeWM three-frame",
+      "numbers": 4,
+      "status": "PASS"
+    },
+    {
+      "check": "window Fast-LeWM",
+      "numbers": 4,
+      "status": "PASS"
+    },
+    {
+      "check": "window AP",
+      "numbers": 4,
+      "status": "PASS"
+    },
+    {
+      "check": "window AD-WM",
+      "numbers": 4,
+      "status": "PASS"
+    },
+    {
+      "check": "prediction LeWM_h3 - LeWM_h1",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "prediction LeWM_h3 - M01_h1",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "prediction LeWM_h3 - M03_h1",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "prediction LeWM_h3 - M07_h1",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "A interval One",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "A interval Two",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "A interval Three",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "A interval Four",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "A interval Five",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "A interval Six",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "A interval Seven",
+      "numbers": 3,
+      "status": "PASS"
+    },
+    {
+      "check": "A interval Eight",
+      "numbers": 3,
+      "status": "PASS"
+    }
+  ],
+  "tolerance": "0.05 percentage points (one-decimal rendering), exact source float CSVs retained"
+}

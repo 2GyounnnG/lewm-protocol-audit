@@ -1,0 +1,20 @@
+--- code_frozen/step4_worker.py
++++ final_code/step4_worker_r3_final.py
+@@ -26,7 +26,7 @@
+ torch.set_num_threads(1);torch.set_num_interop_threads(1)
+ if a.model=='LeWM':
+  import h5py,hdf5plugin
+- from official_formal_v2 import build_model,run_case,records
++ from official_formal_v4_reacher import build_model,run_case,records
+  torch.set_float32_matmul_precision('highest');torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False;torch.backends.cudnn.benchmark=False
+  cases=json.loads((W/'cases/HELDOUT_CASES_V2.json').read_text())['tasks'][a.task][a.case_start:a.case_end] if a.phase=='FORMAL' else json.loads((W/f'cases/tech_{a.task}.json').read_text())
+  if a.case_index is not None:cases=[cases[a.case_index]]
+@@ -39,7 +39,7 @@
+ else:
+  assert a.iterations==30 and a.model in ('M01','M03','M07')
+  from types import SimpleNamespace
+- from method_formal_v1 import run
++ from method_formal_v3_reacher import run
+  assetname=(a.model+'_'+a.train_seed if a.model=='M07' else a.model)+'_'+a.task+'.json'
+  args=SimpleNamespace(**vars(a),method=a.model,assets=str(W/'asset_bindings'/assetname),cases=str(W/'cases/HELDOUT_CASES_V2.json'),
+     device='cuda:0',prereg_receipt=str(W/'FORMAL_LAUNCH_RECEIPT.json'))

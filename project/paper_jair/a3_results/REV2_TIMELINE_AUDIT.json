@@ -1,0 +1,73 @@
+{
+  "events": [
+    {
+      "event": "V1 preregistration",
+      "utc": "2026-10-11T21:05:48Z",
+      "document": "d1_execution/prereg/PREREG_D1_V1.md",
+      "sha256": "ab599de6bf9977a350f86e06df6a4822e962e3f3a64cb14550d10339f30a5a66"
+    },
+    {
+      "event": "V1.1 preregistration",
+      "utc": "2026-10-11T22:23:25Z",
+      "document": "d1_execution/prereg/PREREG_D1_V1_1.md",
+      "sha256": "1e2c0131650beab6829226bf717558e09a1ee9552e02625026b4a6dfabb6106f"
+    },
+    {
+      "event": "V1.2 preregistration",
+      "utc": "2026-10-12T01:51:38Z",
+      "document": "d1_execution/prereg/PREREG_D1_V1_2.md",
+      "sha256": "09235d12a4290db240f3d5c9ec6d22e08dcd8ada99f674ecd30ec1d937cc5f8f"
+    },
+    {
+      "event": "V2 follow-up preregistration",
+      "utc": "2026-10-12T15:29:30Z",
+      "document": "d1_execution/prereg/PREREG_D1_V2_FOLLOWUP.md",
+      "sha256": "924ed56ca54076b8d40925d7f57739157ae8fdc6ccecbc58d660581d45739e12"
+    },
+    {
+      "event": "Author scope revision before held-out results",
+      "utc": "2026-10-12T16:21:37.665763+00:00",
+      "document": "d1_execution/step4/AUTHOR_SCOPE_REVISION.json",
+      "sha256": "3b91dd0e5ddf1f0bb731d989c15b3d0941d4220fbaa45c6eac222f409043afc0"
+    },
+    {
+      "event": "Held-out scope clarification",
+      "utc": "2026-10-12T17:17:12.557896+00:00",
+      "document": "d1_execution/step4/HELDOUT_SCOPE_CLARIFICATION.json",
+      "sha256": "e492dda56dc3e745d3069006aa7d7a12962210d224fe3b56dd0d3c21930044cc"
+    },
+    {
+      "event": "Held-out case manifest sealed",
+      "utc": "2026-10-12T18:12:15.790699+00:00",
+      "document": "d1_execution/step4/resume_01/cases/HELDOUT_SEAL.json",
+      "sha256": "98cb9adf2093e60136686caf8bbeb90553d1a202f0d6a3cf0028b582d9319178",
+      "manifest_sha256": "edb17e175a0b8e4e00566c52e5409b2f887fd21013a779381222ee4307f041cd"
+    },
+    {
+      "event": "Formal run launch receipt",
+      "utc": "2026-10-12T18:58:57.462596+00:00",
+      "document": "d1_execution/step4/resume_01/FORMAL_LAUNCH_RECEIPT.json",
+      "sha256": "d9bb38d33a2bb2238dba3b5b4bc6b1161df518d63da316bb9ce050f992d19310"
+    },
+    {
+      "event": "Formal run / final return",
+      "utc": "2026-10-12T18:59:51.968689Z--2026-10-12T20:25:46.842875Z",
+      "document": "d1_execution/step4/resume_01/SEAL.json",
+      "sha256": "27ba4f42289374e621ed6028a4be95e24157f234bbdf1a1d649d92abf8a5dd90",
+      "return_manifest_sha256": "97baa9c8192881a63d3c06141b9a94859b0b5144c6f3d63c038a04746e3cf88e",
+      "return_archive_sha256": "bc9170910ff10a34bd990ecbed14025b58917b6d686177ca0c8e1e6f5012e4a7"
+    }
+  ],
+  "deviations": [
+    "PushT exact-start override withdrawn; all PushT unified-protocol conditions rerun with the native reset.",
+    "The 21 partial PushT conditions produced under the override were archived and excluded; the earlier 572 records were excluded from formal analyses.",
+    "The common-protocol A--C comparison is a post hoc stream-matched analysis.",
+    "Before held-out data existed, the replanning mechanism grid and the extra mechanism gate were removed, and M03/M07 three-frame conditions were removed; D4 CEM-10 versus CEM-30 was added descriptively.",
+    "Gate-1 fidelity evidence was reused only for the 14 unchanged adapter files; the unified environment was rebuilt."
+  ],
+  "sources": {
+    "step4_seal_sha256": "27ba4f42289374e621ed6028a4be95e24157f234bbdf1a1d649d92abf8a5dd90",
+    "launch_receipt_sha256": "d9bb38d33a2bb2238dba3b5b4bc6b1161df518d63da316bb9ce050f992d19310",
+    "heldout_seal_sha256": "98cb9adf2093e60136686caf8bbeb90553d1a202f0d6a3cf0028b582d9319178"
+  }
+}

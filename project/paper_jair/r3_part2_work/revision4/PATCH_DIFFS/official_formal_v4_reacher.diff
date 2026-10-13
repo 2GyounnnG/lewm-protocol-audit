@@ -1,0 +1,44 @@
+--- code_frozen/official_formal_v2.py
++++ final_code/official_formal_v4_reacher.py
+@@ -94,6 +94,7 @@
+  assert budget==50 or (phase=='TECH' and budget==1)
+  out=Path(out);out.mkdir(parents=True,exist_ok=False);dump(out/'STARTED.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),case=case,stream=stream,history=history,replan_raw=replan,success_mode=success_mode,cem_iterations=cem_iterations,model=identity,code_sha256=sha(__file__),phase=phase,condition_id=condition_id))
+  actions=[];observed=[];frames=[];plans=[];probes=[];successes=[];snapshot={};task=case['task'];sc=scaler(task);transform=image_transform();current=None
++ r3_tracker=None
+  class Cost(ShootingCostEvaluator):
+   def get_cost(self,info,candidates):
+    nonlocal current
+@@ -142,6 +143,9 @@
+  try:
+   offset=24 if variant=='offset' else 25
+   data=CaseData(hf,case,offset,variant=='goal');world=swm.World(**kwargs,num_envs=1,max_episode_steps=100,image_shape=(224,224));world.set_policy(Observed())
++  if task=='reacher':
++   from REVISION_3_REACHER_RECORDING_PATCH import install_nonterminating_reacher
++   r3_tracker=install_nonterminating_reacher(world.envs.envs[0].unwrapped)
+   if variant=='angle':
+    assert task=='pusht'
+    from factor_bindings import old_angle
+@@ -154,7 +158,8 @@
+    world.reset=reset
+   native_step=world.envs.step
+   def step(value,*args,**kw):
+-   result=native_step(value,*args,**kw);actions.append(ar(value[0]));successes.append(bool(result[2][0]))
++   result=native_step(value,*args,**kw);actions.append(ar(value[0]))
++   successes.append(r3_tracker.consume_step() if r3_tracker is not None else bool(result[2][0]))
+    if success_mode=='full50':
+     z=list(result);z[2]=np.zeros_like(result[2]);result=tuple(z)
+    return result
+@@ -171,8 +176,12 @@
+   if world is not None:
+    from factor_bindings import close_world
+    close_world(world)
+- np.savez_compressed(out/'trajectory.npz',raw_actions=np.asarray(actions),observed_actions=np.asarray(observed),returned_plans_normalized=np.asarray(plans),successes=np.asarray(successes))
++ runtime_record=r3_tracker.export_record() if r3_tracker is not None else None
++ ends=runtime_record['step_end_labels'] if runtime_record else successes
++ np.savez_compressed(out/'trajectory.npz',raw_actions=np.asarray(actions),observed_actions=np.asarray(observed),returned_plans_normalized=np.asarray(plans),successes=np.asarray(successes),success_any_in_step=np.asarray(successes),success_at_step_end=np.asarray(ends))
+  result=dict(raw_budget=budget,status='COMPLETE' if err is None else 'FAILED',error=err,case_id=case['case_id'],task=task,stream=stream,history_len=history,replan_raw=replan,success_mode=success_mode,executed_raw_steps=len(actions),success_any=int(any(successes)) if successes else None,success_block=int(any(successes[4::5])) if successes else None,success_final=int(successes[-1]) if successes else None,replans=probes,snapshot=snapshot,variant=variant,goal_render_evidence=data.goal_render_evidence,timing=timing,whole_case_wall_seconds=time.monotonic()-started,optimizer_updates=0,phase=phase,condition_id=condition_id)
++ if runtime_record is not None:
++  result.update(reacher_runtime=runtime_record,success_block=int(any(ends[4::5])),success_final=int(ends[-1]),success_semantics={'success_any':'OR of all microsteps','success_block':'environment-step-end at 5,10,...,50','success_final':'environment-step-end at 50'})
+  dump(out/'result.json',result);dump(out/'COMPLETE.json' if err is None else out/'FAILURE.json',{'sha256':{n:sha(out/n) for n in ['STARTED.json','trajectory.npz','result.json']}})
+  if err and phase=='TECH':raise RuntimeError(err['traceback'])
+  print(json.dumps({k:result[k] for k in ['status','case_id','task','stream','history_len','executed_raw_steps','timing']}),flush=True);return result

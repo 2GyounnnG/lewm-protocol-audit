@@ -1,0 +1,19 @@
+--- code_frozen/adapters/swm_runtime.py
++++ final_code/swm_runtime_recorded.py
+@@ -25,7 +25,7 @@
+   return None if obs is None else obs[0],reward[0],terminated[0],truncated[0],row
+  def close(self):self.world.close()
+ 
+-def bind(case,h5_path,expected_sha,offset=25,goal_source='dataset',clear_cube=True):
++def bind(case,h5_path,expected_sha,offset=25,goal_source='dataset',clear_cube=True,before_reset=None):
+  import h5py,hdf5plugin,stable_worldmodel as swm
+  check_case(case);task=case['task']
+  if expected_sha!=case['source_asset_sha256']:raise ValueError('Dataset does not match sealed case asset')
+@@ -34,6 +34,7 @@
+  kwargs={'env_name':'swm/PushT-v1'} if task=='pusht' else {'env_name':'swm/ReacherDMControl-v0','task':'qpos_match'}
+  if task in ('cube','tworoom'):kwargs=contracts['CONFIG'][task]['world'].copy()
+  world=swm.World(**kwargs,num_envs=1,max_episode_steps=100,image_shape=(224,224))
++ if before_reset is not None:before_reset(world.envs.envs[0].unwrapped)
+  # Exact sealed fallback0 is an explicit replay convention, not recovered dataset RNG.
+  world.reset(seed=None if task=='cube' else [int(case['reset_seed'])])
+  env=world.envs.envs[0].unwrapped

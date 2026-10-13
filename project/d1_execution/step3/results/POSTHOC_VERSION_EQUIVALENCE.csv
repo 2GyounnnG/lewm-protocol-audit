@@ -1,0 +1,13 @@
+﻿analysis,task,left,right,trajectories,outcome_mismatches,first_plan_hash_mismatches,max_abs_first_plan_difference
+post hoc,reacher,old,pip,600,0,0,0.0
+post hoc,reacher,old,cem,600,0,7,7.152557373046875e-07
+post hoc,reacher,pip,cem,600,0,7,7.152557373046875e-07
+post hoc,pusht,old,pip,600,0,0,0.0
+post hoc,pusht,old,cem,600,0,34,2.86102294921875e-06
+post hoc,pusht,pip,cem,600,0,34,2.86102294921875e-06
+post hoc,tworoom,old,pip,600,0,0,0.0
+post hoc,tworoom,old,cem,600,0,14,1.430511474609375e-06
+post hoc,tworoom,pip,cem,600,0,14,1.430511474609375e-06
+post hoc,cube,old,pip,600,0,0,0.0
+post hoc,cube,old,cem,600,0,11,3.814697265625e-06
+post hoc,cube,pip,cem,600,0,11,3.814697265625e-06

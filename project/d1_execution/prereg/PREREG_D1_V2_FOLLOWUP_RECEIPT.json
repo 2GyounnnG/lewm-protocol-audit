@@ -1,0 +1,14 @@
+{
+ "status": "REGISTERED_BEFORE_GPU",
+ "scope": "D1 follow-up conditions only",
+ "registered_utc": "2026-10-12T15:29:30Z",
+ "file": "PREREG_D1_V2_FOLLOWUP.md",
+ "sha256": "924ed56ca54076b8d40925d7f57739157ae8fdc6ccecbc58d660581d45739e12",
+ "main_study_prereg": {
+  "file": "PREREG_D1_V1_2.md",
+  "sha256": "09235d12a4290db240f3d5c9ec6d22e08dcd8ada99f674ecd30ec1d937cc5f8f"
+ },
+ "followup_jobs_run_before_registration": 0,
+ "heldout_cases_constructed": false,
+ "registered_by": "Claude (Anthropic), for the author Ruiqi Wang"
+}

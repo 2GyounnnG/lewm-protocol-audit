@@ -1,0 +1,16 @@
+{
+  "table_factor_effects_source": "d1_execution/step3/results/POSTHOC_CONTRASTS.csv",
+  "factor_source_sha256": "e6b22cc9362a91adb0de264da4a55493c9903bd2601d800effa4b7ec1197edec",
+  "factor_same_stream": "ABC",
+  "factor_rows": 24,
+  "cube_goal_status": "not run (Cube F-goal incident)",
+  "factor_nan_values": 0,
+  "predictions_rows": 3,
+  "prediction_source_sha256": "688de5060a8b3e14ff288acbd5ac9327a3eb948635f4fa1c90b15e2e0fe7946a",
+  "prediction_subconditions": {
+    "p1": 4,
+    "p2": 3,
+    "p3": 4
+  },
+  "generated_by": "REVISION_2_TABLES.py"
+}

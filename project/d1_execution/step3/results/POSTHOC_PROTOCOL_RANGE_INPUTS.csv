@@ -1,0 +1,198 @@
+﻿analysis,task,group,setting,success_definition,success_pct,source
+post hoc,reacher,evaluation_any,h1,any,84.16666666666666,step2 raw / matched ABC
+post hoc,reacher,planner_any,h1,any,84.16666666666666,step2 raw / matched ABC
+post hoc,reacher,planner_any,h3,any,97.16666666666667,step2 raw / matched ABC
+post hoc,reacher,evaluation_any,old,any,80.16666666666666,step2 raw / matched ABC
+post hoc,reacher,evaluation_any,pip,any,80.16666666666666,step2 raw / matched ABC
+post hoc,reacher,evaluation_any,offset,any,84.0,step2 raw / matched ABC
+post hoc,reacher,evaluation_any,goal,any,84.16666666666666,step2 raw / matched ABC
+post hoc,reacher,evaluation_any,cem,any,80.16666666666666,step2 raw / matched ABC
+post hoc,reacher,planner_any,replan1,any,45.0,step2 raw / matched ABC
+post hoc,reacher,planner_any,replan3,any,44.33333333333333,step2 raw / matched ABC
+post hoc,reacher,evaluation_any,success,any,84.16666666666666,step2 raw / matched ABC
+post hoc,reacher,evaluation_any,P0 stream R3_ORIGINAL,any,85.0,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream R4_ALT_CEM_1,any,83.0,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream R4_ALT_CEM_2,any,84.5,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream D1_CEM_STREAM_4,any,85.0,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream D1_CEM_STREAM_5,any,86.5,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream D1_CEM_STREAM_6,any,82.5,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream D1_CEM_STREAM_7,any,80.0,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream D1_CEM_STREAM_8,any,79.5,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream D1_CEM_STREAM_9,any,79.5,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 stream D1_CEM_STREAM_10,any,85.5,sealed H4 stream summary
+post hoc,reacher,evaluation_any,P0 n=50 subset low95,any,78.39999999999999,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,reacher,evaluation_any,P0 n=50 subset high95,any,87.60000000000001,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,reacher,evaluation_any,P0 n=100 subset low95,any,80.4,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,reacher,evaluation_any,P0 n=100 subset high95,any,85.8,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,reacher,evaluation_any,P0 original100,any,82.66666666666667,step2 raw / matched ABC
+post hoc,reacher,evaluation_any,P0 fresh100,any,85.66666666666666,step2 raw / matched ABC
+post hoc,reacher,evaluation_block_final,success any,any,84.16666666666666,step2 raw / matched ABC
+post hoc,reacher,evaluation_block_final,success block,block,30.33333333333333,step2 raw / matched ABC
+post hoc,reacher,evaluation_block_final,success final,final,8.5,step2 raw / matched ABC
+post hoc,reacher,literature_nominal,M01 Table1 cited LeWM,reported,86.0,CITED:LeWM Fig6 | https://arxiv.org/html/2606.26217
+post hoc,reacher,literature_nominal,M01 Appendix seven eval seeds,reported,83.4,UNKNOWN | https://arxiv.org/html/2606.26217
+post hoc,reacher,literature_nominal,M02 Table1 n50,reported,72.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.03294
+post hoc,reacher,literature_nominal,M02 Table1 n100,reported,75.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.03294
+post hoc,reacher,literature_nominal,M03 official protocol paper report,reported,86.0,CITED:LeWM Fig6 | https://arxiv.org/html/2609.30036
+post hoc,reacher,literature_nominal,M03 official protocol native evaluator,reported,80.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.30036
+post hoc,reacher,literature_nominal,M03 official protocol AP own evaluator,reported,80.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.30036
+post hoc,reacher,literature_nominal,M05 main matched LeWM,reported,96.0,SELF_TRAINED | https://arxiv.org/html/2607.25337
+post hoc,reacher,literature_nominal,M05 published reference,reported,86.0,CITED:LeWM Fig6 | https://arxiv.org/html/2607.25337
+post hoc,reacher,literature_nominal,M05 CEM30 w0.3,reported,94.0,SELF_TRAINED | https://arxiv.org/html/2607.25337
+post hoc,reacher,literature_nominal,M05 iCEM30 w0.3,reported,94.0,SELF_TRAINED | https://arxiv.org/html/2607.25337
+post hoc,reacher,literature_nominal,M05 CEM30 w1,reported,86.0,SELF_TRAINED | https://arxiv.org/html/2607.25337
+post hoc,reacher,literature_nominal,M07 standard,reported,76.7,SELF_TRAINED | https://arxiv.org/html/2609.30264
+post hoc,reacher,literature_nominal,M13 matched one epoch,reported,82.0,SELF_TRAINED | https://arxiv.org/html/2608.18746
+post hoc,reacher,literature_nominal,M13 published comparison,reported,86.0,CITED:LeWM Fig6 | https://arxiv.org/html/2608.18746
+post hoc,reacher,literature_nominal,M14 transfer CEM mean,reported,80.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2607.23602
+post hoc,reacher,literature_nominal,M16 offset25,reported,94.7,SELF_TRAINED | https://arxiv.org/html/2610.04988
+post hoc,reacher,literature_nominal,M17 released n50,reported,52.0,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,reacher,literature_nominal,M17 released n200,reported,62.0,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,reacher,literature_nominal,M17 released n500,reported,60.8,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,reacher,literature_nominal,M17 own SIGReg mean2 n500,reported,62.2,SELF_TRAINED | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,pusht,evaluation_any,h1,any,90.33333333333334,step2 raw / matched ABC
+post hoc,pusht,planner_any,h1,any,90.33333333333334,step2 raw / matched ABC
+post hoc,pusht,planner_any,h3,any,89.66666666666666,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,old,any,90.16666666666667,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,pip,any,90.16666666666667,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,offset,any,90.66666666666667,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,goal,any,89.83333333333333,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,cem,any,90.16666666666667,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,angle,any,90.33333333333334,step2 raw / matched ABC
+post hoc,pusht,planner_any,replan1,any,30.833333333333336,step2 raw / matched ABC
+post hoc,pusht,planner_any,replan3,any,30.0,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,success,any,90.33333333333334,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,P0 stream R3_ORIGINAL,any,91.0,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream R4_ALT_CEM_1,any,89.5,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream R4_ALT_CEM_2,any,90.5,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream D1_CEM_STREAM_4,any,90.0,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream D1_CEM_STREAM_5,any,91.5,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream D1_CEM_STREAM_6,any,92.0,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream D1_CEM_STREAM_7,any,88.5,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream D1_CEM_STREAM_8,any,90.0,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream D1_CEM_STREAM_9,any,89.5,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 stream D1_CEM_STREAM_10,any,90.5,sealed H4 stream summary
+post hoc,pusht,evaluation_any,P0 n=50 subset low95,any,84.79499999999999,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,pusht,evaluation_any,P0 n=50 subset high95,any,95.4,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,pusht,evaluation_any,P0 n=100 subset low95,any,87.20000000000002,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,pusht,evaluation_any,P0 n=100 subset high95,any,93.4,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,pusht,evaluation_any,P0 original100,any,93.0,step2 raw / matched ABC
+post hoc,pusht,evaluation_any,P0 fresh100,any,87.66666666666667,step2 raw / matched ABC
+post hoc,pusht,evaluation_block_final,success any,any,90.33333333333334,step2 raw / matched ABC
+post hoc,pusht,evaluation_block_final,success block,block,87.5,step2 raw / matched ABC
+post hoc,pusht,evaluation_block_final,success final,final,65.5,step2 raw / matched ABC
+post hoc,pusht,literature_nominal,M01 Table1 cited LeWM,reported,96.0,CITED:LeWM Fig6 | https://arxiv.org/html/2606.26217
+post hoc,pusht,literature_nominal,M01 Appendix seven eval seeds,reported,87.1,UNKNOWN | https://arxiv.org/html/2606.26217
+post hoc,pusht,literature_nominal,M02 Table1 n50,reported,92.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.03294
+post hoc,pusht,literature_nominal,M02 Table1 n100,reported,88.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.03294
+post hoc,pusht,literature_nominal,M03 official protocol paper report,reported,96.0,CITED:LeWM Fig6 | https://arxiv.org/html/2609.30036
+post hoc,pusht,literature_nominal,M03 official protocol native evaluator,reported,92.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.30036
+post hoc,pusht,literature_nominal,M03 official protocol AP own evaluator,reported,91.3,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.30036
+post hoc,pusht,literature_nominal,M04 best flat baseline offset25,reported,94.0,UNKNOWN | https://arxiv.org/html/2607.12547
+post hoc,pusht,literature_nominal,M05 main matched LeWM,reported,83.6,REMEASURED_OFFICIAL | https://arxiv.org/html/2607.25337
+post hoc,pusht,literature_nominal,M05 published reference,reported,96.0,CITED:LeWM Fig6 | https://arxiv.org/html/2607.25337
+post hoc,pusht,literature_nominal,M06 short offset25,reported,88.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2605.22164
+post hoc,pusht,literature_nominal,M07 standard,reported,94.0,SELF_TRAINED | https://arxiv.org/html/2609.30264
+post hoc,pusht,literature_nominal,M13 matched one epoch,reported,49.3,SELF_TRAINED | https://arxiv.org/html/2608.18746
+post hoc,pusht,literature_nominal,M13 published comparison,reported,96.0,CITED:LeWM Fig6 | https://arxiv.org/html/2608.18746
+post hoc,pusht,literature_nominal,M15 plain H5,reported,98.0,SELF_TRAINED | https://arxiv.org/html/2610.03137
+post hoc,pusht,literature_nominal,M16 offset25,reported,93.6,SELF_TRAINED | https://arxiv.org/html/2610.04988
+post hoc,pusht,literature_nominal,M17 released n50,reported,96.0,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,pusht,literature_nominal,M17 released n200,reported,83.5,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,pusht,literature_nominal,M17 released n500,reported,84.6,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,pusht,literature_nominal,M17 own SIGReg mean2 n500,reported,88.6,SELF_TRAINED | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,tworoom,evaluation_any,h1,any,81.16666666666666,step2 raw / matched ABC
+post hoc,tworoom,planner_any,h1,any,81.16666666666666,step2 raw / matched ABC
+post hoc,tworoom,planner_any,h3,any,81.0,step2 raw / matched ABC
+post hoc,tworoom,evaluation_any,old,any,82.16666666666667,step2 raw / matched ABC
+post hoc,tworoom,evaluation_any,pip,any,82.16666666666667,step2 raw / matched ABC
+post hoc,tworoom,evaluation_any,offset,any,81.33333333333333,step2 raw / matched ABC
+post hoc,tworoom,evaluation_any,goal,any,80.83333333333334,step2 raw / matched ABC
+post hoc,tworoom,evaluation_any,cem,any,82.16666666666667,step2 raw / matched ABC
+post hoc,tworoom,planner_any,replan1,any,75.66666666666666,step2 raw / matched ABC
+post hoc,tworoom,planner_any,replan3,any,76.0,step2 raw / matched ABC
+post hoc,tworoom,evaluation_any,success,any,81.16666666666666,step2 raw / matched ABC
+post hoc,tworoom,evaluation_any,P0 stream R3_ORIGINAL,any,83.0,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream R4_ALT_CEM_1,any,80.0,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream R4_ALT_CEM_2,any,80.5,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream D1_CEM_STREAM_4,any,82.0,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream D1_CEM_STREAM_5,any,82.5,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream D1_CEM_STREAM_6,any,79.0,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream D1_CEM_STREAM_7,any,82.0,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream D1_CEM_STREAM_8,any,82.5,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream D1_CEM_STREAM_9,any,82.5,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 stream D1_CEM_STREAM_10,any,81.0,sealed H4 stream summary
+post hoc,tworoom,evaluation_any,P0 n=50 subset low95,any,73.2,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,tworoom,evaluation_any,P0 n=50 subset high95,any,89.4,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,tworoom,evaluation_any,P0 n=100 subset low95,any,76.7,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,tworoom,evaluation_any,P0 n=100 subset high95,any,86.0,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,tworoom,evaluation_any,P0 original100,any,80.33333333333333,step2 raw / matched ABC
+post hoc,tworoom,evaluation_any,P0 fresh100,any,82.00000000000001,step2 raw / matched ABC
+post hoc,tworoom,evaluation_block_final,success any,any,81.16666666666666,step2 raw / matched ABC
+post hoc,tworoom,evaluation_block_final,success block,block,81.16666666666666,step2 raw / matched ABC
+post hoc,tworoom,evaluation_block_final,success final,final,79.83333333333333,step2 raw / matched ABC
+post hoc,tworoom,literature_nominal,M01 Table1 cited LeWM,reported,87.0,CITED:LeWM Fig6 | https://arxiv.org/html/2606.26217
+post hoc,tworoom,literature_nominal,M01 Appendix seven eval seeds,reported,87.0,UNKNOWN | https://arxiv.org/html/2606.26217
+post hoc,tworoom,literature_nominal,M02 Table1 n50,reported,82.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.03294
+post hoc,tworoom,literature_nominal,M02 Table1 n100,reported,85.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.03294
+post hoc,tworoom,literature_nominal,M03 official protocol paper report,reported,87.0,CITED:LeWM Fig6 | https://arxiv.org/html/2609.30036
+post hoc,tworoom,literature_nominal,M03 official protocol native evaluator,reported,87.3,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.30036
+post hoc,tworoom,literature_nominal,M03 official protocol AP own evaluator,reported,87.3,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.30036
+post hoc,tworoom,literature_nominal,M05 main matched LeWM,reported,97.4,SELF_TRAINED | https://arxiv.org/html/2607.25337
+post hoc,tworoom,literature_nominal,M05 published reference,reported,87.0,CITED:LeWM Fig6 | https://arxiv.org/html/2607.25337
+post hoc,tworoom,literature_nominal,M07 standard,reported,90.0,SELF_TRAINED | https://arxiv.org/html/2609.30264
+post hoc,tworoom,literature_nominal,M12 phase2 offset25 b50,reported,94.0,SELF_TRAINED | https://arxiv.org/html/2608.12959
+post hoc,tworoom,literature_nominal,M13 matched one epoch,reported,98.0,SELF_TRAINED | https://arxiv.org/html/2608.18746
+post hoc,tworoom,literature_nominal,M13 published comparison,reported,87.0,CITED:LeWM Fig6 | https://arxiv.org/html/2608.18746
+post hoc,tworoom,literature_nominal,M16 offset25,reported,87.7,SELF_TRAINED | https://arxiv.org/html/2610.04988
+post hoc,tworoom,literature_nominal,M17 released n50,reported,86.0,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,tworoom,literature_nominal,M17 released n200,reported,85.0,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,tworoom,literature_nominal,M17 released n500,reported,82.8,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,tworoom,literature_nominal,M17 own SIGReg mean2 n500,reported,87.9,SELF_TRAINED | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,cube,evaluation_any,h1,any,73.83333333333334,step2 raw / matched ABC
+post hoc,cube,planner_any,h1,any,73.83333333333334,step2 raw / matched ABC
+post hoc,cube,planner_any,h3,any,73.83333333333333,step2 raw / matched ABC
+post hoc,cube,evaluation_any,old,any,70.33333333333333,step2 raw / matched ABC
+post hoc,cube,evaluation_any,pip,any,70.33333333333333,step2 raw / matched ABC
+post hoc,cube,evaluation_any,offset,any,74.83333333333333,step2 raw / matched ABC
+post hoc,cube,evaluation_any,cem,any,70.33333333333333,step2 raw / matched ABC
+post hoc,cube,planner_any,replan1,any,70.16666666666667,step2 raw / matched ABC
+post hoc,cube,planner_any,replan3,any,70.0,step2 raw / matched ABC
+post hoc,cube,evaluation_any,success,any,73.83333333333334,step2 raw / matched ABC
+post hoc,cube,evaluation_any,P0 stream R3_ORIGINAL,any,75.0,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream R4_ALT_CEM_1,any,73.5,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream R4_ALT_CEM_2,any,73.0,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream D1_CEM_STREAM_4,any,74.0,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream D1_CEM_STREAM_5,any,73.0,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream D1_CEM_STREAM_6,any,76.0,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream D1_CEM_STREAM_7,any,74.0,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream D1_CEM_STREAM_8,any,73.0,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream D1_CEM_STREAM_9,any,75.5,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 stream D1_CEM_STREAM_10,any,74.0,sealed H4 stream summary
+post hoc,cube,evaluation_any,P0 n=50 subset low95,any,64.4,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,cube,evaluation_any,P0 n=50 subset high95,any,83.2,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,cube,evaluation_any,P0 n=100 subset low95,any,68.70000000000002,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,cube,evaluation_any,P0 n=100 subset high95,any,79.4,"sealed 5000 subset estimates; 95% endpoint, not extrema"
+post hoc,cube,evaluation_any,P0 original100,any,80.33333333333333,step2 raw / matched ABC
+post hoc,cube,evaluation_any,P0 fresh100,any,67.33333333333333,step2 raw / matched ABC
+post hoc,cube,evaluation_block_final,success any,any,73.83333333333334,step2 raw / matched ABC
+post hoc,cube,evaluation_block_final,success block,block,71.33333333333333,step2 raw / matched ABC
+post hoc,cube,evaluation_block_final,success final,final,62.0,step2 raw / matched ABC
+post hoc,cube,literature_nominal,M01 Table1 cited LeWM,reported,74.0,CITED:LeWM Fig6 | https://arxiv.org/html/2606.26217
+post hoc,cube,literature_nominal,M01 Appendix seven eval seeds,reported,67.4,UNKNOWN | https://arxiv.org/html/2606.26217
+post hoc,cube,literature_nominal,M02 Table1 n50,reported,62.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.03294
+post hoc,cube,literature_nominal,M02 Table1 n100,reported,62.0,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.03294
+post hoc,cube,literature_nominal,M03 official protocol paper report,reported,74.0,CITED:LeWM Fig6 | https://arxiv.org/html/2609.30036
+post hoc,cube,literature_nominal,M03 official protocol native evaluator,reported,74.7,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.30036
+post hoc,cube,literature_nominal,M03 official protocol AP own evaluator,reported,74.7,REMEASURED_OFFICIAL | https://arxiv.org/html/2609.30036
+post hoc,cube,literature_nominal,M04 best flat baseline offset25,reported,65.3,UNKNOWN | https://arxiv.org/html/2607.12547
+post hoc,cube,literature_nominal,M05 main matched LeWM,reported,68.0,SELF_TRAINED | https://arxiv.org/html/2607.25337
+post hoc,cube,literature_nominal,M05 published reference,reported,74.0,CITED:LeWM Fig6 | https://arxiv.org/html/2607.25337
+post hoc,cube,literature_nominal,M07 standard,reported,73.3,SELF_TRAINED | https://arxiv.org/html/2609.30264
+post hoc,cube,literature_nominal,M13 matched one epoch,reported,62.7,SELF_TRAINED | https://arxiv.org/html/2608.18746
+post hoc,cube,literature_nominal,M13 published comparison,reported,74.0,CITED:LeWM Fig6 | https://arxiv.org/html/2608.18746
+post hoc,cube,literature_nominal,M16 offset25,reported,74.8,SELF_TRAINED | https://arxiv.org/html/2610.04988
+post hoc,cube,literature_nominal,M17 released n50,reported,68.0,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,cube,literature_nominal,M17 released n200,reported,63.0,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,cube,literature_nominal,M17 released n500,reported,66.0,REMEASURED_OFFICIAL | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md
+post hoc,cube,literature_nominal,M17 own SIGReg mean2 n500,reported,65.5,SELF_TRAINED | https://huggingface.co/basilboy/epiwm/raw/326fac0dbcfe61afce69fd49f4a847030452c679/README.md

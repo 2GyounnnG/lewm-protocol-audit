@@ -1,0 +1,304 @@
+{
+  "status": "SEALED_AFTER_NUMERICAL_GATES_BEFORE_VALID_FORMAL",
+  "registration_utc": "2026-10-13T06:06:33.085208+00:00",
+  "prior_invalid_formal_excluded": true,
+  "correction_reason": "stable-worldmodel qpos_match Reacher termination is registered by dm_control before outer terminated flag is cleared",
+  "baseline": {
+    "official_formal_v2_sha256": "06a146f6dcac6be16b1db02232a1e64b9c1079ac191177aeb4b27b818792128b",
+    "method_formal_v1_sha256": "99545c1582de18c394e246ab8439d65b015bf7be4a210b33866876a79a95f403",
+    "stable_worldmodel_commit": "63988116d34cde56aea1240d5e58eb158ac67dc0"
+  },
+  "environment": {
+    "lock_sha256": "d6dc27e056874564df5cfca45f9c2fd0c29d1779dcf8a109c2a8b6d4ea8a47da",
+    "environment_receipt_sha256": "f781b288d1a46cbf63bd26c695cda4ab3ee332766cbde683a252d219fac97d91",
+    "pip_freeze_sha256": "fda2f8515625c6b2b02248c00e6fe48bd10ba4093e8a1ba717fc8aafccc0a38b",
+    "pip_check": "No broken requirements found.",
+    "python": "3.12.3",
+    "gpu_info_sha256": "85f25923eaa64cbc3ea90f7cf935eb5bdbaca19ae9819c455c93f1c13b44cb83",
+    "resolver_revision_sha256": "cc5b18f525b8695699df640f5d59b30581d319890876de4e4984a630fa341b0e"
+  },
+  "assets": {
+    "dataset_archive_sha256": "4ff2385e49712caa89f21b8e0a246e2614b621d3f22cf2d1224d845e879a1cc2",
+    "dataset_unpacked_sha256": "85a7dddfa1801302abcb175a80a23bb69c78291dd977ce40d69aedcb9123da06",
+    "official_weights_sha256": "eb70b1fd5409f8f81875d62f5ee5a20dd220a3128a477de66b5760f475f0f469",
+    "M01_sha256": "aa56a01da50f411c8555a6554a7f383ce66eb0fd501ea4df4bce9e59befd943e",
+    "M07_3072_sha256": "3f0c70b47a3f99adae33e4849be03b55aa3e0f85a28bdf7b736bb3d9b6434021",
+    "M07_4096_sha256": "56c87c71b3719ec9c05015641096ff4cdd8fb338bf953b80559d0c47f0241b55",
+    "M07_6144_sha256": "fc129ec67a87ad0ec1e8c8312d8d2eebc7cea549b79cf4e9413635267597eac3",
+    "AP_latent_cache_sha256": "62c1fe2adbe45dea8abf03828d0409cacd6e6257377227167b03a5ae5998a1ba"
+  },
+  "formal_scope": {
+    "condition_ids": {
+      "D1V2_001": {
+        "model": "LeWM",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "official"
+      },
+      "D1V2_002": {
+        "model": "LeWM",
+        "history": 3,
+        "iterations": 30,
+        "train_seed": "official"
+      },
+      "D1V2_009": {
+        "model": "M01",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "released"
+      },
+      "D1V2_010": {
+        "model": "M03",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "official"
+      },
+      "D1V2_011": {
+        "model": "M07",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "3072"
+      },
+      "D1V2_012": {
+        "model": "M07",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "4096"
+      },
+      "D1V2_013": {
+        "model": "M07",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "6144"
+      },
+      "D1V2_029": {
+        "model": "LeWM",
+        "history": 1,
+        "iterations": 10,
+        "train_seed": "official"
+      },
+      "D1V2_030": {
+        "model": "LeWM",
+        "history": 3,
+        "iterations": 10,
+        "train_seed": "official"
+      }
+    },
+    "cases": 100,
+    "streams": "ABC",
+    "budget_raw": 50,
+    "expected_trajectories_per_condition": 300,
+    "expected_total_trajectories": 2700,
+    "scope_note": "V1.2 enumerates nine Reacher conditions (four LeWM h/history/iteration combinations plus M01, M03, and three M07 seeds); this enumerated scope is retained without changing preregistration definitions."
+  },
+  "code_sha256": {
+    "code/factor_bindings.py": "109a790065474a986a129dc5f94b035a26082fb3af8aa1f53037751b7e0d85fa",
+    "code/formal_guard.py": "604d7eb4e26b7af5f99b68d7391d882d198c24e0e20f2f1fbfef3d2759433d24",
+    "code/method_formal_v1.py": "99545c1582de18c394e246ab8439d65b015bf7be4a210b33866876a79a95f403",
+    "code/native_reset.py": "504cb1d2d100f2097155bfb84723d1dabe1027dde2d19c5396e6baa449cf79cf",
+    "code/official_formal_v2.py": "06a146f6dcac6be16b1db02232a1e64b9c1079ac191177aeb4b27b818792128b",
+    "code/step4_worker.py": "42d1955397e38edb4971a12321f41b613695f8640cac088924f0f559e5fb697e",
+    "code/official_formal_v3_reacher.py": "9b959cd1cd8e9bdafa8f47f02cb20c6531ef425ec5ad7a289c6847523375ea53",
+    "code/method_formal_v2_reacher.py": "93e997216b998dd32205e1cc21606a07506735d3a50d4c500c8def7386be4b72",
+    "code/step4_worker_r3.py": "7fea8aedbe4c5c32bb49d5ae80de0288b1972e0f1a73e62850e4b35e80a023b1",
+    "code/official_formal_v4_reacher.py": "1eabcc34d5865a02c0d809109ca81892ac0b776ceef32438bb0b2b945ce8edb5",
+    "code/method_formal_v3_reacher.py": "56fc919b50489eb7d58b54317947ad861031cc3f96701eb990ed03772697029d",
+    "code/step4_worker_r3_final.py": "23bd1276af3f9961e1931a4258dea9b7e1e808647b5d8f67f57f5ec17583f9c9",
+    "code/adapters/__init__.py": "bcfed37dc5500875bf2f9960315168ab6cdd7821d7374a9eff80750665b34905",
+    "code/adapters/common.py": "498a3a8dd60003ded58c3de3e2e2f8d9f82ee039cdb66166aa870c830e9db0ac",
+    "code/adapters/harness.py": "a5d2df84c2646989134e91bd1ecbb7607da1449d15bb13ba86fd0cdce373c495",
+    "code/adapters/model_runtime.py": "3489ea0b84ab191261b1d8e0e237a04550843a9b22b4055529621e967a0639cf",
+    "code/adapters/original_mode.py": "d45450ea16eee749146d4e25ab875dfdc2a09519a2ce7e7d13ed63bd1cc623fc",
+    "code/adapters/swm_api_compat.py": "eecabc40e40465a69b30bcac603bac9cef23386c215f7110b4bb6885a253cb38",
+    "code/adapters/swm_runtime.py": "d5fd559936c1feaec003f0fbef9acffe1d0c8798427b0e6b52ff6ab060e30362",
+    "code/adapters/task_contracts.json": "a405f764082b134b7900333dae8396278ee16aa2ff3e0530f70deacaea63fc58",
+    "code/adapters/swm_runtime_recorded.py": "38cc977534a2551e89f3f0c0f06a074cd37cf23043877b6fbdedd2c6047d3cf7",
+    "code/harness_reference/environment_check.py": "9b14b53924641fa1af4e649d75e899e632399fb10d6d55fa5ee72b2f491388d6",
+    "code/harness_reference/roles.py": "4445cd3e8add0e69118f75daf91e3f8ced8852305d08ad0624b35d62b613cf9b",
+    "code/harness_reference/env_compat.py": "331f224613cbbb0c74b373b86623ef8c66f48498fabc1f540877329cca815eaf",
+    "code/harness_reference/train_worker.py": "c9c6db8d9f1c3a8e572ce5c007cba0fa457de3bdfcb3300fc0dd781d5ebd72ae",
+    "code/harness_reference/__init__.py": "68e04f6704ca60223a0e04594c80f2ca3fa02048ce08cb4e74c4cc8748a5c429",
+    "code/harness_reference/model.py": "6f53fee6349fc034b39eeebb1410c5c1eabd918c69832cbe3a92f2fc0f74b5a8",
+    "code/harness_reference/open_loop.py": "576f2933430bfe7d6715eb6dfa72ee093d86f9c89c0806b78aa62336c9a4f88e",
+    "code/harness_reference/common.py": "76625927a0951a25fa2a6e2bf5019dff8f802dd1e8660d08585e67b1850231ff",
+    "code/harness_reference/planning.py": "7b911886c48e4cd5d720bfe58d3066925b8ef550b1602073db33c63fccbd0da7",
+    "code/harness_reference/statistics.py": "8e782b6348d21f42cc9b1d64d726bfb85dd10b9eeafff59539e062ca139e24b2",
+    "code/harness_reference/reset_fallback.py": "9258070054e4b8a56df7a9abb0c4a39a66dadb09e3d8ab64e8399f47880a12d5",
+    "code/harness_reference/data.py": "7b5b9acd0dffba48363d402757c8e4a69a720e0cef7d04ec106ec0eec3682e9c",
+    "code/adapters/M01/__init__.py": "2bcffee500bad967d11d2bd63f0e306a99523eaa9f6429f202974341247779c6",
+    "code/adapters/M01/adapter.py": "0637c1a68cbcb710cb54e75642bb3ace839d631e581270dfc8d679989f4ddaec",
+    "code/adapters/M03/__init__.py": "0c3367ade660f2b3443799fe8473316e5e129044439206baa7a29636535070e6",
+    "code/adapters/M03/adapter.py": "b78f61f34920c0de2d36633783b071ec8d057612ee7c8b327503eac2ba69ecc6",
+    "code/adapters/M07/__init__.py": "fbe23d0926a3358fd4a0d09e311a8d809f8b8dbfeaacd8c7a03b74333efc6a22",
+    "code/adapters/M07/adapter.py": "250a86b66324c7e9829385eba1da571e6c0a087e761abbff491595eef476c20b",
+    "code/harness_reference/r3/environment_check.py": "9b14b53924641fa1af4e649d75e899e632399fb10d6d55fa5ee72b2f491388d6",
+    "code/harness_reference/r3/roles.py": "4445cd3e8add0e69118f75daf91e3f8ced8852305d08ad0624b35d62b613cf9b",
+    "code/harness_reference/r3/env_compat.py": "331f224613cbbb0c74b373b86623ef8c66f48498fabc1f540877329cca815eaf",
+    "code/harness_reference/r3/train_worker.py": "c9c6db8d9f1c3a8e572ce5c007cba0fa457de3bdfcb3300fc0dd781d5ebd72ae",
+    "code/harness_reference/r3/__init__.py": "68e04f6704ca60223a0e04594c80f2ca3fa02048ce08cb4e74c4cc8748a5c429",
+    "code/harness_reference/r3/model.py": "6f53fee6349fc034b39eeebb1410c5c1eabd918c69832cbe3a92f2fc0f74b5a8",
+    "code/harness_reference/r3/open_loop.py": "576f2933430bfe7d6715eb6dfa72ee093d86f9c89c0806b78aa62336c9a4f88e",
+    "code/harness_reference/r3/common.py": "76625927a0951a25fa2a6e2bf5019dff8f802dd1e8660d08585e67b1850231ff",
+    "code/harness_reference/r3/planning.py": "7b911886c48e4cd5d720bfe58d3066925b8ef550b1602073db33c63fccbd0da7",
+    "code/harness_reference/r3/statistics.py": "8e782b6348d21f42cc9b1d64d726bfb85dd10b9eeafff59539e062ca139e24b2",
+    "code/harness_reference/r3/reset_fallback.py": "9258070054e4b8a56df7a9abb0c4a39a66dadb09e3d8ab64e8399f47880a12d5",
+    "code/harness_reference/r3/data.py": "7b5b9acd0dffba48363d402757c8e4a69a720e0cef7d04ec106ec0eec3682e9c",
+    "REVISION_3_REACHER_RECORDING_PATCH.py": "800387eb136b9b631bf46a909b183e2c547f73bdb67575f1454cf0970b25507a",
+    "run_verified_formal.py": "43e1d7a3cb484964aa488e9cefdcb5604ab3d5231d094110a93a53c3f0ccb09b",
+    "snapshot_return.py": "9ceba9366791d0722a6a1c13a277a64a6655dbb1b7f6e988e4c1c0517829fae5",
+    "seal_verified_registration.py": "4b82c5dfde6edd6b6375c0dcefceb5000f4e1373094219951089b1e9e4af5396",
+    "run_verified_tech.py": "2b299c370d8c38e86b4c03d2659b436ce262850583668f1a2e385d2ab45d5078",
+    "evaluate_final_gates.py": "01d076042cd5fabd9e8de7af2685ea7273b22bebedfe4e13668b089970392bff",
+    "runtime_checks_final.py": "74df9a168b5694ddf76d5f95da817c207117312743695f8544eb61fffd550698"
+  },
+  "final_code_sha256": {
+    "code/factor_bindings.py": "109a790065474a986a129dc5f94b035a26082fb3af8aa1f53037751b7e0d85fa",
+    "code/formal_guard.py": "604d7eb4e26b7af5f99b68d7391d882d198c24e0e20f2f1fbfef3d2759433d24",
+    "code/method_formal_v1.py": "99545c1582de18c394e246ab8439d65b015bf7be4a210b33866876a79a95f403",
+    "code/native_reset.py": "504cb1d2d100f2097155bfb84723d1dabe1027dde2d19c5396e6baa449cf79cf",
+    "code/official_formal_v2.py": "06a146f6dcac6be16b1db02232a1e64b9c1079ac191177aeb4b27b818792128b",
+    "code/step4_worker.py": "42d1955397e38edb4971a12321f41b613695f8640cac088924f0f559e5fb697e",
+    "code/official_formal_v3_reacher.py": "9b959cd1cd8e9bdafa8f47f02cb20c6531ef425ec5ad7a289c6847523375ea53",
+    "code/method_formal_v2_reacher.py": "93e997216b998dd32205e1cc21606a07506735d3a50d4c500c8def7386be4b72",
+    "code/step4_worker_r3.py": "7fea8aedbe4c5c32bb49d5ae80de0288b1972e0f1a73e62850e4b35e80a023b1",
+    "code/official_formal_v4_reacher.py": "1eabcc34d5865a02c0d809109ca81892ac0b776ceef32438bb0b2b945ce8edb5",
+    "code/method_formal_v3_reacher.py": "56fc919b50489eb7d58b54317947ad861031cc3f96701eb990ed03772697029d",
+    "code/step4_worker_r3_final.py": "23bd1276af3f9961e1931a4258dea9b7e1e808647b5d8f67f57f5ec17583f9c9",
+    "code/adapters/__init__.py": "bcfed37dc5500875bf2f9960315168ab6cdd7821d7374a9eff80750665b34905",
+    "code/adapters/common.py": "498a3a8dd60003ded58c3de3e2e2f8d9f82ee039cdb66166aa870c830e9db0ac",
+    "code/adapters/harness.py": "a5d2df84c2646989134e91bd1ecbb7607da1449d15bb13ba86fd0cdce373c495",
+    "code/adapters/model_runtime.py": "3489ea0b84ab191261b1d8e0e237a04550843a9b22b4055529621e967a0639cf",
+    "code/adapters/original_mode.py": "d45450ea16eee749146d4e25ab875dfdc2a09519a2ce7e7d13ed63bd1cc623fc",
+    "code/adapters/swm_api_compat.py": "eecabc40e40465a69b30bcac603bac9cef23386c215f7110b4bb6885a253cb38",
+    "code/adapters/swm_runtime.py": "d5fd559936c1feaec003f0fbef9acffe1d0c8798427b0e6b52ff6ab060e30362",
+    "code/adapters/task_contracts.json": "a405f764082b134b7900333dae8396278ee16aa2ff3e0530f70deacaea63fc58",
+    "code/adapters/swm_runtime_recorded.py": "38cc977534a2551e89f3f0c0f06a074cd37cf23043877b6fbdedd2c6047d3cf7",
+    "code/harness_reference/environment_check.py": "9b14b53924641fa1af4e649d75e899e632399fb10d6d55fa5ee72b2f491388d6",
+    "code/harness_reference/roles.py": "4445cd3e8add0e69118f75daf91e3f8ced8852305d08ad0624b35d62b613cf9b",
+    "code/harness_reference/env_compat.py": "331f224613cbbb0c74b373b86623ef8c66f48498fabc1f540877329cca815eaf",
+    "code/harness_reference/train_worker.py": "c9c6db8d9f1c3a8e572ce5c007cba0fa457de3bdfcb3300fc0dd781d5ebd72ae",
+    "code/harness_reference/__init__.py": "68e04f6704ca60223a0e04594c80f2ca3fa02048ce08cb4e74c4cc8748a5c429",
+    "code/harness_reference/model.py": "6f53fee6349fc034b39eeebb1410c5c1eabd918c69832cbe3a92f2fc0f74b5a8",
+    "code/harness_reference/open_loop.py": "576f2933430bfe7d6715eb6dfa72ee093d86f9c89c0806b78aa62336c9a4f88e",
+    "code/harness_reference/common.py": "76625927a0951a25fa2a6e2bf5019dff8f802dd1e8660d08585e67b1850231ff",
+    "code/harness_reference/planning.py": "7b911886c48e4cd5d720bfe58d3066925b8ef550b1602073db33c63fccbd0da7",
+    "code/harness_reference/statistics.py": "8e782b6348d21f42cc9b1d64d726bfb85dd10b9eeafff59539e062ca139e24b2",
+    "code/harness_reference/reset_fallback.py": "9258070054e4b8a56df7a9abb0c4a39a66dadb09e3d8ab64e8399f47880a12d5",
+    "code/harness_reference/data.py": "7b5b9acd0dffba48363d402757c8e4a69a720e0cef7d04ec106ec0eec3682e9c",
+    "code/adapters/M01/__init__.py": "2bcffee500bad967d11d2bd63f0e306a99523eaa9f6429f202974341247779c6",
+    "code/adapters/M01/adapter.py": "0637c1a68cbcb710cb54e75642bb3ace839d631e581270dfc8d679989f4ddaec",
+    "code/adapters/M03/__init__.py": "0c3367ade660f2b3443799fe8473316e5e129044439206baa7a29636535070e6",
+    "code/adapters/M03/adapter.py": "b78f61f34920c0de2d36633783b071ec8d057612ee7c8b327503eac2ba69ecc6",
+    "code/adapters/M07/__init__.py": "fbe23d0926a3358fd4a0d09e311a8d809f8b8dbfeaacd8c7a03b74333efc6a22",
+    "code/adapters/M07/adapter.py": "250a86b66324c7e9829385eba1da571e6c0a087e761abbff491595eef476c20b",
+    "code/harness_reference/r3/environment_check.py": "9b14b53924641fa1af4e649d75e899e632399fb10d6d55fa5ee72b2f491388d6",
+    "code/harness_reference/r3/roles.py": "4445cd3e8add0e69118f75daf91e3f8ced8852305d08ad0624b35d62b613cf9b",
+    "code/harness_reference/r3/env_compat.py": "331f224613cbbb0c74b373b86623ef8c66f48498fabc1f540877329cca815eaf",
+    "code/harness_reference/r3/train_worker.py": "c9c6db8d9f1c3a8e572ce5c007cba0fa457de3bdfcb3300fc0dd781d5ebd72ae",
+    "code/harness_reference/r3/__init__.py": "68e04f6704ca60223a0e04594c80f2ca3fa02048ce08cb4e74c4cc8748a5c429",
+    "code/harness_reference/r3/model.py": "6f53fee6349fc034b39eeebb1410c5c1eabd918c69832cbe3a92f2fc0f74b5a8",
+    "code/harness_reference/r3/open_loop.py": "576f2933430bfe7d6715eb6dfa72ee093d86f9c89c0806b78aa62336c9a4f88e",
+    "code/harness_reference/r3/common.py": "76625927a0951a25fa2a6e2bf5019dff8f802dd1e8660d08585e67b1850231ff",
+    "code/harness_reference/r3/planning.py": "7b911886c48e4cd5d720bfe58d3066925b8ef550b1602073db33c63fccbd0da7",
+    "code/harness_reference/r3/statistics.py": "8e782b6348d21f42cc9b1d64d726bfb85dd10b9eeafff59539e062ca139e24b2",
+    "code/harness_reference/r3/reset_fallback.py": "9258070054e4b8a56df7a9abb0c4a39a66dadb09e3d8ab64e8399f47880a12d5",
+    "code/harness_reference/r3/data.py": "7b5b9acd0dffba48363d402757c8e4a69a720e0cef7d04ec106ec0eec3682e9c",
+    "REVISION_3_REACHER_RECORDING_PATCH.py": "800387eb136b9b631bf46a909b183e2c547f73bdb67575f1454cf0970b25507a",
+    "run_verified_formal.py": "43e1d7a3cb484964aa488e9cefdcb5604ab3d5231d094110a93a53c3f0ccb09b",
+    "snapshot_return.py": "9ceba9366791d0722a6a1c13a277a64a6655dbb1b7f6e988e4c1c0517829fae5",
+    "seal_verified_registration.py": "4b82c5dfde6edd6b6375c0dcefceb5000f4e1373094219951089b1e9e4af5396",
+    "run_verified_tech.py": "2b299c370d8c38e86b4c03d2659b436ce262850583668f1a2e385d2ab45d5078",
+    "evaluate_final_gates.py": "01d076042cd5fabd9e8de7af2685ea7273b22bebedfe4e13668b089970392bff",
+    "runtime_checks_final.py": "74df9a168b5694ddf76d5f95da817c207117312743695f8544eb61fffd550698"
+  },
+  "evidence_sha256": {
+    "TECH_GATE_FINAL_T1_T4.json": "aebaa7ff7f6bbee37164eabee6b7d33624c7085b0ca7742e58cb3dabbd4f1fab",
+    "runtime_checks_final.json": "dccd9c43a7fc8aec2bc4ef49d114b665bfca660d8450e443eb18b4b73abb1769",
+    "FINAL_BIND_CPU_SMOKE.json": "4eca4f118451def6918605d8be489e488900622d7791ad49ca955bc8c307d6e5",
+    "CORRECTION_RECORDING_REVISION_PRETECH.json": "5a01536639e6239443acbacc9c8edcbdc4a3e6db2df44cb0a5e3e7e2aa2eef5f",
+    "THROUGHPUT_FINAL.json": "08f503874a7d9052f5a35a41622e1e5767bcf98c4306f323c6fe8486423e80e5",
+    "PREMATURE_FORMAL_EXCLUSION.json": "0bc827769740d271f6576c6a09b565faa08dbc58609f0c20ddb6b74e368bad21"
+  },
+  "technical_gates": {
+    "T1": {
+      "status": "PASS",
+      "case_stream_counts": {
+        "PASS": 108,
+        "FAIL": 0,
+        "BLOCKED": 0
+      },
+      "case_streams_expected": 108,
+      "totals": {
+        "actions_before_success_compared": 3397,
+        "actions_including_first_success_compared": 3497
+      }
+    },
+    "T2": {
+      "status": "PASS",
+      "case_stream_counts": {
+        "PASS": 108,
+        "FAIL": 0,
+        "BLOCKED": 0
+      },
+      "case_streams_expected": 108,
+      "totals": {
+        "wrapper_reset_count": 108,
+        "dm_control_reset_count": 108,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0
+      }
+    },
+    "T3": {
+      "status": "PASS",
+      "case_stream_counts": {
+        "PASS": 108,
+        "FAIL": 0,
+        "BLOCKED": 0
+      },
+      "case_streams_expected": 108,
+      "totals": {
+        "microsteps": 10800,
+        "environment_steps": 5400,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0
+      }
+    },
+    "T4": {
+      "status": "PASS",
+      "case_stream_counts": {
+        "PASS": 108,
+        "FAIL": 0,
+        "BLOCKED": 0
+      },
+      "case_streams_expected": 108,
+      "totals": {
+        "predicate_comparisons": 10800,
+        "predicate_mismatches": 0,
+        "steps_where_two_labels_differ": 78
+      }
+    }
+  },
+  "success_semantics": {
+    "any": "OR across predicates in both microsteps",
+    "block_final_occupancy_lastK": "predicate at the second microstep/environment-step end"
+  },
+  "recording_schema": "reacher_correction_record_v2",
+  "recording_fields": [
+    "tracker.events",
+    "step_any_labels",
+    "step_end_labels",
+    "physics.time",
+    "qpos",
+    "qvel",
+    "target_qpos",
+    "reset_count",
+    "internal_reset_events"
+  ],
+  "termination_correction": "Disable native success termination; preserve exact strict qpos predicate and both microsteps. T1 proves original action prefix unchanged.",
+  "logging_revision": "Real reset observation installed before native reset; both label streams and all microstep states; no planner/action changes.",
+  "preregistration_unchanged": true,
+  "formal_output_directory": "formal_verified",
+  "no_training": true,
+  "no_submission": true,
+  "no_preprint": true
+}

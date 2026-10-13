@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-13T19:01:13.108752+00:00",
+  "status": "PASS",
+  "records": 2700,
+  "microsteps": 270000,
+  "environment_steps": 135000,
+  "records_with_any_failed_check": 0,
+  "totals": {
+    "reset_mismatch": 0,
+    "internal_reset_events": 0,
+    "pending_resets": 0,
+    "time_increment_mismatches": 0,
+    "target_mismatches": 0,
+    "nonfinite_states": 0,
+    "state_chain_mismatches": 0,
+    "endpoint_state_mismatches": 0,
+    "predicate_state_mismatches": 0,
+    "threshold_mismatches": 0,
+    "predicate_mismatches": 0,
+    "or_label_mismatches": 0,
+    "end_label_mismatches": 0,
+    "tracker_alias_mismatch": 0,
+    "action_prefix_mismatch": 0,
+    "action_through_hit_mismatch": 0,
+    "any_outcome_mismatch": 0
+  },
+  "actions_before_first_success": 82691,
+  "actions_through_first_success": 85094,
+  "max_time_increment_error": 9.367506770274758e-17,
+  "physical_replay": false,
+  "time_note": "0.02 s per microstep, 0.04 s per environment step; float tolerance 1e-12",
+  "failures": []
+}

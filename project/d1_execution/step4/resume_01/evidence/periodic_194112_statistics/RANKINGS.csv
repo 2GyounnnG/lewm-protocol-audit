@@ -1,0 +1,16 @@
+﻿task,definition,model,rate_pct,rank
+reacher,any,LeWM_h1,84.66666666666667,4.5
+reacher,any,LeWM_h3,97.33333333333333,2.0
+reacher,any,M01_h1,84.66666666666667,4.5
+reacher,any,M03_h1,100.0,1.0
+reacher,any,M07_h1,86.22222222222223,3.0
+reacher,block,LeWM_h1,26.333333333333336,5.0
+reacher,block,LeWM_h3,37.333333333333336,1.0
+reacher,block,M01_h1,30.333333333333336,4.0
+reacher,block,M03_h1,30.999999999999993,3.0
+reacher,block,M07_h1,31.888888888888893,2.0
+reacher,final,LeWM_h1,9.333333333333334,4.0
+reacher,final,LeWM_h3,16.666666666666668,1.0
+reacher,final,M01_h1,10.0,3.0
+reacher,final,M03_h1,1.3333333333333333,5.0
+reacher,final,M07_h1,11.888888888888886,2.0

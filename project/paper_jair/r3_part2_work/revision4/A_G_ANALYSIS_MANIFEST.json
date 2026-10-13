@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-13T19:02:28.810968+00:00",
+  "bootstrap": 5000,
+  "seed": 20261011,
+  "indices_sha256": "6cb486118ec64a49629eb153dfc56e6769e50fa8816687cf10f0830f77800ef8",
+  "statistics_sha256": "58855f7cff9188d6dc0c0f2838f3de6c1a5d6e49793bf0166eabe5a814c6abf3",
+  "source_analysis_sha256": "b597037160b1523388418ff9589bc391e18dd9981c12852195a12496174be4e7",
+  "source_assets_sha256": "2a35a8569e5a17c4c75de3c4b68fb9eb071701e671b57581b95d2be79dfd392d",
+  "status": "COMPLETE",
+  "output_sha256": {
+    "G_CUBE_PAIRED_INTERVALS.csv": "241009a0e6d09d1294b3b1f5d96d44cbec3953f140ff1162052050b06bc766e3",
+    "A_WINDOW_PAIRED_INTERVALS.csv": "94772a365e6fd0ee85e5810b9526b557e82a45e50044bd36ffa85f4f71fea609"
+  }
+}

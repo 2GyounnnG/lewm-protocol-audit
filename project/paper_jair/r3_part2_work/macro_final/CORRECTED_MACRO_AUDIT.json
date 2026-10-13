@@ -1,0 +1,555 @@
+{
+  "utc": "2026-10-13T07:40:49.579172+00:00",
+  "status": "GENERATED_FROM_COMPLETE_ANALYSIS",
+  "updated_macros": {
+    "ReacherLeWMOneAny": {
+      "value": "84.7",
+      "source": "ABSOLUTE_RATES: LeWM_h1/any/30",
+      "previous_value": "84.67"
+    },
+    "ReacherLeWMOneBlock": {
+      "value": "63.7",
+      "source": "ABSOLUTE_RATES: LeWM_h1/block/30",
+      "previous_value": null
+    },
+    "ReacherLeWMOneFinal": {
+      "value": "37.3",
+      "source": "ABSOLUTE_RATES: LeWM_h1/final/30",
+      "previous_value": "9.33"
+    },
+    "ReacherAPAny": {
+      "value": "100.0",
+      "source": "ABSOLUTE_RATES: M03_h1/any/30",
+      "previous_value": "100.00"
+    },
+    "ReacherAPBlock": {
+      "value": "96.7",
+      "source": "ABSOLUTE_RATES: M03_h1/block/30",
+      "previous_value": null
+    },
+    "ReacherAPFinal": {
+      "value": "66.0",
+      "source": "ABSOLUTE_RATES: M03_h1/final/30",
+      "previous_value": "1.33"
+    },
+    "ReacherLeWMThreeAny": {
+      "value": "97.3",
+      "source": "ABSOLUTE_RATES: LeWM_h3/any/30",
+      "previous_value": null
+    },
+    "ReacherLeWMThreeBlock": {
+      "value": "92.7",
+      "source": "ABSOLUTE_RATES: LeWM_h3/block/30",
+      "previous_value": null
+    },
+    "ReacherLeWMThreeFinal": {
+      "value": "85.7",
+      "source": "ABSOLUTE_RATES: LeWM_h3/final/30",
+      "previous_value": null
+    },
+    "ReacherHistoryDelta": {
+      "value": "+12.7",
+      "source": "CONTRASTS: main/h3-h1/any",
+      "previous_value": "+12.67"
+    },
+    "ReacherHistoryDeltaRevision": {
+      "value": "+12.7",
+      "source": "CONTRASTS: main/h3-h1/any",
+      "previous_value": "+12.7"
+    },
+    "ReacherHistoryLow": {
+      "value": "+8.3",
+      "source": "CONTRASTS: main/h3-h1/any",
+      "previous_value": "+8.33"
+    },
+    "ReacherHistoryHigh": {
+      "value": "+17.3",
+      "source": "CONTRASTS: main/h3-h1/any",
+      "previous_value": "+17.33"
+    },
+    "ReacherHistoryCI": {
+      "value": "+12.7 [+8.3, +17.3]",
+      "source": "CONTRASTS: main/h3-h1/any",
+      "previous_value": "+12.67 [+8.33, +17.33]"
+    },
+    "ReacherHistoryCIOnly": {
+      "value": "[+8.3, +17.3]",
+      "source": "CONTRASTS: main/h3-h1/any; interval-only avoids repeating point estimate after 95% CI",
+      "previous_value": "[+8.33, +17.33]"
+    },
+    "ReacherHistoryCIRevision": {
+      "value": "[+8.3, +17.3]",
+      "source": "CONTRASTS: main/h3-h1/any; interval-only avoids repeating point estimate after 95% CI",
+      "previous_value": "+12.7 [+8.3, +17.3]"
+    },
+    "ReacherHistoryFinalCI": {
+      "value": "+48.3 [+42.0, +55.0]",
+      "source": "CONTRASTS: main/h3-h1/final",
+      "previous_value": null
+    },
+    "ReacherHistoryFinalDelta": {
+      "value": "+48.3",
+      "source": "CONTRASTS: main/h3-h1/final",
+      "previous_value": null
+    },
+    "ReacherMOneDelta": {
+      "value": "+12.7 [+7.7, +17.7]",
+      "source": "CONTRASTS: C2/h3-M01_h1/any",
+      "previous_value": "+12.67 [+7.67, +17.67]"
+    },
+    "ReacherMSevenDelta": {
+      "value": "+11.1 [+7.3, +15.0]",
+      "source": "CONTRASTS: C2/h3-M07_h1/any",
+      "previous_value": "+11.11 [+7.33, +15.00]"
+    },
+    "ReacherMThreeDelta": {
+      "value": "-2.7 [-4.7, -1.0]",
+      "source": "CONTRASTS: C2/h3-M03_h1/any",
+      "previous_value": "-2.67 [-4.67, -1.00]"
+    },
+    "ReacherThreeVsFast": {
+      "value": "+12.7",
+      "source": "CONTRASTS: C2/h3-M01_h1/any",
+      "previous_value": "+12.7"
+    },
+    "ReacherThreeVsAD": {
+      "value": "+11.1",
+      "source": "CONTRASTS: C2/h3-M07_h1/any",
+      "previous_value": "+11.1"
+    },
+    "ReacherAPVsThree": {
+      "value": "+2.7",
+      "source": "NEGATIVE of C2 h3-AP: macro means AP minus h3; fixes former negative-below wording",
+      "previous_value": "-2.7"
+    },
+    "ReacherThreeVsAP": {
+      "value": "-2.7",
+      "source": "CONTRASTS: C2/h3-AP/any",
+      "previous_value": null
+    },
+    "APReacherAnyDelta": {
+      "value": "+15.3",
+      "source": "AP_LEWM_PAIRED: corrected/any",
+      "previous_value": "+15.3"
+    },
+    "ReacherAPLeWMAnyDelta": {
+      "value": "+15.3",
+      "source": "AP_LEWM_PAIRED: corrected/any",
+      "previous_value": "+15.33"
+    },
+    "APReacherFinalDelta": {
+      "value": "+28.7",
+      "source": "AP_LEWM_PAIRED: corrected/final",
+      "previous_value": "-8.0"
+    },
+    "ReacherAPLeWMFinalDelta": {
+      "value": "+28.7",
+      "source": "AP_LEWM_PAIRED: corrected/final",
+      "previous_value": "-8.00"
+    },
+    "APLeWMReacherAnyCI": {
+      "value": "+15.3 [+11.0, +20.0]",
+      "source": "AP_LEWM_PAIRED: corrected/any",
+      "previous_value": "+15.3 [+11.0, +20.0]"
+    },
+    "OldAPLeWMReacherAnyCI": {
+      "value": "+15.3 [+11.0, +20.0]",
+      "source": "AP_LEWM_PAIRED: old/any",
+      "previous_value": null
+    },
+    "APLeWMReacherFinalCI": {
+      "value": "+28.7 [+20.7, +36.3]",
+      "source": "AP_LEWM_PAIRED: corrected/final",
+      "previous_value": "-8.0 [-11.7, -4.7]"
+    },
+    "OldAPLeWMReacherFinalCI": {
+      "value": "-8.0 [-11.7, -4.7]",
+      "source": "AP_LEWM_PAIRED: old/final",
+      "previous_value": null
+    },
+    "APLeWMReacherChangeCI": {
+      "value": "+13.3 [+5.7, +21.0]",
+      "source": "AP_LEWM_PAIRED: corrected/final_minus_any_difference_in_differences",
+      "previous_value": "-23.3 [-29.0, -18.3]"
+    },
+    "OldAPLeWMReacherChangeCI": {
+      "value": "-23.3 [-28.7, -18.0]",
+      "source": "AP_LEWM_PAIRED: old/final_minus_any_difference_in_differences",
+      "previous_value": null
+    },
+    "TauReacherAnyBlock": {
+      "value": "0.95",
+      "source": "KENDALL_TAU: any/block",
+      "previous_value": "0.53"
+    },
+    "ReacherTauAnyBlock": {
+      "value": "0.95",
+      "source": "KENDALL_TAU: any/block",
+      "previous_value": "0.5270462766947299"
+    },
+    "OldReacherTauAnyBlock": {
+      "value": "0.53",
+      "source": "KENDALL_TAU_OLD: any/block",
+      "previous_value": null
+    },
+    "TauReacherAnyFinal": {
+      "value": "0.74",
+      "source": "KENDALL_TAU: any/final",
+      "previous_value": "0.11"
+    },
+    "ReacherTauAnyFinal": {
+      "value": "0.74",
+      "source": "KENDALL_TAU: any/final",
+      "previous_value": "0.10540925533894596"
+    },
+    "OldReacherTauAnyFinal": {
+      "value": "0.11",
+      "source": "KENDALL_TAU_OLD: any/final",
+      "previous_value": null
+    },
+    "TauReacherBlockFinal": {
+      "value": "0.80",
+      "source": "KENDALL_TAU: block/final",
+      "previous_value": "0.60"
+    },
+    "ReacherTauBlockFinal": {
+      "value": "0.80",
+      "source": "KENDALL_TAU: block/final",
+      "previous_value": "0.6"
+    },
+    "OldReacherTauBlockFinal": {
+      "value": "0.60",
+      "source": "KENDALL_TAU_OLD: block/final",
+      "previous_value": null
+    },
+    "ReacherAOneLeWMOnePostHit": {
+      "value": "23.7",
+      "source": "100 - ABSOLUTE_RATES outside_fraction_after_first_hit; only observable later-step windows",
+      "previous_value": "0.32"
+    },
+    "ReacherAOneLeWMOneLeave": {
+      "value": "55.9",
+      "source": "TRAJECTORIES: corrected hit-but-not-final / any hit; retains original macro estimand",
+      "previous_value": "88.98"
+    },
+    "ReacherAOneAPPostHit": {
+      "value": "49.1",
+      "source": "100 - ABSOLUTE_RATES outside_fraction_after_first_hit; only observable later-step windows",
+      "previous_value": "0.99"
+    },
+    "ReacherAOneAPLeave": {
+      "value": "34.0",
+      "source": "TRAJECTORIES: corrected hit-but-not-final / any hit; retains original macro estimand",
+      "previous_value": "98.67"
+    },
+    "DFourReacherHOneAnyDelta": {
+      "value": "-4.7",
+      "source": "CONTRASTS: D4_iterations/h1/any",
+      "previous_value": "-4.67"
+    },
+    "DFourReacherHOneAnyLow": {
+      "value": "-9.0",
+      "source": "CONTRASTS: D4_iterations/h1/any",
+      "previous_value": "-9.00"
+    },
+    "DFourReacherHOneAnyHigh": {
+      "value": "-0.3",
+      "source": "CONTRASTS: D4_iterations/h1/any",
+      "previous_value": "-0.33"
+    },
+    "CEMMaxDelta": {
+      "value": "6.7",
+      "source": "max |D4 delta| across new Reacher + unchanged sealed other tasks; {'task': 'cube', 'contrast': 'LeWM_h1 CEM10 - CEM30', 'definition': 'final'}",
+      "previous_value": "6.7"
+    },
+    "OldReacherLeWMOneAny": {
+      "value": "84.7",
+      "source": "ABSOLUTE_RATES_OLD: LeWM_h1/any/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionLeWMOneAnyCI": {
+      "value": "+0.0 [+0.0, +0.0]",
+      "source": "OLD_VS_CORRECTED: LeWM_h1/any",
+      "previous_value": null
+    },
+    "OldReacherLeWMOneBlock": {
+      "value": "26.3",
+      "source": "ABSOLUTE_RATES_OLD: LeWM_h1/block/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionLeWMOneBlockCI": {
+      "value": "+37.3 [+31.0, +43.7]",
+      "source": "OLD_VS_CORRECTED: LeWM_h1/block",
+      "previous_value": null
+    },
+    "OldReacherLeWMOneFinal": {
+      "value": "9.3",
+      "source": "ABSOLUTE_RATES_OLD: LeWM_h1/final/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionLeWMOneFinalCI": {
+      "value": "+28.0 [+22.3, +33.7]",
+      "source": "OLD_VS_CORRECTED: LeWM_h1/final",
+      "previous_value": null
+    },
+    "ReacherEndMinusORLeWMOneBlockCI": {
+      "value": "-6.0 [-9.0, -3.3]",
+      "source": "LABEL_SEMANTICS_COMPARISON: LeWM_h1/block",
+      "previous_value": null
+    },
+    "ReacherEndMinusORLeWMOneFinalCI": {
+      "value": "-3.3 [-5.7, -1.3]",
+      "source": "LABEL_SEMANTICS_COMPARISON: LeWM_h1/final",
+      "previous_value": null
+    },
+    "OldReacherLeWMThreeAny": {
+      "value": "97.3",
+      "source": "ABSOLUTE_RATES_OLD: LeWM_h3/any/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionLeWMThreeAnyCI": {
+      "value": "+0.0 [+0.0, +0.0]",
+      "source": "OLD_VS_CORRECTED: LeWM_h3/any",
+      "previous_value": null
+    },
+    "OldReacherLeWMThreeBlock": {
+      "value": "37.3",
+      "source": "ABSOLUTE_RATES_OLD: LeWM_h3/block/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionLeWMThreeBlockCI": {
+      "value": "+55.3 [+48.7, +61.7]",
+      "source": "OLD_VS_CORRECTED: LeWM_h3/block",
+      "previous_value": null
+    },
+    "OldReacherLeWMThreeFinal": {
+      "value": "16.7",
+      "source": "ABSOLUTE_RATES_OLD: LeWM_h3/final/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionLeWMThreeFinalCI": {
+      "value": "+69.0 [+62.3, +75.3]",
+      "source": "OLD_VS_CORRECTED: LeWM_h3/final",
+      "previous_value": null
+    },
+    "ReacherEndMinusORLeWMThreeBlockCI": {
+      "value": "-3.7 [-7.0, -1.0]",
+      "source": "LABEL_SEMANTICS_COMPARISON: LeWM_h3/block",
+      "previous_value": null
+    },
+    "ReacherEndMinusORLeWMThreeFinalCI": {
+      "value": "-4.0 [-7.3, -1.3]",
+      "source": "LABEL_SEMANTICS_COMPARISON: LeWM_h3/final",
+      "previous_value": null
+    },
+    "OldReacherAPAny": {
+      "value": "100.0",
+      "source": "ABSOLUTE_RATES_OLD: M03_h1/any/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionAPAnyCI": {
+      "value": "+0.0 [+0.0, +0.0]",
+      "source": "OLD_VS_CORRECTED: M03_h1/any",
+      "previous_value": null
+    },
+    "OldReacherAPBlock": {
+      "value": "31.0",
+      "source": "ABSOLUTE_RATES_OLD: M03_h1/block/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionAPBlockCI": {
+      "value": "+65.7 [+59.0, +71.7]",
+      "source": "OLD_VS_CORRECTED: M03_h1/block",
+      "previous_value": null
+    },
+    "OldReacherAPFinal": {
+      "value": "1.3",
+      "source": "ABSOLUTE_RATES_OLD: M03_h1/final/30",
+      "previous_value": null
+    },
+    "ReacherCorrectionAPFinalCI": {
+      "value": "+64.7 [+58.7, +70.3]",
+      "source": "OLD_VS_CORRECTED: M03_h1/final",
+      "previous_value": null
+    },
+    "ReacherEndMinusORAPBlockCI": {
+      "value": "-1.0 [-2.3, +0.0]",
+      "source": "LABEL_SEMANTICS_COMPARISON: M03_h1/block",
+      "previous_value": null
+    },
+    "ReacherEndMinusORAPFinalCI": {
+      "value": "-6.3 [-9.3, -3.7]",
+      "source": "LABEL_SEMANTICS_COMPARISON: M03_h1/final",
+      "previous_value": null
+    },
+    "ReacherTerminationLeWMBlockOld": {
+      "value": "26.3",
+      "source": "ABSOLUTE_RATES_OLD: LeWM_h1/block",
+      "previous_value": null
+    },
+    "ReacherTerminationLeWMBlockNew": {
+      "value": "63.7",
+      "source": "ABSOLUTE_RATES: LeWM_h1/block",
+      "previous_value": null
+    },
+    "ReacherTerminationLeWMFinalOld": {
+      "value": "9.3",
+      "source": "ABSOLUTE_RATES_OLD: LeWM_h1/final",
+      "previous_value": null
+    },
+    "ReacherTerminationLeWMFinalNew": {
+      "value": "37.3",
+      "source": "ABSOLUTE_RATES: LeWM_h1/final",
+      "previous_value": null
+    },
+    "ReacherTerminationAPAnyContrastOld": {
+      "value": "+15.3 [+11.0, +20.0]",
+      "source": "AP_LEWM_PAIRED: old/any",
+      "previous_value": null
+    },
+    "ReacherTerminationAPAnyContrastNew": {
+      "value": "+15.3 [+11.0, +20.0]",
+      "source": "AP_LEWM_PAIRED: corrected/any",
+      "previous_value": null
+    },
+    "ReacherTerminationAPFinalContrastOld": {
+      "value": "-8.0 [-11.7, -4.7]",
+      "source": "AP_LEWM_PAIRED: old/final",
+      "previous_value": null
+    },
+    "ReacherTerminationAPFinalContrastNew": {
+      "value": "+28.7 [+20.7, +36.3]",
+      "source": "AP_LEWM_PAIRED: corrected/final",
+      "previous_value": null
+    },
+    "ReacherTerminationAPChangeContrastOld": {
+      "value": "-23.3 [-28.7, -18.0]",
+      "source": "AP_LEWM_PAIRED: old/final_minus_any_difference_in_differences",
+      "previous_value": null
+    },
+    "ReacherTerminationAPChangeContrastNew": {
+      "value": "+13.3 [+5.7, +21.0]",
+      "source": "AP_LEWM_PAIRED: corrected/final_minus_any_difference_in_differences",
+      "previous_value": null
+    },
+    "ReacherAPHistoryComparisonSentence": {
+      "value": "Three-frame LeWM is 2.7 percentage points below AP under any-step success.",
+      "source": "CONTRASTS C2: h3 - AP; direction chosen from actual sign",
+      "previous_value": null
+    },
+    "ReacherIntroCase": {
+      "value": "D1\\_HELDOUT\\_reacher\\_001a1806cf6459cf9ee9098f",
+      "source": "INTRO_CANDIDATES + INTRO_EXAMPLE_STATES (selected actual corrected trajectory)",
+      "previous_value": null
+    },
+    "ReacherIntroStream": {
+      "value": "R3\\_ORIGINAL",
+      "source": "INTRO_CANDIDATES + INTRO_EXAMPLE_STATES (selected actual corrected trajectory)",
+      "previous_value": null
+    },
+    "ReacherIntroFirstAnyStep": {
+      "value": "16",
+      "source": "INTRO_CANDIDATES + INTRO_EXAMPLE_STATES (selected actual corrected trajectory)",
+      "previous_value": null
+    },
+    "ReacherIntroFirstEndStep": {
+      "value": "16",
+      "source": "INTRO_CANDIDATES + INTRO_EXAMPLE_STATES (selected actual corrected trajectory)",
+      "previous_value": null
+    },
+    "ReacherIntroFirstExitStep": {
+      "value": "18",
+      "source": "INTRO_CANDIDATES + INTRO_EXAMPLE_STATES (selected actual corrected trajectory)",
+      "previous_value": null
+    },
+    "ReacherIntroFinalStep": {
+      "value": "50",
+      "source": "INTRO_CANDIDATES + INTRO_EXAMPLE_STATES (selected actual corrected trajectory)",
+      "previous_value": null
+    },
+    "ReacherIntroFinalMaxJointError": {
+      "value": "0.135",
+      "source": "INTRO_CANDIDATES + INTRO_EXAMPLE_STATES (selected actual corrected trajectory)",
+      "previous_value": null
+    },
+    "ReacherJointThreshold": {
+      "value": "0.05",
+      "source": "INTRO_CANDIDATES + INTRO_EXAMPLE_STATES (selected actual corrected trajectory)",
+      "previous_value": null
+    },
+    "IntroFirstHitStep": {
+      "value": "16",
+      "source": "INTRO_EXAMPLE_STATES: first endpoint hit/exit/final endpoint; see ReacherIntro macros",
+      "previous_value": null
+    },
+    "IntroFirstAnyHitStep": {
+      "value": "16",
+      "source": "INTRO_EXAMPLE_STATES: first endpoint hit/exit/final endpoint; see ReacherIntro macros",
+      "previous_value": null
+    },
+    "IntroExitStep": {
+      "value": "18",
+      "source": "INTRO_EXAMPLE_STATES: first endpoint hit/exit/final endpoint; see ReacherIntro macros",
+      "previous_value": null
+    },
+    "IntroFinalStep": {
+      "value": "50",
+      "source": "INTRO_EXAMPLE_STATES: first endpoint hit/exit/final endpoint; see ReacherIntro macros",
+      "previous_value": null
+    },
+    "IntroFinalState": {
+      "value": "outside the target",
+      "source": "INTRO_EXAMPLE_STATES: first endpoint hit/exit/final endpoint; see ReacherIntro macros",
+      "previous_value": null
+    }
+  },
+  "intentionally_unchanged_reacher_macros": {
+    "ReacherNoiseRange": "Step-2 ten-stream any-step noise diagnostic; not HELDOUT continuation",
+    "ReacherNoiseHalfwidth": "Step-2 registered-function any-step uncertainty",
+    "ReacherFifty": "Step-2 any-step noise",
+    "ReacherHundred": "Step-2 any-step noise",
+    "ReacherHundredThree": "Step-2 any-step noise",
+    "NoiseReacherFifty": "Step-2 any-step noise",
+    "NoiseReacherHundred": "Step-2 any-step noise",
+    "NoiseReacherHundredThree": "Step-2 any-step noise",
+    "ReplanReacherDelta": "Step-3 stream-matched any-step protocol contrast; not rerun scope",
+    "LibraryReacherDelta": "Step-3 any-step version factor; not rerun scope",
+    "PaperGainRangeReacher": "Published literature inventory",
+    "ClaimRangeReacher": "Published literature inventory",
+    "ReproAPReacherOur": "Step-2 original-protocol reproduction",
+    "ReproAPReacherPaper": "Published original-protocol comparison value"
+  },
+  "all_existing_reacher_macros_classified": true,
+  "non_reacher_pair_ci_policy": "Existing PushT/TwoRoom/Cube pair CIs from REVISION_3_PAIR_STATS (seed 20261012) remain byte-for-byte in source files and are not overridden.",
+  "corrected_reacher_bootstrap": "Frozen V2: 5000 replicates, seed 20261011, percentile .025/.975; shared case indices",
+  "coverage_vs_asset_generator": "Full overlay independently covers known main macros; additionally fills missing A1 PostHit/Leave, h3 rates, correction-old/new, label OR/END, and intro macros.",
+  "semantic_fixes": [
+    "ReacherAPVsThree is AP minus h3, matching the name and below-AP construction; use generated direction-aware sentence.",
+    "ReacherHistoryCIRevision is interval-only for the existing 95% CI prose, not point estimate plus interval."
+  ],
+  "unresolved_numeric_scope": [
+    "Correction and total GPU/cost macros need actual run-cost receipts; no cost inferred from the experiment tables. Historical StepTwoGPUHours/FormalGPUHours/TotalGPUHours remain unchanged in this overlay until the cost table is updated explicitly."
+  ],
+  "inputs": {
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/ANALYSIS_MANIFEST.json": "b597037160b1523388418ff9589bc391e18dd9981c12852195a12496174be4e7",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/ABSOLUTE_RATES.csv": "5431d3e4e56ae04372a7ab7c7e750d17f818f0cd86f100c815d40f364756bef0",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/ABSOLUTE_RATES_OLD.csv": "b4b7c3a66098a17ca873871498db14f24e4ccda456212df6cd106281919d97a6",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/CONTRASTS.csv": "18080d94a73a00ec1e102cf62e6aaac5b596e7365a5df344cefc07f0c3b271e7",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/AP_LEWM_PAIRED.csv": "ae0faa4a1a53324011a82af94d4d9cccc27a323296752201da8c5c1e831b43ec",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/KENDALL_TAU.csv": "abf86ee9af674e4fa365a06a4c0f64d1ad822ef2484bc771e212707491b5bb38",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/KENDALL_TAU_OLD.csv": "6dd7fd0a2c03e4624a459029be6ef35398cc43b19a4ed81da90c4555dc67c7ba",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/OLD_VS_CORRECTED.csv": "9356553a06c0c77c131858fcd6ab10e711503c118152560597eaf07fd99f6abd",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/LABEL_SEMANTICS_COMPARISON.csv": "d21f800bc5284e558e02cbcf38303f32b80afbc3a10fa43a7a1cb01064758e27",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/TRAJECTORIES.csv": "fa876bce60bf28b4315f0ff731e00d28c1b3842c92cae851a4471bf726c825e3",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/a3_results/numbers.tex": "f124d1765abad1ae8700bc77dd07e762ca73a31aa4ebca5adb2b6fedf103a07c",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/a3_results/revision3_pair_stats.tex": "9e3bb96e167c9423f0114c287b09389d8a697b618e78be3e4ba82643a8a87d50",
+    "/Users/richwang/Documents/ChatGPT/热/d1_execution/step4/resume_01/results/CONTRASTS.csv": "688de5060a8b3e14ff288acbd5ac9327a3eb948635f4fa1c90b15e2e0fe7946a",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/INTRO_EXAMPLE_STATES.csv": "3926c2006aed75fa0d34e6b3a75dbe5ba0edf968b72c467ade78c219d4236b0c",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/analysis_final/INTRO_CANDIDATES.csv": "f4806b61732d7297abe14e214476afacb1bced6beaf231274431eb79e351ea81",
+    "/Users/richwang/Documents/ChatGPT/热/paper_jair/r3_part2_work/generate_corrected_macros.py": "25d978e373823c19079b942dc9ddb5739a860e783e3bea65852d37b791f4edcf"
+  },
+  "outputs": {
+    "revision3_corrected_numbers.tex": "0641d7432df7c70eff15fa1af7d921a0872ed1d957814a36c0d1e9016b88038a",
+    "SECTION7_CORRECTED_DRAFT_EN.tex": "4e0d1932016f981b5787c33c387074734a7b41dcc1ba6410b57970ec2eeafa96"
+  }
+}

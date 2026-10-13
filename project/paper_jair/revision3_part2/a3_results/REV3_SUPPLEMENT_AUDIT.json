@@ -1,0 +1,212 @@
+{
+  "source": "/Users/richwang/Documents/ChatGPT/热/paper_jair/a1_results/A1_TRAJECTORY_SUMMARY.csv",
+  "source_sha256": "f50c8b581b97e0e71457a4c1e7cfab08b3d2725e95a8641ee8c475ed1b9b2e37",
+  "rows": [
+    {
+      "task": "Reacher",
+      "model": "LeWM one-frame",
+      "occ5": 5.133333333333334,
+      "occ10": 3.1,
+      "all5": 0.0,
+      "all10": 0.0,
+      "exit": 99.67708306919576,
+      "n": 300
+    },
+    {
+      "task": "Reacher",
+      "model": "LeWM three-frame",
+      "occ5": 6.933333333333333,
+      "occ10": 4.0,
+      "all5": 0.0,
+      "all10": 0.0,
+      "exit": 99.69722701849591,
+      "n": 300
+    },
+    {
+      "task": "Reacher",
+      "model": "Fast-LeWM",
+      "occ5": 4.466666666666667,
+      "occ10": 2.7666666666666666,
+      "all5": 0.0,
+      "all10": 0.0,
+      "exit": 99.62020710873169,
+      "n": 300
+    },
+    {
+      "task": "Reacher",
+      "model": "Anchored Planning",
+      "occ5": 0.8666666666666666,
+      "occ10": 1.0333333333333332,
+      "all5": 0.0,
+      "all10": 0.0,
+      "exit": 99.0076600367874,
+      "n": 300
+    },
+    {
+      "task": "Reacher",
+      "model": "AD-WM",
+      "occ5": 5.31111111111111,
+      "occ10": 3.188888888888888,
+      "all5": 0.0,
+      "all10": 0.0,
+      "exit": 96.30802432654325,
+      "n": 300
+    },
+    {
+      "task": "PushT",
+      "model": "LeWM one-frame",
+      "occ5": 41.46666666666667,
+      "occ10": 25.433333333333337,
+      "all5": 14.333333333333334,
+      "all10": 2.0,
+      "exit": 70.15569050755742,
+      "n": 300
+    },
+    {
+      "task": "PushT",
+      "model": "LeWM three-frame",
+      "occ5": 35.66666666666667,
+      "occ10": 21.7,
+      "all5": 10.0,
+      "all10": 1.6666666666666667,
+      "exit": 73.09101619984565,
+      "n": 300
+    },
+    {
+      "task": "PushT",
+      "model": "Fast-LeWM",
+      "occ5": 64.46666666666667,
+      "occ10": 44.233333333333334,
+      "all5": 32.33333333333333,
+      "all10": 13.0,
+      "exit": 53.989370608343634,
+      "n": 300
+    },
+    {
+      "task": "PushT",
+      "model": "Anchored Planning",
+      "occ5": 46.86666666666667,
+      "occ10": 48.16666666666667,
+      "all5": 31.666666666666664,
+      "all10": 27.333333333333332,
+      "exit": 42.0858238570189,
+      "n": 300
+    },
+    {
+      "task": "PushT",
+      "model": "AD-WM",
+      "occ5": 48.24444444444444,
+      "occ10": 31.677777777777777,
+      "all5": 20.666666666666668,
+      "all10": 5.666666666666666,
+      "exit": 64.72774781293086,
+      "n": 300
+    },
+    {
+      "task": "TwoRoom",
+      "model": "LeWM one-frame",
+      "occ5": 72.8,
+      "occ10": 63.93333333333333,
+      "all5": 61.33333333333333,
+      "all10": 47.333333333333336,
+      "exit": 19.855717328324943,
+      "n": 300
+    },
+    {
+      "task": "TwoRoom",
+      "model": "LeWM three-frame",
+      "occ5": 73.4,
+      "occ10": 64.16666666666667,
+      "all5": 62.66666666666667,
+      "all10": 48.333333333333336,
+      "exit": 18.039925692849756,
+      "n": 300
+    },
+    {
+      "task": "TwoRoom",
+      "model": "Fast-LeWM",
+      "occ5": 87.26666666666667,
+      "occ10": 77.53333333333333,
+      "all5": 76.66666666666667,
+      "all10": 60.66666666666667,
+      "exit": 15.33136842027102,
+      "n": 300
+    },
+    {
+      "task": "TwoRoom",
+      "model": "Anchored Planning",
+      "occ5": 98.6,
+      "occ10": 98.4,
+      "all5": 98.33333333333333,
+      "all10": 98.0,
+      "exit": 1.3915457022640805,
+      "n": 300
+    },
+    {
+      "task": "TwoRoom",
+      "model": "AD-WM",
+      "occ5": 92.80000000000001,
+      "occ10": 83.6,
+      "all5": 86.66666666666667,
+      "all10": 69.0,
+      "exit": 17.96337561199333,
+      "n": 300
+    },
+    {
+      "task": "Cube",
+      "model": "LeWM one-frame",
+      "occ5": 49.93333333333334,
+      "occ10": 49.36666666666667,
+      "all5": 47.66666666666667,
+      "all10": 45.666666666666664,
+      "exit": 17.154451874884437,
+      "n": 300
+    },
+    {
+      "task": "Cube",
+      "model": "LeWM three-frame",
+      "occ5": 51.733333333333334,
+      "occ10": 50.9,
+      "all5": 50.0,
+      "all10": 47.0,
+      "exit": 15.904821976384435,
+      "n": 300
+    },
+    {
+      "task": "Cube",
+      "model": "Fast-LeWM",
+      "occ5": 48.733333333333334,
+      "occ10": 49.03333333333333,
+      "all5": 46.33333333333333,
+      "all10": 46.0,
+      "exit": 13.64609491226751,
+      "n": 300
+    },
+    {
+      "task": "Cube",
+      "model": "Anchored Planning",
+      "occ5": 75.06666666666668,
+      "occ10": 74.93333333333332,
+      "all5": 69.66666666666667,
+      "all10": 66.33333333333333,
+      "exit": 12.359515956265135,
+      "n": 300
+    },
+    {
+      "task": "Cube",
+      "model": "AD-WM",
+      "occ5": 80.71111111111111,
+      "occ10": 79.46666666666667,
+      "all5": 81.33333333333333,
+      "all10": 76.66666666666667,
+      "exit": 15.479928231907426,
+      "n": 300
+    }
+  ],
+  "definition": {
+    "occupancy": "mean success indicator in final K raw steps",
+    "all": "all K raw steps successful",
+    "exit": "complement of post-hit occupancy among rows with a first hit"
+  },
+  "reacher_status": "provisional until registered termination correction"
+}

@@ -1,0 +1,32 @@
+{
+ "status": "REGISTERED_BEFORE_GPU",
+ "registered_utc": "2026-10-11T21:05:48Z",
+ "registered_by": "Claude (Anthropic), for the author Ruiqi Wang, after review of step-0/1 deliverables",
+ "formal_jobs_run_before_registration": 0,
+ "files": {
+  "PREREG_D1_V1.md": "ab599de6bf9977a350f86e06df6a4822e962e3f3a64cb14550d10339f30a5a66",
+  "RUN_PLAN_V1.csv": "ff66f9bc26093d8dd0dfcd994396eedb41a8723b5aa64c09dc5b7d1f426cf65d",
+  "UNIFIED_CASES_V1.json": "97936733622282daf8d3d10cf51503fc9502da035df9188f50e33fac46dbb8f5",
+  "CHANGES_FROM_DRAFT.md": "33ee2d66a0a3608263fd6c95455878155f7d5a879c6599c32ac41a02c5ff9998"
+ },
+ "references": {
+  "step1/upload/cases/CASE_AND_RANDOM_STREAM_MANIFEST.json": "a33deab1d21812b2b3389970dc15f98a197741bb7981ff95b2e523aa9c5152c3",
+  "step1/upload/cases/UNIFIED_CASES_DRAFT.json": "1020514f581ac7471aeab967462574e1e0bc983eb43440932d802083594110d1",
+  "step1/upload/cases/tech_reacher.json": "614390c4048e530f36161ab7540f792d74faf85cbdfbae9ae96fd99861255911",
+  "step1/upload/cases/tech_pusht.json": "eaeac8a9eca2f62b24904ca0710ad1d38b10a8ef101503012e9986540ec030dd",
+  "step1/upload/cases/tech_tworoom.json": "53bbe9a624a98811042494084368a5cbdb0bdfdd531e79e64b6092e39eb9f709",
+  "step1/upload/cases/tech_cube.json": "8d60237736ceb3ff5bb8b4946d6587fe7b744cdf148cc15270c1b9022f7d2b08",
+  "step1/upload/cases/ap_original_protocols/main.json": "3243f4ec7c55d349a3f7a73b093664ca7ae695d369f6f718824b54ea47b894b6",
+  "step1/upload/HF_ASSETS_MANIFEST.json": "a6f4109df8248f13c5c1ce18c1d815af0fc7b8e5fd6274c0fdad174a0358f43f",
+  "step1/upload/SHA256SUMS.txt": "23079c75fc4d5bd0b1455e863e8cec8e3448c6867c02e50ca77683a04b68bc3e",
+  "step1/D1_STEP1_UPLOAD_CODE_ONLY.tar.gz": "d63760b2c8935eba7a22f33fb2573c51b9f1298208e3e519def2f13e42d12a80",
+  "step1/code/tools/statistics_d1.py": "58855f7cff9188d6dc0c0f2838f3de6c1a5d6e49793bf0166eabe5a814c6abf3",
+  "step1/code/tools/budget_gate.py": "8328107b9be5df321d14f217ad1cdd1a7b090e0ae76dd414c75adfdf4a720b28",
+  "step1/BASELINE_AUDIT.csv": "d0eefef622c1274160a1523ee13e676548633bf64fc336542fd52a6b720f385e",
+  "step1/PREREG_D1_DRAFT.md": "a39ab87e27bfb63baa9e0aece2ef3ada2bb5f5c0a935e60ac6bbe9ef6bed65e1",
+  "step1/SEAL.json": "2361a085c8ad112167709fcc71f626b8273eaccfd53b2811e29511e9953c7a83",
+  "step1/RUN_PLAN.csv": "ebe9052e5361d5e462de071f8427f837f57efe56a8aca51cbcdc13d80234d33b"
+ },
+ "budget_cap_rtx4090_gpu_hours": 300,
+ "note": "A change before the first formal job creates PREREG_D1_V1_1.md with a reason; after it, DEVIATIONS.jsonl. This receipt is a local record; an external timestamp (e.g. an OSF or GitHub registration of these hashes) can be added by the author."
+}

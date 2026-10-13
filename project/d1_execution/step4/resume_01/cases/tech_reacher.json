@@ -1,0 +1,246 @@
+[
+  {
+    "task": "reacher",
+    "case_id": "R3_reacher_9fa19bfa7865e6d007460378",
+    "role": "TECH",
+    "episode_id": "reacher:85a7dddfa1801302:9586",
+    "source_episode_idx": 9586,
+    "source_asset_sha256": "85a7dddfa1801302abcb175a80a23bb69c78291dd977ce40d69aedcb9123da06",
+    "episode_sha256": "36187193ab3cb10aa94f1f3fa8017030727a52a535dae83400c19350258fb441",
+    "family_id": null,
+    "length": 201,
+    "start_raw_index": 155,
+    "goal_raw_index": 180,
+    "goal_offset_raw": 25,
+    "open_loop_anchor_raw": 155,
+    "open_loop_window_start_raw": 145,
+    "open_loop_target_raw": {
+      "1": 160,
+      "2": 165,
+      "5": 180
+    },
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "source_seed": null,
+    "reset_seed": 0,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "qpos": [
+          2
+        ],
+        "qvel": [
+          2
+        ]
+      },
+      "start": {
+        "qpos": [
+          1.4503720280207033,
+          -0.4636861915271779
+        ],
+        "qvel": [
+          -1.2803818404443743,
+          2.343810118396358
+        ]
+      },
+      "goal": {
+        "qpos": [
+          1.1947315201536268,
+          0.6631094645345422
+        ],
+        "qvel": [
+          -1.2103623651156004,
+          -2.6174937235165863
+        ]
+      },
+      "source_start_pixel_sha256": "e75cdbef16312f71759f7b04d9633c4b3566f48ef7e3478e196cba15976cc873",
+      "source_goal_pixel_sha256": "dcb2ff13905120033ff3fa558d8368e8cba98b404ce2f5921d77839afc26416e"
+    },
+    "cem_case_seed_uint64": 2507808156839943692,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "selection_used_model_outputs": false,
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "task": "reacher",
+    "case_id": "R3_reacher_82447389bac1df5a10bf69a1",
+    "role": "TECH",
+    "episode_id": "reacher:85a7dddfa1801302:9232",
+    "source_episode_idx": 9232,
+    "source_asset_sha256": "85a7dddfa1801302abcb175a80a23bb69c78291dd977ce40d69aedcb9123da06",
+    "episode_sha256": "5ceb2dee4da560422b7459db26fb9f8080ba14b9173cc828406bd9f5f3af8eda",
+    "family_id": null,
+    "length": 201,
+    "start_raw_index": 88,
+    "goal_raw_index": 113,
+    "goal_offset_raw": 25,
+    "open_loop_anchor_raw": 88,
+    "open_loop_window_start_raw": 78,
+    "open_loop_target_raw": {
+      "1": 93,
+      "2": 98,
+      "5": 113
+    },
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "source_seed": null,
+    "reset_seed": 0,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "qpos": [
+          2
+        ],
+        "qvel": [
+          2
+        ]
+      },
+      "start": {
+        "qpos": [
+          -0.34679190090056156,
+          -2.6782735100158033
+        ],
+        "qvel": [
+          -1.647629126059958,
+          0.646015404056264
+        ]
+      },
+      "goal": {
+        "qpos": [
+          -0.39807653960036116,
+          -2.5102346532669126
+        ],
+        "qvel": [
+          -1.9133927626345595,
+          1.5583617205685472
+        ]
+      },
+      "source_start_pixel_sha256": "6729759f383840f2b58e2394e37a36a7fd3dca92da62f9a70b7c5d17838943cc",
+      "source_goal_pixel_sha256": "a33656594b3822a1ebedc9f243a0b6d272d5e83829cf36993f62abaf168a2d0c"
+    },
+    "cem_case_seed_uint64": 6411016285177920880,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "selection_used_model_outputs": false,
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "task": "reacher",
+    "case_id": "R3_reacher_38a495df8dbd4b90551cda69",
+    "role": "TECH",
+    "episode_id": "reacher:85a7dddfa1801302:866",
+    "source_episode_idx": 866,
+    "source_asset_sha256": "85a7dddfa1801302abcb175a80a23bb69c78291dd977ce40d69aedcb9123da06",
+    "episode_sha256": "941662906a0060f1db28df3fa5892dfaf2c4716c98a7e21675ca8743c51cb6f8",
+    "family_id": null,
+    "length": 201,
+    "start_raw_index": 46,
+    "goal_raw_index": 71,
+    "goal_offset_raw": 25,
+    "open_loop_anchor_raw": 46,
+    "open_loop_window_start_raw": 36,
+    "open_loop_target_raw": {
+      "1": 51,
+      "2": 56,
+      "5": 71
+    },
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "source_seed": null,
+    "reset_seed": 0,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "qpos": [
+          2
+        ],
+        "qvel": [
+          2
+        ]
+      },
+      "start": {
+        "qpos": [
+          0.6339464510508916,
+          0.525655944959342
+        ],
+        "qvel": [
+          -0.4934628992392122,
+          4.024967272943341
+        ]
+      },
+      "goal": {
+        "qpos": [
+          0.7884910639698468,
+          0.3928656074602035
+        ],
+        "qvel": [
+          -1.2609214309235945,
+          2.54663120665035
+        ]
+      },
+      "source_start_pixel_sha256": "ba6edf0e97526d6f48348832bcf7bffbd7f789b69db7430f461940e08bc88da7",
+      "source_goal_pixel_sha256": "0a1780cd9d933f08221cecd41bac78796e1ec6080c78d2cdd298025a682734b7"
+    },
+    "cem_case_seed_uint64": 15888524363148603148,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "selection_used_model_outputs": false,
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "task": "reacher",
+    "case_id": "R3_reacher_f604de23b888fac3453ce650",
+    "role": "TECH",
+    "episode_id": "reacher:85a7dddfa1801302:5315",
+    "source_episode_idx": 5315,
+    "source_asset_sha256": "85a7dddfa1801302abcb175a80a23bb69c78291dd977ce40d69aedcb9123da06",
+    "episode_sha256": "760cf43bc632585edcce5d942d4d6a930bb4a7eed8496ff52fafdaffbc06b824",
+    "family_id": null,
+    "length": 201,
+    "start_raw_index": 59,
+    "goal_raw_index": 84,
+    "goal_offset_raw": 25,
+    "open_loop_anchor_raw": 59,
+    "open_loop_window_start_raw": 49,
+    "open_loop_target_raw": {
+      "1": 64,
+      "2": 69,
+      "5": 84
+    },
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "source_seed": null,
+    "reset_seed": 0,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "qpos": [
+          2
+        ],
+        "qvel": [
+          2
+        ]
+      },
+      "start": {
+        "qpos": [
+          0.4857924251444378,
+          -2.124607258485057
+        ],
+        "qvel": [
+          0.21506472435061919,
+          1.2819127789037261
+        ]
+      },
+      "goal": {
+        "qpos": [
+          0.37591858066817574,
+          -2.4443489569070938
+        ],
+        "qvel": [
+          -2.2049191609261207,
+          -4.033525090405727
+        ]
+      },
+      "source_start_pixel_sha256": "8d534dc9a5991dea7c122e667d7f65a36ff414fe615cb175ea153be84e0e14fd",
+      "source_goal_pixel_sha256": "88168d5b46387a39bd9b8c7ae2b3db8b53e1b328f6964e7aeb7094ccb482e2fb"
+    },
+    "cem_case_seed_uint64": 8123637296922889745,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "selection_used_model_outputs": false,
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  }
+]

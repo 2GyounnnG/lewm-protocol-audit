@@ -1,0 +1,122 @@
+{
+  "status": "SEALED_BEFORE_CORRECTION_TECH_OR_FORMAL_GPU_JOB",
+  "registration_utc": "2026-10-13T04:32:57.298487+00:00",
+  "preregistration_unchanged": true,
+  "correction_reason": "stable-worldmodel qpos_match Reacher termination is registered by dm_control before outer terminated flag is cleared",
+  "success_semantics": {
+    "action_repeat": 2,
+    "microstep_any": "OR of qpos predicate over both microsteps; first-success prefix comparison",
+    "env_step_end": "predicate at completed environment step; used for block/final/occupancy/terminal-window metrics",
+    "threshold_unchanged": true
+  },
+  "runtime_checks": {
+    "path": "runtime_checks.json",
+    "sha256": "525b79eccbab1613db5cd4661a58c8ea02f91cc1f062fac1b68903836b4857cb",
+    "status": "PASS",
+    "cpu_only": true,
+    "four_env_continuation": true,
+    "reacher_recorded_replay": true
+  },
+  "baseline": {
+    "official_formal_v2_sha256": "06a146f6dcac6be16b1db02232a1e64b9c1079ac191177aeb4b27b818792128b",
+    "method_formal_v1_sha256": "99545c1582de18c394e246ab8439d65b015bf7be4a210b33866876a79a95f403",
+    "stable_worldmodel_commit": "63988116d34cde56aea1240d5e58eb158ac67dc0"
+  },
+  "patches": {
+    "official_formal_v3_sha256": "c50771134fb40e4897e77a8b422d13aa40739cd03de34cc065380dad32a8f8a3",
+    "method_formal_v2_sha256": "d651bde078c91c74a931ed3bf3cba0c01dd5600fd65f49ed09af98232838c3d1",
+    "patch_module_sha256": "91fee32a0b2f4838beb6d78bf25e44afbd4db7b650e1171a3532cd7118c47fd1",
+    "worker_patch_sha256": "6ae17040225af783cff2be9e4cc7b0bfcbff111607d2617ba64de43f74e159b4",
+    "method_patch_sha256": "982b93e1b6e27b56db34a9b997df049c7da93f43e3941cefd4bd1424fef1c604",
+    "dispatcher_sha256": "7fea8aedbe4c5c32bb49d5ae80de0288b1972e0f1a73e62850e4b35e80a023b1"
+  },
+  "environment": {
+    "lock_sha256": "d6dc27e056874564df5cfca45f9c2fd0c29d1779dcf8a109c2a8b6d4ea8a47da",
+    "environment_receipt_sha256": "f781b288d1a46cbf63bd26c695cda4ab3ee332766cbde683a252d219fac97d91",
+    "pip_freeze_sha256": "fda2f8515625c6b2b02248c00e6fe48bd10ba4093e8a1ba717fc8aafccc0a38b",
+    "pip_check": "No broken requirements found.",
+    "python": "3.12.3",
+    "gpu_info_sha256": "85f25923eaa64cbc3ea90f7cf935eb5bdbaca19ae9819c455c93f1c13b44cb83",
+    "resolver_revision_sha256": "cc5b18f525b8695699df640f5d59b30581d319890876de4e4984a630fa341b0e"
+  },
+  "assets": {
+    "dataset_archive_sha256": "4ff2385e49712caa89f21b8e0a246e2614b621d3f22cf2d1224d845e879a1cc2",
+    "dataset_unpacked_sha256": "85a7dddfa1801302abcb175a80a23bb69c78291dd977ce40d69aedcb9123da06",
+    "official_weights_sha256": "eb70b1fd5409f8f81875d62f5ee5a20dd220a3128a477de66b5760f475f0f469",
+    "M01_sha256": "aa56a01da50f411c8555a6554a7f383ce66eb0fd501ea4df4bce9e59befd943e",
+    "M07_3072_sha256": "3f0c70b47a3f99adae33e4849be03b55aa3e0f85a28bdf7b736bb3d9b6434021",
+    "M07_4096_sha256": "56c87c71b3719ec9c05015641096ff4cdd8fb338bf953b80559d0c47f0241b55",
+    "M07_6144_sha256": "fc129ec67a87ad0ec1e8c8312d8d2eebc7cea549b79cf4e9413635267597eac3",
+    "AP_latent_cache_sha256": "62c1fe2adbe45dea8abf03828d0409cacd6e6257377227167b03a5ae5998a1ba"
+  },
+  "formal_scope": {
+    "condition_ids": {
+      "D1V2_001": {
+        "model": "LeWM",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "official"
+      },
+      "D1V2_002": {
+        "model": "LeWM",
+        "history": 3,
+        "iterations": 30,
+        "train_seed": "official"
+      },
+      "D1V2_009": {
+        "model": "M01",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "released"
+      },
+      "D1V2_010": {
+        "model": "M03",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "official"
+      },
+      "D1V2_011": {
+        "model": "M07",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "3072"
+      },
+      "D1V2_012": {
+        "model": "M07",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "4096"
+      },
+      "D1V2_013": {
+        "model": "M07",
+        "history": 1,
+        "iterations": 30,
+        "train_seed": "6144"
+      },
+      "D1V2_029": {
+        "model": "LeWM",
+        "history": 1,
+        "iterations": 10,
+        "train_seed": "official"
+      },
+      "D1V2_030": {
+        "model": "LeWM",
+        "history": 3,
+        "iterations": 10,
+        "train_seed": "official"
+      }
+    },
+    "cases": 100,
+    "streams": "ABC",
+    "budget_raw": 50,
+    "expected_trajectories_per_condition": 300,
+    "expected_total_trajectories": 2700,
+    "scope_note": "V1.2 enumerates nine Reacher conditions (four LeWM h/history/iteration combinations plus M01, M03, and three M07 seeds); this enumerated scope is retained without changing preregistration definitions."
+  },
+  "technical_gate": {
+    "required": "runtime checks PASS; patched worker paths verified for LeWM/AP/M01/M03/M07; first-success prefix equality; reset count one; monotone physical time; microstep predicate labels"
+  },
+  "no_training": true,
+  "no_preprint": true,
+  "no_submission": true
+}

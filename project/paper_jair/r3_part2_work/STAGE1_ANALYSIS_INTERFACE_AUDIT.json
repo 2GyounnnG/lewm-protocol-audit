@@ -1,0 +1,11 @@
+{
+  "status": "SCHEMA_AND_ARTIFACT_AUDIT_ONLY_NOT_FINAL_ANALYSIS",
+  "records_verified": 600,
+  "artifact_hashes_verified": 2400,
+  "environment_endpoints_verified": 30000,
+  "microstep_predicates_verified": 60000,
+  "introduced_performance_estimates": false,
+  "candidate_joint_error_trace_readable": true,
+  "complete_expected_artifact_count": 9300,
+  "partial_600_rejected_before_analysis": "Corrected seal artifact set differs: missing=6900, unexpected=0"
+}

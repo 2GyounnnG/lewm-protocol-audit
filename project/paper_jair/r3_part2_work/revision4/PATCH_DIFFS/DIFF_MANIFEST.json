@@ -1,0 +1,30 @@
+[
+  {
+    "old": "code_frozen/official_formal_v2.py",
+    "new": "final_code/official_formal_v4_reacher.py",
+    "old_sha256": "06a146f6dcac6be16b1db02232a1e64b9c1079ac191177aeb4b27b818792128b",
+    "new_sha256": "04220944a542a339a32feaf5ea0872bfcf69fcf457f98816e57c94952946c694",
+    "diff_sha256": "fa885529336509ff02be3c79fb637bc13db17c7e426d73f4e7702c494bc9ea25"
+  },
+  {
+    "old": "code_frozen/method_formal_v1.py",
+    "new": "final_code/method_formal_v3_reacher.py",
+    "old_sha256": "99545c1582de18c394e246ab8439d65b015bf7be4a210b33866876a79a95f403",
+    "new_sha256": "56fc919b50489eb7d58b54317947ad861031cc3f96701eb990ed03772697029d",
+    "diff_sha256": "784ce589c48027df779ef9d316ba8c41daace161bd3ede357764698ece0b4247"
+  },
+  {
+    "old": "code_frozen/step4_worker.py",
+    "new": "final_code/step4_worker_r3_final.py",
+    "old_sha256": "42d1955397e38edb4971a12321f41b613695f8640cac088924f0f559e5fb697e",
+    "new_sha256": "23bd1276af3f9961e1931a4258dea9b7e1e808647b5d8f67f57f5ec17583f9c9",
+    "diff_sha256": "ce3b7be0f97d461d4522210f02f29b1c50df90c2a7d12b178818b3d78e677669"
+  },
+  {
+    "old": "code_frozen/adapters/swm_runtime.py",
+    "new": "final_code/swm_runtime_recorded.py",
+    "old_sha256": "d5fd559936c1feaec003f0fbef9acffe1d0c8798427b0e6b52ff6ab060e30362",
+    "new_sha256": "38cc977534a2551e89f3f0c0f06a074cd37cf23043877b6fbdedd2c6047d3cf7",
+    "diff_sha256": "f23f44a5d4674ab10637d71ecb711d446d69596a0933e97d609f7a9923c5663b"
+  }
+]

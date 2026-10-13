@@ -1,0 +1,12 @@
+﻿prediction,task,criterion,contrast,status,delta_pp,ci95_low_pp,ci95_high_pp
+C1,reacher,delta >= 10 and CI lower > 0,LeWM_h3 - LeWM_h1,PASS,12.666666666666671,8.333333333333332,17.333333333333332
+C1,pusht,abs(delta) <= 2,LeWM_h3 - LeWM_h1,PASS,0.0,-1.0,1.0
+C1,tworoom,abs(delta) <= 2,LeWM_h3 - LeWM_h1,PASS,-0.6666666666666666,-1.6666666666666667,0.0
+C1,cube,abs(delta) <= 2,LeWM_h3 - LeWM_h1,PASS,0.3333333333333334,-1.0,2.0
+C2,reacher,delta >= 0 and CI lower > -5,LeWM_h3 - M01_h1,PASS,12.666666666666671,7.666666666666668,17.66666666666667
+C2,reacher,delta >= 0 and CI lower > -5,LeWM_h3 - M07_h1,PASS,11.111111111111112,7.333333333333336,15.000000000000002
+C2,reacher,delta < 0,LeWM_h3 - M03_h1,PASS,-2.666666666666667,-4.666666666666667,-1.0
+C3,tworoom,CI lower > 0,M03_h1 - LeWM_h1,INCOMPLETE,,,
+C3,tworoom,CI lower > 0,M07_h1 - LeWM_h1,INCOMPLETE,,,
+C3,cube,CI lower > 0,M03_h1 - LeWM_h1,INCOMPLETE,,,
+C3,cube,CI lower > 0,M07_h1 - LeWM_h1,INCOMPLETE,,,

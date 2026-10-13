@@ -1,0 +1,242 @@
+[
+  {
+    "task": "pusht",
+    "case_id": "R3_pusht_d232773d79ba1384fc558708",
+    "role": "TECH",
+    "episode_id": "pusht:b6ebd9ac94bbe9e3:17137",
+    "source_episode_idx": 17137,
+    "source_asset_sha256": "b6ebd9ac94bbe9e383f6e7a9cd92d74e9aa665ea57b758ed3717b0ee7df8d4fb",
+    "episode_sha256": "cf6e65c28b50963e7916af24be6046722f8f733b45c99e6dfeb57255cea0c60c",
+    "family_id": "initial_input_exact:293fc6c6c1c4e4bbf76cf5d6f1c52faa2136859645e4285cbb0c47fd2c6883be",
+    "length": 159,
+    "start_raw_index": 34,
+    "goal_raw_index": 59,
+    "goal_offset_raw": 25,
+    "open_loop_anchor_raw": 34,
+    "open_loop_window_start_raw": 24,
+    "open_loop_target_raw": {
+      "1": 39,
+      "2": 44,
+      "5": 59
+    },
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "source_seed": null,
+    "reset_seed": 0,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "state": [
+          7
+        ]
+      },
+      "start": {
+        "state": [
+          280.6236267089844,
+          198.09132385253906,
+          316.27520751953125,
+          312.3934326171875,
+          2.586312770843506,
+          -78.56159973144531,
+          -0.06522278487682343
+        ]
+      },
+      "goal": {
+        "state": [
+          210.69911193847656,
+          380.7915954589844,
+          320.9811096191406,
+          315.6210632324219,
+          2.3916633129119873,
+          106.82111358642578,
+          135.73170471191406
+        ]
+      },
+      "source_start_pixel_sha256": "79f21fe71f8e045b6e05584ff09f9a36cc6e5923795f45cceca664fef7c11c44",
+      "source_goal_pixel_sha256": "123f0e3ea45d171257b567d4f03860401c602810e2eef8a779175fe7b926fee0"
+    },
+    "cem_case_seed_uint64": 4469997285060774245,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "selection_used_model_outputs": false,
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "task": "pusht",
+    "case_id": "R3_pusht_7ce91d4ff6c641f063f24c1c",
+    "role": "TECH",
+    "episode_id": "pusht:b6ebd9ac94bbe9e3:13317",
+    "source_episode_idx": 13317,
+    "source_asset_sha256": "b6ebd9ac94bbe9e383f6e7a9cd92d74e9aa665ea57b758ed3717b0ee7df8d4fb",
+    "episode_sha256": "c2ccbfccf8f87fc455be9981b5ed3576accea67bc9ec65b48eb247d08a9b716f",
+    "family_id": "initial_input_exact:edc32ceccdeb100904303be543cd203b677866570345d87566c4e4c6447611f8",
+    "length": 153,
+    "start_raw_index": 51,
+    "goal_raw_index": 76,
+    "goal_offset_raw": 25,
+    "open_loop_anchor_raw": 51,
+    "open_loop_window_start_raw": 41,
+    "open_loop_target_raw": {
+      "1": 56,
+      "2": 61,
+      "5": 76
+    },
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "source_seed": null,
+    "reset_seed": 0,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "state": [
+          7
+        ]
+      },
+      "start": {
+        "state": [
+          19.292396545410156,
+          360.72332763671875,
+          111.37246704101562,
+          296.1878356933594,
+          6.169585704803467,
+          9.703268051147461,
+          -54.39585494995117
+        ]
+      },
+      "goal": {
+        "state": [
+          204.9232177734375,
+          454.72381591796875,
+          162.3822479248047,
+          276.7861022949219,
+          0.3305477201938629,
+          177.17027282714844,
+          -54.024681091308594
+        ]
+      },
+      "source_start_pixel_sha256": "43425f3d599649e2c2ddc4e763cfea9837c5a5680ea592fab49dcf626f6b8e4b",
+      "source_goal_pixel_sha256": "36872f9749b5b9e83dc4dae965681c6d49f574744029a76a6cdae5f0b7879fb9"
+    },
+    "cem_case_seed_uint64": 11818254570121065661,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "selection_used_model_outputs": false,
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "task": "pusht",
+    "case_id": "R3_pusht_487672b045a227341910253e",
+    "role": "TECH",
+    "episode_id": "pusht:b6ebd9ac94bbe9e3:7193",
+    "source_episode_idx": 7193,
+    "source_asset_sha256": "b6ebd9ac94bbe9e383f6e7a9cd92d74e9aa665ea57b758ed3717b0ee7df8d4fb",
+    "episode_sha256": "77c5c18d1a15754e237910a16180f6ca0757f0d0cf23d622323a0ee62651a9f6",
+    "family_id": "initial_input_exact:5159af142614a603579a8a9510fe62b0e92ae65e8285a31199fc1cfd9a0f5e1d",
+    "length": 125,
+    "start_raw_index": 25,
+    "goal_raw_index": 50,
+    "goal_offset_raw": 25,
+    "open_loop_anchor_raw": 25,
+    "open_loop_window_start_raw": 15,
+    "open_loop_target_raw": {
+      "1": 30,
+      "2": 35,
+      "5": 50
+    },
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "source_seed": null,
+    "reset_seed": 0,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "state": [
+          7
+        ]
+      },
+      "start": {
+        "state": [
+          137.78114318847656,
+          75.7973861694336,
+          186.41961669921875,
+          204.252197265625,
+          2.861971616744995,
+          -2.9063289165496826,
+          36.00053024291992
+        ]
+      },
+      "goal": {
+        "state": [
+          154.5774688720703,
+          163.5203399658203,
+          227.3993682861328,
+          277.4020080566406,
+          2.6389853954315186,
+          -0.18115225434303284,
+          17.088693618774414
+        ]
+      },
+      "source_start_pixel_sha256": "a6d82eb939da13a63a6713d99affbe627632a6901f9004259e0504208ee8fc5f",
+      "source_goal_pixel_sha256": "2225fc14cf9e2e4b7e02a015a177805ff9ff695be02f5f2eb4c1dda804cbd42b"
+    },
+    "cem_case_seed_uint64": 15793962743294612101,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "selection_used_model_outputs": false,
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "task": "pusht",
+    "case_id": "R3_pusht_4492b8aacb9c67725b610e91",
+    "role": "TECH",
+    "episode_id": "pusht:b6ebd9ac94bbe9e3:4083",
+    "source_episode_idx": 4083,
+    "source_asset_sha256": "b6ebd9ac94bbe9e383f6e7a9cd92d74e9aa665ea57b758ed3717b0ee7df8d4fb",
+    "episode_sha256": "110a4debcb13d23693067df954938ea3e674920a707d42825341ad31fca1e432",
+    "family_id": "initial_input_exact:b130134f0968a65f48890b27a0ea0fb9edfb8115a94227a23c037aa4a87500d4",
+    "length": 147,
+    "start_raw_index": 121,
+    "goal_raw_index": 146,
+    "goal_offset_raw": 25,
+    "open_loop_anchor_raw": 43,
+    "open_loop_window_start_raw": 33,
+    "open_loop_target_raw": {
+      "1": 48,
+      "2": 53,
+      "5": 68
+    },
+    "open_loop_anchor_relation": "OPEN_LOOP_ANCHOR_NOT_PLANNING_START",
+    "source_seed": null,
+    "reset_seed": 0,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "state": [
+          7
+        ]
+      },
+      "start": {
+        "state": [
+          144.7028045654297,
+          290.2152099609375,
+          246.66456604003906,
+          263.2839660644531,
+          0.8742634057998657,
+          -6.273586273193359,
+          57.73984146118164
+        ]
+      },
+      "goal": {
+        "state": [
+          156.90187072753906,
+          359.04473876953125,
+          249.6907501220703,
+          261.235595703125,
+          0.7705913186073303,
+          27.534692764282227,
+          -41.88264846801758
+        ]
+      },
+      "source_start_pixel_sha256": "768b44ade8c325fd213eb7b580904a7a06cbe90a1bb0c1d5097987a1aa062f00",
+      "source_goal_pixel_sha256": "a0b00a04f5837e650f4b327671dc5d6032203f72fd77e05e131995f67035e39d"
+    },
+    "cem_case_seed_uint64": 11669113138032092444,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "selection_used_model_outputs": false,
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  }
+]

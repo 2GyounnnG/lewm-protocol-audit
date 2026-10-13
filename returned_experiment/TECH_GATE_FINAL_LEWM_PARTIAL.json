@@ -1,0 +1,3517 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-13T06:00:09.012448+00:00",
+  "scope": "FINAL_CODE_TECH_ONLY",
+  "groups": [
+    "LeWM_h1_i30",
+    "LeWM_h3_i30"
+  ],
+  "full_registered_group_coverage": false,
+  "formal_launch_authorized_by_this_file": false,
+  "additional_required_evidence": "Both addendum section 2 runtime checks and locally returned SHA verification are required separately.",
+  "evaluator_sha256": "01d076042cd5fabd9e8de7af2685ea7273b22bebedfe4e13668b089970392bff",
+  "tech_case_sha256": "614390c4048e530f36161ab7540f792d74faf85cbdfbae9ae96fd99861255911",
+  "reference_index_sha256": "6e72992c28d72e348a509e5f5f36884677669bbee5dd9b7df07027256dac40a1",
+  "rules": {
+    "T1": "Strict dtype/shape/C-order-byte equality, before first original success and separately including its action; no success means all 50 actions.",
+    "T2": "Actual initial wrapper reset, dm_control reset and initialization exactly once; no pending or internal resets.",
+    "T3": "Monotone time, dt=.02, target fixed, finite states; every saved state agrees with native CPU full-two-microstep replay.",
+    "T4": "Original non-wrapped absolute-joint threshold .05; independent predicate, both step labels and any/block/final semantics agree.",
+    "replay_state_absolute_tolerance": 1e-12,
+    "replay_state_relative_tolerance": 0,
+    "success_predicate_tolerance": "none: strict < 0.05"
+  },
+  "gates": {
+    "T1": {
+      "status": "PASS",
+      "case_stream_counts": {
+        "PASS": 24,
+        "FAIL": 0,
+        "BLOCKED": 0
+      },
+      "case_streams_expected": 24,
+      "totals": {
+        "actions_before_success_compared": 895,
+        "actions_including_first_success_compared": 918
+      }
+    },
+    "T2": {
+      "status": "PASS",
+      "case_stream_counts": {
+        "PASS": 24,
+        "FAIL": 0,
+        "BLOCKED": 0
+      },
+      "case_streams_expected": 24,
+      "totals": {
+        "wrapper_reset_count": 24,
+        "dm_control_reset_count": 24,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0
+      }
+    },
+    "T3": {
+      "status": "PASS",
+      "case_stream_counts": {
+        "PASS": 24,
+        "FAIL": 0,
+        "BLOCKED": 0
+      },
+      "case_streams_expected": 24,
+      "totals": {
+        "microsteps": 2400,
+        "environment_steps": 1200,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0
+      }
+    },
+    "T4": {
+      "status": "PASS",
+      "case_stream_counts": {
+        "PASS": 24,
+        "FAIL": 0,
+        "BLOCKED": 0
+      },
+      "case_streams_expected": 24,
+      "totals": {
+        "predicate_comparisons": 2400,
+        "predicate_mismatches": 0,
+        "steps_where_two_labels_differ": 9
+      }
+    }
+  },
+  "case_stream_results": [
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_9fa19bfa7865e6d007460378",
+      "stream": "R3_ORIGINAL",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/result.json": "22ce1101ce37bf1d3da39280c982dcd6e820debde9d6da272dafd66c7f0d0d95",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/trajectory.npz": "77403fd91f11d1097f6280129d58db4d9267849a8384777145778c4f31f33e4b"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 48,
+        "actions_before_success_compared": 48,
+        "actions_including_first_success_compared": 49,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/actions.npy": "36f6c52886cb8f988c9a101bb4f2fab2179fc243707fce1a9858884d0d304137",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/successes.npy": "bd22d2386955f5fd106c28d0c45986d5dced289bba9e2df8626027b0a6be3cfc",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/metadata.json": "893a97d5aee54206f03c338d9bdafeec5aa4d434730d9f4fb22f68991d6a5913"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08873306948196213,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 4,
+        "positive_any_in_step_labels": 2,
+        "positive_step_end_labels": 2,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_9fa19bfa7865e6d007460378",
+      "stream": "R4_ALT_CEM_1",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/result.json": "5e556ac22cf77f52a5150c5db4e203a6b03878161b74c3f1643a11497e0f0efb",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/trajectory.npz": "1a5f419c2511a254f299ad6688d07f8c4ea83f3e5cdcf593aa2d7cc1434a7a28"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 32,
+        "actions_before_success_compared": 32,
+        "actions_including_first_success_compared": 33,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/actions.npy": "81eea6346eea73814cb1bcb42680e958cc97016de7b95832cc1e73e5e3aa7a75",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/successes.npy": "67319ceac53dd02e7fb58023991f912c9a4cf8206d6739a2f6ca4bd210e0c790",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/metadata.json": "977045a0796372ddfbb668449cf01e98be5427797e51266ae823cc67803bf74f"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08993111549824943,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 10,
+        "positive_any_in_step_labels": 6,
+        "positive_step_end_labels": 6,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 0
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_9fa19bfa7865e6d007460378",
+      "stream": "R4_ALT_CEM_2",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/result.json": "b4990c40b5f4443e11cb392f3d8fe6353a9d1c105d592b131c51e8ade20683db",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/trajectory.npz": "954cd24e8cdbc23c6e28d9f980bc3ecf0589b342ebb1d4353022bfeb452391b8"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 49,
+        "actions_before_success_compared": 49,
+        "actions_including_first_success_compared": 50,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/actions.npy": "2f3fc9a2a2f62e30bf8a02477e89802f829ec4765fcf60a9db1f153603d9a9b0",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/successes.npy": "21d653100b604dbacf9cde7a589bae6f737d2cc81b5109a170dfa54c8d35cdfb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/metadata.json": "58f26486e7ac992f40550ec1e17905710ab43cf28fa081a81a6b806798ecdbe7"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08149784306619895,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 2,
+        "positive_any_in_step_labels": 1,
+        "positive_step_end_labels": 1,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_82447389bac1df5a10bf69a1",
+      "stream": "R3_ORIGINAL",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/result.json": "ef7dd7a18edb1e1c3110e163387d2fb04eb833e8f206cc2c3842aaa97be81485",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/trajectory.npz": "f7c5ac8b5e3015dd5f48cc9e2c552ebc92e410af01ed25225ebaf92082848011"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 27,
+        "actions_before_success_compared": 27,
+        "actions_including_first_success_compared": 28,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/actions.npy": "5ae0632b1dd29b82ee36f12f72662ebfc165df3cd56603fca79eb4e122211b97",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/successes.npy": "679caad8df0c77ee8ea5c4c95b2a7543478a6717c3fa2db81f25eb7a39858dda",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/metadata.json": "d41acb10107e6a5013b7184fba3313936d986c1252804f85afd8d2b520317262"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07078176471184783,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 4,
+        "positive_any_in_step_labels": 3,
+        "positive_step_end_labels": 3,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_82447389bac1df5a10bf69a1",
+      "stream": "R4_ALT_CEM_1",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/result.json": "755af4fb1e03d30238b0350439c0b5554b750384f357a9785453d1b16fd0a526",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/trajectory.npz": "94f2d9a639710f75896235f58c0fc050b96b0e296f274c18ad6c16d5aa99acad"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": null,
+        "actions_before_success_compared": 50,
+        "actions_including_first_success_compared": 50,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/actions.npy": "f0052c93ac852edfb8b13cb43c91524f608303872da941d585c6449860aa2ba6",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/successes.npy": "cfe8f2e303eb8b6e4c40b6856b240013e31b5161b3747040fadf65066cc8ecd6",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/metadata.json": "c6c9f6f0f9e3d2fcb7d06a9075284afcb15aa79aea39ba2316a25d18c4916262"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.06460007531166889,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 0,
+        "positive_any_in_step_labels": 0,
+        "positive_step_end_labels": 0,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 0,
+          "success_block": 0,
+          "success_final": 0
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_82447389bac1df5a10bf69a1",
+      "stream": "R4_ALT_CEM_2",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/result.json": "ea492539e631566a6639b7098c683ab3e67c941c1f7fb6bc7daef628f8241ddc",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/trajectory.npz": "99993da9d4d9c1c8e262f5acd8c3d9395f2c637da9a4c4b1bb0524cdd82ec33d"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 49,
+        "actions_before_success_compared": 49,
+        "actions_including_first_success_compared": 50,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/actions.npy": "c5d80b14d8378474660887f8ff3b538fd9c856e8b5dc18aa9fedc7d112f2e9f8",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/successes.npy": "21d653100b604dbacf9cde7a589bae6f737d2cc81b5109a170dfa54c8d35cdfb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/metadata.json": "2e69278822b0e83df7acd51585cc2d6fbbc02440d5b8c86509192b95491b9eb1"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07557993878792502,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 2,
+        "positive_any_in_step_labels": 1,
+        "positive_step_end_labels": 1,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_38a495df8dbd4b90551cda69",
+      "stream": "R3_ORIGINAL",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/result.json": "cc1a651202b9ac0a8452f01022b56ef6701450df746c5d792a48fc197b85c6f7",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/trajectory.npz": "1e3654bc2108497835e5bed12752b301434d77178b71bd51bd8fa75800d60158"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 33,
+        "actions_before_success_compared": 33,
+        "actions_including_first_success_compared": 34,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/actions.npy": "646de64cc24154e4c28b767623be3a086e232b5cd1f4bb733611415ccd95a3ca",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/successes.npy": "427b53f9f1e3b191d40a871e72671d3a6073dd14bddd714f618cd0605c4c7a0d",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/metadata.json": "2b1436ddd9d6f27a3d81a5c2c6184eb2e1f6e9dc33711e9a7b755357dcf21c6c"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07195563122582982,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 6,
+        "positive_any_in_step_labels": 4,
+        "positive_step_end_labels": 4,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 0
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_38a495df8dbd4b90551cda69",
+      "stream": "R4_ALT_CEM_1",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/result.json": "b7590d6c47aa156fca0a302be7d785a6644764287c9bf56599b445d2f7778dcf",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/trajectory.npz": "bc2cd76adb3891ed410e6e59020ce593b62db017b7fac16144369f1ad0cb23a7"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 44,
+        "actions_before_success_compared": 44,
+        "actions_including_first_success_compared": 45,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/actions.npy": "0d0361e275f83dbc3ce379725b4db630cb8a9bfa6e0edee2c82876e3d1c1394a",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/successes.npy": "574df4b19cd8ca0d18738380adc6df389244f119a94d59d47de6c9f32099782b",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/metadata.json": "671b70291014e2bf31ea9721ad98a8c0ff9d94d5b84f39b3108b04dd5acb57bc"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.09026611431323972,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 7,
+        "positive_any_in_step_labels": 4,
+        "positive_step_end_labels": 3,
+        "steps_where_two_labels_differ": 1,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 0
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_38a495df8dbd4b90551cda69",
+      "stream": "R4_ALT_CEM_2",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/result.json": "0064846273ab660d12233c3fffb25e142c082057c8eed17558bf05a2053769e2",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/trajectory.npz": "113761e74230487cdd7558c4ba661083b916205fca7b72982ad920fca24f49e4"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 31,
+        "actions_before_success_compared": 31,
+        "actions_including_first_success_compared": 32,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/actions.npy": "5a4c579c30bdae820f8e87665639fb76ee6e2d873106690a3178d2c12c764004",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/successes.npy": "32d04a304562b1c083dde86785d68fef00bfdac56ca5f33dab300210d806e4f9",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/metadata.json": "28849d999829b23941e6c754653097f0cb06b8644c5c801f87546e771366478f"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.06910578396997569,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 21,
+        "positive_any_in_step_labels": 13,
+        "positive_step_end_labels": 10,
+        "steps_where_two_labels_differ": 3,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 0
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_f604de23b888fac3453ce650",
+      "stream": "R3_ORIGINAL",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/result.json": "19ce4bc1e8280711408d181d454ac3c378480603986ba94b20fcd8496591f319",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/trajectory.npz": "38d9bcd2d30bb07912634231f20bf9c22ff6ec6deb4b68d18e47d2b11c29ab6a"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 24,
+        "actions_before_success_compared": 24,
+        "actions_including_first_success_compared": 25,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/actions.npy": "07e8c3c53883de48981c8d60b80aaa379ad4b3a8ea26c72ed24ae871e67ff05a",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/successes.npy": "1df0f5fe7442647aaa08ef02a8ee99980557c3ca80ef8b310dc01e1764259372",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/metadata.json": "9d0a3542ec47457febb6a19b0075230b27f5f29eaa9510f1bb23152d62c22214"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07987171733943654,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 7,
+        "positive_any_in_step_labels": 4,
+        "positive_step_end_labels": 4,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_f604de23b888fac3453ce650",
+      "stream": "R4_ALT_CEM_1",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/result.json": "5a8b246886aced5fe328aa97a8d1a3078583b45b5ebf4e94eb0432a6e3a06da2",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/trajectory.npz": "c22631a985bf937b3050adcac17fc4d6b43048ee828f9b63e5cd81160aadc268"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 24,
+        "actions_before_success_compared": 24,
+        "actions_including_first_success_compared": 25,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/actions.npy": "25c0f29107efaf0d34a9900fa940e22329afff3249cc4f2b60208148c6410341",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/successes.npy": "1df0f5fe7442647aaa08ef02a8ee99980557c3ca80ef8b310dc01e1764259372",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/metadata.json": "03097b992cbedeb9afdb2f5c01eaefd292422ccf40b5cd177b21ca79f83a3ec9"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07587234176903701,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 4,
+        "positive_any_in_step_labels": 2,
+        "positive_step_end_labels": 2,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 0
+        }
+      }
+    },
+    {
+      "group": "LeWM_h1_i30",
+      "case_id": "R3_reacher_f604de23b888fac3453ce650",
+      "stream": "R4_ALT_CEM_2",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/result.json": "c5cf6989ce195e7c67b3baa0b8d998d3dc94d6c2d701a4192e398994f4580087",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/trajectory.npz": "3963ae6213e522e436c32f2bdde0a30c7d35a3922b283cfc75e846b22fd55af9"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 22,
+        "actions_before_success_compared": 22,
+        "actions_including_first_success_compared": 23,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/actions.npy": "e5e60a1202c4d348c9f41da5b6fa41cf98d10732f1ca6c082170810a75067688",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/successes.npy": "197351b17340e428b3620a749c5657c0b08dd1c6dde42e8f5dfa8fcd218b21fb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h1_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/metadata.json": "d92d5574b23236a856154fce5d35c6b450f1394bd5ce49fb06b9a1e8719554df"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08041609997345844,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 12,
+        "positive_any_in_step_labels": 7,
+        "positive_step_end_labels": 6,
+        "steps_where_two_labels_differ": 1,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_9fa19bfa7865e6d007460378",
+      "stream": "R3_ORIGINAL",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/result.json": "edf0064aac99c2c2e955181ada505e4e7792b0924da408c9bde4d292879a12e6",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/trajectory.npz": "bb185090fcc2dbe97b7ea225e0843a3571d3a69b51254380b8c6e7fd3719fe43"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 49,
+        "actions_before_success_compared": 49,
+        "actions_including_first_success_compared": 50,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/actions.npy": "43c48a44e6e95ad0e570229ae25904f2827fc61c2422c5139fbcab602cc1ca02",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/successes.npy": "21d653100b604dbacf9cde7a589bae6f737d2cc81b5109a170dfa54c8d35cdfb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R3_ORIGINAL/metadata.json": "9e58efceba8de83ac74f6e7da672500b2dbd49cacb8bbefa52a211abd4dac25a"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08873306948196213,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 2,
+        "positive_any_in_step_labels": 1,
+        "positive_step_end_labels": 1,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_9fa19bfa7865e6d007460378",
+      "stream": "R4_ALT_CEM_1",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/result.json": "3b1a5a81ebc700232bc8ccb6f3bc0c552172f4b3b61912ee8f365652149d4661",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/trajectory.npz": "ee0e9ab58b2c2b0c95acc17641f701e5c866db434c33825efe21f6097ded2ca6"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 31,
+        "actions_before_success_compared": 31,
+        "actions_including_first_success_compared": 32,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/actions.npy": "e09104f551e0490418807d09816ce813a7bbd357f5f755b71c5105ddc293442b",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/successes.npy": "32d04a304562b1c083dde86785d68fef00bfdac56ca5f33dab300210d806e4f9",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_1/metadata.json": "3961dbd8d4537b740dcd0b862758d00a492977066b2969f7254a201ceaf1976c"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08993111549824943,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 8,
+        "positive_any_in_step_labels": 5,
+        "positive_step_end_labels": 5,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_9fa19bfa7865e6d007460378",
+      "stream": "R4_ALT_CEM_2",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/result.json": "aa4c2e115c89beae38cff264c029c076a8a17672124531842c7080c14d53a86e",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/trajectory.npz": "b9149e9245ac630fb913662f572946cb86fd703115111d8cfe335b56e9da45e4"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 49,
+        "actions_before_success_compared": 49,
+        "actions_including_first_success_compared": 50,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/actions.npy": "8f031293867103b05b1480d68c58f4622d37fbcac7a69d162d6e393c4712eadf",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/successes.npy": "21d653100b604dbacf9cde7a589bae6f737d2cc81b5109a170dfa54c8d35cdfb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_9fa19bfa7865e6d007460378/R4_ALT_CEM_2/metadata.json": "6262725c8cc01daa491cd9d7cf69fdc1285d84473a1a7c4adaa7f6d698414174"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08149784306619895,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 1,
+        "positive_any_in_step_labels": 1,
+        "positive_step_end_labels": 1,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_82447389bac1df5a10bf69a1",
+      "stream": "R3_ORIGINAL",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/result.json": "e952c567c74dcdce67e84781f218f0fef46c829b366596e1c7fd3c17b8aa0eab",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/trajectory.npz": "e533cd83319d669cb8ccd5c4f7c9991e55ff67eb20f4ff586e23e96935eb6f2d"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 49,
+        "actions_before_success_compared": 49,
+        "actions_including_first_success_compared": 50,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/actions.npy": "f744ad3e72ade96633b5c965a71cada7bf3521d31cb31349b348fe609cd298da",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/successes.npy": "21d653100b604dbacf9cde7a589bae6f737d2cc81b5109a170dfa54c8d35cdfb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R3_ORIGINAL/metadata.json": "f0676455eeca6d0e1888b095c621a7c568f7aaafc760394d986a0aa7acf6d544"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07078176471184783,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 1,
+        "positive_any_in_step_labels": 1,
+        "positive_step_end_labels": 1,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_82447389bac1df5a10bf69a1",
+      "stream": "R4_ALT_CEM_1",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/result.json": "4992afba9a69eb3146d59043253e65f04fdb2600c9bc83bf762f963896d0053c",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/trajectory.npz": "1d6b433e9f8013f685d895dc5ce8b0f0befe2652738e4c36a9cfd29f1783b9c3"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 49,
+        "actions_before_success_compared": 49,
+        "actions_including_first_success_compared": 50,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/actions.npy": "528b905fd78f9c8376c31958ab5ed9481955370237d2df04ac7c1782bf6cd1db",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/successes.npy": "21d653100b604dbacf9cde7a589bae6f737d2cc81b5109a170dfa54c8d35cdfb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_1/metadata.json": "b40c4c469aa818adbe24cb58e6d5be0223604efcb1fd3ed4f5f76e3c94ff5fa5"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.06460007531166889,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 2,
+        "positive_any_in_step_labels": 1,
+        "positive_step_end_labels": 1,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_82447389bac1df5a10bf69a1",
+      "stream": "R4_ALT_CEM_2",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/result.json": "0993ab67cb4b4bc60a5c01cf45734c3fae33358649edd4fd3b97cea133602b07",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/trajectory.npz": "6b9c18a421a1d2c38457fce041405e523d880414b1f60f990d3de4c033275610"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 49,
+        "actions_before_success_compared": 49,
+        "actions_including_first_success_compared": 50,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/actions.npy": "289c83d739f251978ef9b86afc7d263a879e0a5538dfd2824b4f8d4410742601",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/successes.npy": "21d653100b604dbacf9cde7a589bae6f737d2cc81b5109a170dfa54c8d35cdfb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_82447389bac1df5a10bf69a1/R4_ALT_CEM_2/metadata.json": "c8184c420e4f6fcf319446545253353010a0ae8068bafd2bd9531cdad0aeb104"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08828335542031596,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 2,
+        "positive_any_in_step_labels": 1,
+        "positive_step_end_labels": 1,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_38a495df8dbd4b90551cda69",
+      "stream": "R3_ORIGINAL",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/result.json": "0fb257138e4f5ba665ca4db28c33ebb114b1180fb0d95232afe3f63bc5c51da3",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/trajectory.npz": "3b8f4c4cfc0b48580e5bd60d9b0bcbc416c136549204c90ff8942d099b3926e1"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 32,
+        "actions_before_success_compared": 32,
+        "actions_including_first_success_compared": 33,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/actions.npy": "76bb0e532cd675495bcaf8f69d1e3a98077a6e693a1d6f57802a9352d9c527d9",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/successes.npy": "67319ceac53dd02e7fb58023991f912c9a4cf8206d6739a2f6ca4bd210e0c790",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R3_ORIGINAL/metadata.json": "354e4234e9c9508dda5fa2ee676712c9f550614768a914de914466ed43754ff2"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07195563122582982,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 7,
+        "positive_any_in_step_labels": 5,
+        "positive_step_end_labels": 4,
+        "steps_where_two_labels_differ": 1,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_38a495df8dbd4b90551cda69",
+      "stream": "R4_ALT_CEM_1",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/result.json": "e4eae0feda765b30ea6a6a35821809ffbf8c55c659fe524fbf1b4b16072a6de2",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/trajectory.npz": "b9294403f51d482349d94432b7ceb79d6c4b87f84eadcbcdd9a86c504e4284c7"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 44,
+        "actions_before_success_compared": 44,
+        "actions_including_first_success_compared": 45,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/actions.npy": "573fc455739d39e51e3adf683f7a5c0c588334b99da12a2b8348074a5b0c8fe1",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/successes.npy": "574df4b19cd8ca0d18738380adc6df389244f119a94d59d47de6c9f32099782b",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_1/metadata.json": "1d092ff6605ed516f43cbec76867d5ba53fd2b9b21c8f9f08fdfbf9ff248955f"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.06289902748488108,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 11,
+        "positive_any_in_step_labels": 6,
+        "positive_step_end_labels": 6,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_38a495df8dbd4b90551cda69",
+      "stream": "R4_ALT_CEM_2",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/result.json": "6f09d9a1a9bd75d394a65e1ebe258fe04ac53b02f25961ee10a8b188c1ed79db",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/trajectory.npz": "fb43f6233fdb87cd079efd994b7a5175c6d3e966df8534aad104e0a70ad304b9"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 40,
+        "actions_before_success_compared": 40,
+        "actions_including_first_success_compared": 41,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/actions.npy": "f923cf66497d7acab6ea4e6d7c0a2fea8f91cdcc87fb5cf1a0c3ea1ce0526b2f",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/successes.npy": "c3e054901b6b99a8c8445e3a5f3a9fa9340033eb7e8262c891e18250dc6baf13",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_38a495df8dbd4b90551cda69/R4_ALT_CEM_2/metadata.json": "cd1fe1c611bae18587e0826f457b67619ee41ad6e56ed02b8e531051360daca7"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.06615088943293412,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 10,
+        "positive_any_in_step_labels": 6,
+        "positive_step_end_labels": 5,
+        "steps_where_two_labels_differ": 1,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_f604de23b888fac3453ce650",
+      "stream": "R3_ORIGINAL",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/result.json": "c565114e620e3e3c962ca12b8ebd0f2f4d988fe655db0c06c0919ad9629d86e3",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/trajectory.npz": "981d668e9c2d831bb21eb7a8fb3b46a00c0a5e890a222c866c10eff7467558ae"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 24,
+        "actions_before_success_compared": 24,
+        "actions_including_first_success_compared": 25,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/actions.npy": "959f8365b1a78973db6ec76d095f83cbf54124e8103fb115dba163b344d1c235",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/successes.npy": "1df0f5fe7442647aaa08ef02a8ee99980557c3ca80ef8b310dc01e1764259372",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R3_ORIGINAL/metadata.json": "3c9c760abbd981aa296241f6e9d0705963beb09398cfcf86b963712f61524192"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07987171733943654,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 5,
+        "positive_any_in_step_labels": 3,
+        "positive_step_end_labels": 2,
+        "steps_where_two_labels_differ": 1,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_f604de23b888fac3453ce650",
+      "stream": "R4_ALT_CEM_1",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/result.json": "a0cf85dba1869423bc56d6c003e37748aab8584d0b5776cdffedd5f631d9dde8",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/trajectory.npz": "87ff930cd031f295e7ccb6962dba519afd638aa854dc1e999e9be634dbe5e9b0"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 24,
+        "actions_before_success_compared": 24,
+        "actions_including_first_success_compared": 25,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/actions.npy": "39e953bf6e4c304c1474339e1eb02fadc28b19055b474efadc68b514ec24c9cd",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/successes.npy": "1df0f5fe7442647aaa08ef02a8ee99980557c3ca80ef8b310dc01e1764259372",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_1/metadata.json": "07de40d748243de5db7989e8e7ad73d61dd9d91b387a2dd362e8b6c6be48b520"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.08007119317692801,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 6,
+        "positive_any_in_step_labels": 4,
+        "positive_step_end_labels": 3,
+        "steps_where_two_labels_differ": 1,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    },
+    {
+      "group": "LeWM_h3_i30",
+      "case_id": "R3_reacher_f604de23b888fac3453ce650",
+      "stream": "R4_ALT_CEM_2",
+      "files_sha256": {
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/result.json": "ef19afcf1484cd973669469d0beda9bedccae102e6e7d5d4b66815b42f2a91f8",
+        "/workspace/d1/step4/resume_03_reacher/tech_verified/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/trajectory.npz": "1dd397331f58b0754fbc321232287391ce053ad994396e642b25cd9a414f198f"
+      },
+      "structure_checks": {
+        "status_complete": true,
+        "full50": true,
+        "action_shape": true,
+        "record_schema": true,
+        "microstep_count": true,
+        "step_count": true
+      },
+      "T1": {
+        "status": "PASS",
+        "checks": {
+          "actions_sha_matches_manifest": true,
+          "successes_sha_matches_manifest": true,
+          "all_sources_seal_verified": true,
+          "metadata_prefix_matches_labels": true,
+          "index_prefix_matches_labels": true,
+          "metadata_identity": true,
+          "reference_shape": true,
+          "before_first_success_bitwise": true,
+          "including_first_success_action_bitwise": true
+        },
+        "first_original_success_index_zero_based": 22,
+        "actions_before_success_compared": 22,
+        "actions_including_first_success_compared": 23,
+        "first_divergence_action_zero_based": null,
+        "first_divergence_action_one_based": null,
+        "max_abs_action_difference_through_first_success": 0.0,
+        "reference_dtype": "<f4",
+        "final_dtype": "<f4",
+        "reference_file_sha256": {
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/actions.npy": "28b48f30dff3452c0cf185eb7dc12d3fb33275c073f89e8812b62a06506bb4bd",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/successes.npy": "197351b17340e428b3620a749c5657c0b08dd1c6dde42e8f5dfa8fcd218b21fb",
+          "/workspace/d1/step4/resume_03_reacher/t1_reference/LeWM_h3_i30/R3_reacher_f604de23b888fac3453ce650/R4_ALT_CEM_2/metadata.json": "ea638052b548f3b95aeb774fc330690b554e6fbaad090f1cb0e9e6efb7702c5a"
+        },
+        "required_on_failure": null
+      },
+      "T2": {
+        "status": "PASS",
+        "checks": {
+          "one_real_wrapper_reset": true,
+          "wrapper_reset_before_actions": true,
+          "one_real_dm_control_reset": true,
+          "one_real_initialize_episode": true,
+          "dm_resets_only_explicit_initial_reset": true,
+          "initialization_only_explicit_initial_reset": true,
+          "no_internal_reset_events": true,
+          "no_pending_reset": true,
+          "no_dm_terminal_steps": true,
+          "reset_count_unchanged_at_each_step": true
+        },
+        "wrapper_reset_count": 1,
+        "dm_control_reset_count": 1,
+        "initialize_episode_count": 1,
+        "internal_reset_event_count": 0,
+        "pending_reset_microsteps": 0,
+        "dm_terminal_microsteps": 0
+      },
+      "T3": {
+        "status": "PASS",
+        "checks": {
+          "finite_actions_and_states": true,
+          "physical_time_strictly_increases": true,
+          "each_microstep_dt_0_02": true,
+          "state_chain_continuous": true,
+          "environment_step_state_equals_second_microstep": true,
+          "target_unchanged": true,
+          "action_repeat_exactly_two": true,
+          "independent_cpu_replay_matches_every_microstep": true
+        },
+        "microsteps": 100,
+        "environment_steps": 50,
+        "initial_physics_time": 0.0,
+        "final_physics_time": 2.0000000000000013,
+        "min_microstep_dt": 0.019999999999999907,
+        "max_microstep_dt": 0.020000000000000018,
+        "max_microstep_dt_error": 9.367506770274758e-17,
+        "max_abs_qpos_step_change": 0.07769951124907326,
+        "state_chain_mismatches": 0,
+        "environment_state_mismatches": 0,
+        "continuity_rule": "No arbitrary qpos-jump cutoff; recorded changes must match independent non-reset physics replay at every microstep.",
+        "cpu_replay": {
+          "status": "PASS",
+          "microsteps_replayed": 100,
+          "state_comparisons": 200,
+          "max_abs_by_field": {
+            "physics.time": 0.0,
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "target_qpos": 0.0
+          },
+          "first_mismatch": null,
+          "pending_resets": 0,
+          "terminal_microsteps": 0,
+          "absolute_tolerance": 1e-12,
+          "relative_tolerance": 0,
+          "source": "/workspace/d1/venvs/r3-reacher-v3/lib/python3.12/site-packages/stable_worldmodel/envs/dmcontrol/reacher.py",
+          "method": "native uninstrumented SWM Reacher; native action scaling/dtype; get_termination=None; exactly two dm_control steps per raw action"
+        }
+      },
+      "T4": {
+        "status": "PASS",
+        "checks": {
+          "threshold_exactly_0_05": true,
+          "events_match_independent_qpos_predicate": true,
+          "tracker_events_alias_matches": true,
+          "stored_predicates_match": true,
+          "original_termination_values_match": true,
+          "predicate_observed_at_microstep_end": true,
+          "wrapper_termination_always_false": true,
+          "step_any_labels_match": true,
+          "step_end_labels_match": true,
+          "step_label_aliases_match": true,
+          "event_offsets_match": true,
+          "env_step_event_mapping": true,
+          "microstep_indices_match": true,
+          "no_unconsumed_events_or_diagnostics": true,
+          "task_termination_returns_none": true,
+          "success_any_uses_registered_semantics": true,
+          "success_block_uses_registered_semantics": true,
+          "success_final_uses_registered_semantics": true,
+          "trajectory_npz_labels_match": true
+        },
+        "predicate_comparisons": 100,
+        "predicate_mismatches": 0,
+        "positive_microstep_predicates": 13,
+        "positive_any_in_step_labels": 7,
+        "positive_step_end_labels": 7,
+        "steps_where_two_labels_differ": 0,
+        "expected_result": {
+          "success_any": 1,
+          "success_block": 1,
+          "success_final": 1
+        }
+      }
+    }
+  ]
+}

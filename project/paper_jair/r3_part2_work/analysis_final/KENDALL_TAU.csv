@@ -1,0 +1,4 @@
+﻿version,task,definitions,status,kendall_tau_b,n_models
+corrected,reacher,any/block,DEFINED,0.9486832980505138,5
+corrected,reacher,any/final,DEFINED,0.7378647873726218,5
+corrected,reacher,block/final,DEFINED,0.7999999999999999,5

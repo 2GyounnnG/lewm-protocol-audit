@@ -1,0 +1,331 @@
+{
+  "source": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step4/resume_01/evidence/stage2_statistics/RAW_TRAJECTORIES.csv",
+  "source_sha256": "8599a69432e5ad518a6839674d73574ac37d16cc3b552680fa979fcfa646ec68",
+  "rows": [
+    {
+      "task": "Reacher",
+      "seed": "3072",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 84.0,
+      "block": 33.0,
+      "final": 11.0
+    },
+    {
+      "task": "Reacher",
+      "seed": "3072",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 83.0,
+      "block": 28.999999999999996,
+      "final": 14.000000000000002
+    },
+    {
+      "task": "Reacher",
+      "seed": "3072",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 89.0,
+      "block": 35.0,
+      "final": 12.0
+    },
+    {
+      "task": "Reacher",
+      "seed": "4096",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 85.0,
+      "block": 23.0,
+      "final": 10.0
+    },
+    {
+      "task": "Reacher",
+      "seed": "4096",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 89.0,
+      "block": 34.0,
+      "final": 8.0
+    },
+    {
+      "task": "Reacher",
+      "seed": "4096",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 92.0,
+      "block": 40.0,
+      "final": 13.0
+    },
+    {
+      "task": "Reacher",
+      "seed": "6144",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 89.0,
+      "block": 33.0,
+      "final": 17.0
+    },
+    {
+      "task": "Reacher",
+      "seed": "6144",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 84.0,
+      "block": 32.0,
+      "final": 12.0
+    },
+    {
+      "task": "Reacher",
+      "seed": "6144",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 81.0,
+      "block": 28.000000000000004,
+      "final": 10.0
+    },
+    {
+      "task": "PushT",
+      "seed": "3072",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 94.0,
+      "block": 93.0,
+      "final": 81.0
+    },
+    {
+      "task": "PushT",
+      "seed": "3072",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 96.0,
+      "block": 92.0,
+      "final": 84.0
+    },
+    {
+      "task": "PushT",
+      "seed": "3072",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 96.0,
+      "block": 96.0,
+      "final": 86.0
+    },
+    {
+      "task": "PushT",
+      "seed": "4096",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 92.0,
+      "block": 89.0,
+      "final": 70.0
+    },
+    {
+      "task": "PushT",
+      "seed": "4096",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 92.0,
+      "block": 91.0,
+      "final": 71.0
+    },
+    {
+      "task": "PushT",
+      "seed": "4096",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 94.0,
+      "block": 92.0,
+      "final": 70.0
+    },
+    {
+      "task": "PushT",
+      "seed": "6144",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 90.0,
+      "block": 88.0,
+      "final": 76.0
+    },
+    {
+      "task": "PushT",
+      "seed": "6144",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 94.0,
+      "block": 92.0,
+      "final": 73.0
+    },
+    {
+      "task": "PushT",
+      "seed": "6144",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 93.0,
+      "block": 90.0,
+      "final": 76.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "3072",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 98.0,
+      "block": 98.0,
+      "final": 98.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "3072",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 98.0,
+      "block": 98.0,
+      "final": 98.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "3072",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 97.0,
+      "block": 97.0,
+      "final": 97.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "4096",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 97.0,
+      "block": 97.0,
+      "final": 97.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "4096",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 97.0,
+      "block": 97.0,
+      "final": 97.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "4096",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 96.0,
+      "block": 96.0,
+      "final": 96.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "6144",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 95.0,
+      "block": 95.0,
+      "final": 95.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "6144",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 97.0,
+      "block": 97.0,
+      "final": 96.0
+    },
+    {
+      "task": "TwoRoom",
+      "seed": "6144",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 96.0,
+      "block": 96.0,
+      "final": 96.0
+    },
+    {
+      "task": "Cube",
+      "seed": "3072",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 85.0,
+      "block": 84.0,
+      "final": 82.0
+    },
+    {
+      "task": "Cube",
+      "seed": "3072",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 86.0,
+      "block": 86.0,
+      "final": 80.0
+    },
+    {
+      "task": "Cube",
+      "seed": "3072",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 90.0,
+      "block": 90.0,
+      "final": 85.0
+    },
+    {
+      "task": "Cube",
+      "seed": "4096",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 90.0,
+      "block": 89.0,
+      "final": 86.0
+    },
+    {
+      "task": "Cube",
+      "seed": "4096",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 84.0,
+      "block": 84.0,
+      "final": 78.0
+    },
+    {
+      "task": "Cube",
+      "seed": "4096",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 85.0,
+      "block": 84.0,
+      "final": 80.0
+    },
+    {
+      "task": "Cube",
+      "seed": "6144",
+      "stream": "R3_ORIGINAL",
+      "n": 100,
+      "any": 87.0,
+      "block": 87.0,
+      "final": 80.0
+    },
+    {
+      "task": "Cube",
+      "seed": "6144",
+      "stream": "R4_ALT_CEM_1",
+      "n": 100,
+      "any": 83.0,
+      "block": 81.0,
+      "final": 77.0
+    },
+    {
+      "task": "Cube",
+      "seed": "6144",
+      "stream": "R4_ALT_CEM_2",
+      "n": 100,
+      "any": 88.0,
+      "block": 86.0,
+      "final": 82.0
+    }
+  ],
+  "note": "Reacher rows provisional until registered termination correction"
+}

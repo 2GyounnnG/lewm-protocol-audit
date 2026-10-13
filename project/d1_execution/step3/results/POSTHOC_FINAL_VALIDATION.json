@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-12T17:16:24.798750+00:00",
+  "status": "PASS",
+  "ap_case_and_seed_checks": 512,
+  "prefix_rows": 2400,
+  "contrast_rows": 363,
+  "main_figures": 5,
+  "supplementary_figures": 1,
+  "gpu_hours": 0,
+  "sealed_source_checks": [
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step1/BASELINE_AUDIT.csv",
+      "sha256": "d0eefef622c1274160a1523ee13e676548633bf64fc336542fd52a6b720f385e"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step1/VERSION_BEHAVIOR_TABLE.csv",
+      "sha256": "cc0d3916c5553641bb1c591b9a94644a9b6c12dc56ccda411907febed0b39a61"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step1/repos/M03/data/main_episodes.csv",
+      "sha256": "d2276c2055312a7721690e8df33f6d9f1cb75194ccd4b92addd93238dcf8888d"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step1/repos/M03/data/main_results.csv",
+      "sha256": "3d16d83f527526d57b15fb8e6eb44275fd0c4ababb54a9e2c639a023e1f0c1ad"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step1/repos/M03/code/ap/protocols/main.json",
+      "sha256": "3243f4ec7c55d349a3f7a73b093664ca7ae695d369f6f718824b54ea47b894b6"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step1/repos/M03/lewm_checks/runtime_versions.json",
+      "sha256": "e667e5cc3d7cdcb444e21b08ab96635217f3121a526d8d7422bb992afc425c8f"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step2/resume_03/results/H4_NOISE.json",
+      "sha256": "70ec24629c995bdbc781d0e4b988ffb04eb693ebe0c69605ab0c2855ea6d9fc0"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step2/resume_03/results/RAW_TRAJECTORIES.csv",
+      "sha256": "8cc5633fc156bb53ca31dafd1aeabc4adb5af0eb888339c42caa21e7fad5d140"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step2/resume_03/results/CONTRASTS.csv",
+      "sha256": "03435a4d7abd700167653a639e293a30b8ff705d9c9237c86f4b5e227741d93e"
+    },
+    {
+      "path": "/Users/richwang/Documents/ChatGPT/热/d1_execution/step2/resume_03/LOCAL_RETURN_INDEX.json",
+      "sha256": "b9a6feeec9ace56fb40b4c64994b4237aaed487358d41d043f3ad70e34987a35"
+    }
+  ],
+  "visual_checks": "All six PNG previews inspected; figure 2 legend moved outside data; factor plot leaves incomplete Cube goal missing."
+}

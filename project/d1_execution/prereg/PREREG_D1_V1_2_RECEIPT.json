@@ -1,0 +1,45 @@
+{
+ "status": "REGISTERED_DURING_FORMAL_RUNS_AFFECTED_SUBSET_NOT_RUN",
+ "version": "1.2",
+ "registered_utc": "2026-10-12T01:51:38Z",
+ "supersedes": {
+  "file": "PREREG_D1_V1_1.md",
+  "sha256": "1e2c0131650beab6829226bf717558e09a1ee9552e02625026b4a6dfabb6106f"
+ },
+ "registered_by": "Claude (Anthropic), for the author Ruiqi Wang",
+ "affected_conditions": [
+  "D1_009",
+  "D1_010",
+  "D1_011",
+  "D1_012",
+  "D1_013",
+  "D1_014",
+  "D1_015",
+  "D1_016",
+  "D1_033",
+  "D1_036",
+  "D1_044",
+  "D1_045",
+  "D1_056",
+  "D1_057",
+  "D1_058",
+  "D1_059",
+  "D1_060",
+  "D1_061",
+  "D1_120",
+  "D1_121",
+  "D1_127"
+ ],
+ "affected_conditions_complete_results": 0,
+ "outcomes_seen": "Stage-1 aggregates for Reacher, TwoRoom and Cube seen by the author ~2026-10-12T01:10Z; no PushT unified-protocol success rate seen",
+ "files": {
+  "PREREG_D1_V1_2.md": "09235d12a4290db240f3d5c9ec6d22e08dcd8ada99f674ecd30ec1d937cc5f8f",
+  "CHANGES_V1_1_TO_V1_2.md": "d9157202c2f669dad1a31384f66106e7077b590a6e38f5c1e3c95121eb538e45",
+  "RUN_PLAN_V1.csv": "ff66f9bc26093d8dd0dfcd994396eedb41a8723b5aa64c09dc5b7d1f426cf65d",
+  "UNIFIED_CASES_V1.json": "97936733622282daf8d3d10cf51503fc9502da035df9188f50e33fac46dbb8f5"
+ },
+ "evidence": {
+  "step2/resume_03/QUESTIONS_FOR_AUTHOR_ZH.md": "a0289596be28626e6dfe71447549783202dbc081f43906dd1550e7a5436ffdac",
+  "step2/resume_03/code/exact_pusht_reset.py": "bdf04ffdeba900609011cd908284e6a841d8fe3751b39adbece79710a5a9d7cb"
+ }
+}

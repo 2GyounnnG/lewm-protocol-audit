@@ -1,0 +1,5 @@
+﻿analysis,task,queries,identities_equal,public_ap_successes,our_ap_successes,public_direct_successes,mismatches,public_fail_ours_success,public_success_ours_fail
+post hoc,reacher,128,128,97,125,127,32,30,2
+post hoc,pusht,128,128,89,90,66,15,8,7
+post hoc,tworoom,128,128,60,59,127,11,5,6
+post hoc,cube,128,128,60,60,105,4,2,2

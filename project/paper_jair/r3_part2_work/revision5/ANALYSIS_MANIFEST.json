@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-13T19:40:31.268206+00:00",
+  "seed": 20261011,
+  "bootstrap": 5000,
+  "index_sha256": "6cb486118ec64a49629eb153dfc56e6769e50fa8816687cf10f0830f77800ef8",
+  "statistics_sha256": "58855f7cff9188d6dc0c0f2838f3de6c1a5d6e49793bf0166eabe5a814c6abf3",
+  "outputs": {
+    "FIG5_THREE_LABEL_CONTRASTS.csv": "11f38b3f31932f9f4fe896cbd53c0fa9705888fc44ad750d29238134ad7b1543",
+    "TABLE16_UNIFIED_SEED.csv": "bd300eaad15edf669f0361b6642775180e6b38b1f5f359ad0c4e83283645dc17"
+  }
+}

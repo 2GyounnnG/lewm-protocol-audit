@@ -1,0 +1,13 @@
+﻿method,task,paper_success_pct,paper_gain_pp,source,status,success_pct,ci95_low_pct,ci95_high_pct,absolute_reproduced,n_cases,per_seed_pct,baseline_pct,gain_pp,gain_ci95_low_pp,gain_ci95_high_pp,reported_gain_in_interval,gain_label,matched_gain
+M01,tworoom,98.0,11.0,https://arxiv.org/abs/2606.26217,COMPLETE,96.0,90.0,100.0,True,50,"{""released"": 96.0}",88.0,8.0,0.0,18.0,True,未检出,
+M01,reacher,88.0,2.0,https://arxiv.org/abs/2606.26217,COMPLETE,88.0,78.0,96.0,True,50,"{""released"": 88.0}",80.0,8.0,-4.0,20.0,True,未检出,
+M01,pusht,96.0,0.0,https://arxiv.org/abs/2606.26217,COMPLETE,100.0,100.0,100.0,False,50,"{""released"": 100.0}",98.0,2.0,0.0,6.0,True,未检出,
+M01,cube,80.0,6.0,https://arxiv.org/abs/2606.26217,COMPLETE,78.0,66.0,88.0,True,50,"{""released"": 78.0}",76.0,2.0,-6.0,10.0,True,未检出,
+M03,cube,46.9,31.3,https://arxiv.org/abs/2609.30036,COMPLETE,46.875,38.28125,55.46875,True,128,"{""official"": 46.875}",13.28125,33.59375,25.0,42.1875,True,增益成立,
+M03,pusht,69.5,62.5,https://arxiv.org/abs/2609.30036,COMPLETE,70.3125,61.71875,78.125,True,128,"{""official"": 70.3125}",6.25,64.0625,53.90625,73.4375,True,增益成立,
+M03,reacher,75.8,9.4,https://arxiv.org/abs/2609.30036,COMPLETE,97.65625,94.53125,100.0,False,128,"{""official"": 97.65625}",70.3125,27.34375,19.53125,35.15625,False,增益成立,
+M03,tworoom,46.9,29.7,https://arxiv.org/abs/2609.30036,COMPLETE,46.09375,37.5,54.6875,True,128,"{""official"": 46.09375}",18.75,27.34375,15.625,38.28125,True,增益成立,
+M07,cube,90.7,17.4,https://arxiv.org/abs/2609.30264,COMPLETE,89.33333333333333,81.33333333333334,96.0,True,50,"{""3072"": 92.0, ""4096"": 88.0, ""6144"": 88.0}",,,,,,,NOT_ESTIMABLE_NO_PUBLIC_BASELINE_WEIGHTS
+M07,reacher,83.3,6.6,https://arxiv.org/abs/2609.30264,COMPLETE,81.33333333333333,73.33333333333333,88.66666666666666,True,50,"{""3072"": 80.0, ""4096"": 80.0, ""6144"": 84.0}",,,,,,,NOT_ESTIMABLE_NO_PUBLIC_BASELINE_WEIGHTS
+M07,tworoom,98.0,8.0,https://arxiv.org/abs/2609.30264,COMPLETE,97.33333333333333,92.66666666666666,100.0,True,50,"{""3072"": 98.0, ""4096"": 96.0, ""6144"": 98.0}",,,,,,,NOT_ESTIMABLE_NO_PUBLIC_BASELINE_WEIGHTS
+M07,pusht,92.0,-2.0,https://arxiv.org/abs/2609.30264,COMPLETE,92.66666666666666,87.99999999999999,96.66666666666667,True,50,"{""3072"": 94.0, ""4096"": 92.0, ""6144"": 92.0}",,,,,,,NOT_ESTIMABLE_NO_PUBLIC_BASELINE_WEIGHTS

@@ -1,0 +1,7 @@
+﻿figure_or_table,data_source,source_sha256,notes
+numbers.tex,A3_NUMBER_GENERATOR.py,025bec7ffdbe7125a9b8a868e7d8ed1f773a04bb04558f1a5f9654fd99c7f076,Macros derived from sealed CSV/JSON; no hand-entered result values.
+A1_OCCUPANCY_CURVES,plot_a1.py + a1_results/A1_OCCUPANCY_CURVES.csv,84c4411f9dc58ec31daf76d7b64188eaa28a771c34f609416998071542f48763,Full-budget HELDOUT trajectory success flags.
+FIG3_SUCCESS_DEFINITIONS,d1_execution/step4/resume_01/figures/FIG1_SUCCESS_DEFINITIONS.png,ede7ba46edb67bf65c83979e45d466894683e0c071f064f9a7df8dffcc52c31f,Copied read-only sealed Step 4 figure; renamed for manuscript ordering.
+FIG4_METHOD_CONTRASTS,d1_execution/step4/resume_01/figures/FIG2_METHOD_CONTRASTS.png,711d966399c7fc7daa7753c51dfd21054ef31f3ffa0a47a1da91bded877cdbd1,Copied read-only sealed Step 4 figure; renamed for manuscript ordering.
+FIG_D4_CEM_ITERATIONS,d1_execution/step4/resume_01/figures/FIG3_CEM_ITERATIONS.png,443520c8a8bc669680730cb7e9d9012cfd184bd3443e74f1b115f51a5bc8f752,Copied read-only sealed Step 4 descriptive D4 figure.
+FIG5_NOISE_SCALE,d1_execution/step3/figures/POSTHOC_FIG4_NOISE_SCALE.png,4389d33fe6a84228bf8612811e227185e97e255bae8745bda04665f5a71123d9,Copied read-only sealed Step 3 post hoc figure.

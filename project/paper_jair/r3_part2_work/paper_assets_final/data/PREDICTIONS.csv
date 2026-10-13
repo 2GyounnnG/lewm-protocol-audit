@@ -1,0 +1,12 @@
+prediction,subcondition,criterion,estimate_pp,ci95_low_pp,ci95_high_pp,passed
+P1,Reacher (3-frame $-$ 1-frame),$\widehat{\Delta}\geq+10$ pp and CI lower bound $>0$,12.666666666666671,8.333333333333332,17.333333333333332,True
+P1,PushT (3-frame $-$ 1-frame),$|\widehat{\Delta}|\leq2$ pp (point-estimate rule),0.0,-1.0,1.0,True
+P1,TwoRoom (3-frame $-$ 1-frame),$|\widehat{\Delta}|\leq2$ pp (point-estimate rule),-0.6666666666666666,-1.6666666666666667,0.0,True
+P1,Cube (3-frame $-$ 1-frame),$|\widehat{\Delta}|\leq2$ pp (point-estimate rule),0.3333333333333334,-1.0,2.0,True
+P2,Reacher: LeWM 3-frame $-$ Fast-LeWM,$\widehat{\Delta}\geq0$ pp and CI lower bound $>-5$ pp,12.666666666666671,7.666666666666668,17.66666666666667,True
+P2,Reacher: LeWM 3-frame $-$ AP,$\widehat{\Delta}<0$ pp (point-estimate rule),-2.666666666666667,-4.666666666666667,-1.0,True
+P2,Reacher: LeWM 3-frame $-$ AD-WM,$\widehat{\Delta}\geq0$ pp and CI lower bound $>-5$ pp,11.111111111111116,7.333333333333336,15.000000000000002,True
+P3,TwoRoom: AP $-$ LeWM 1-frame,CI lower bound $>0$ pp (gain rule),17.666666666666668,11.0,25.000000000000007,True
+P3,TwoRoom: AD-WM $-$ LeWM 1-frame,CI lower bound $>0$ pp (gain rule),15.77777777777778,9.88888888888889,22.333333333333336,True
+P3,Cube: AP $-$ LeWM 1-frame,CI lower bound $>0$ pp (gain rule),27.0,19.666666666666664,34.66666666666667,True
+P3,Cube: AD-WM $-$ LeWM 1-frame,CI lower bound $>0$ pp (gain rule),24.11111111111111,17.22222222222222,30.888888888888893,True

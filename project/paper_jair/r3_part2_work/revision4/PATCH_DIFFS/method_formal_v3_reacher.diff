@@ -1,0 +1,43 @@
+--- code_frozen/method_formal_v1.py
++++ final_code/method_formal_v3_reacher.py
+@@ -25,7 +25,7 @@
+  from sklearn.preprocessing import StandardScaler
+  from torchvision.transforms import v2
+  from adapters.model_runtime import load_object,CEMPlanner
+- from adapters.swm_runtime import bind
++ from adapters.swm_runtime_recorded import bind
+  torch.set_num_threads(1);torch.use_deterministic_algorithms(True);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
+  torch.backends.cuda.enable_flash_sdp(False);torch.backends.cuda.enable_mem_efficient_sdp(False);torch.backends.cuda.enable_math_sdp(True)
+  n=json.loads(Path(assets['normalization']).read_text())['action'];sc=StandardScaler();sc.mean_=np.array(n['mean']);sc.scale_=np.array(n['scale']);sc.var_=np.array(n['variance']);sc.n_features_in_=len(sc.mean_);sc.n_samples_seen_=n.get('finite_rows',1)
+@@ -66,7 +66,18 @@
+   out=root_out/stream;out.mkdir(parents=True,exist_ok=True)
+   started=time.monotonic()
+   if (out/(case['case_id']+'.json')).exists():raise FileExistsError('Refuse overwrite delivered case')
+-  env,initial,goal=bind(case,assets['dataset'],assets['dataset_sha256'])
++  from REVISION_3_REACHER_RECORDING_PATCH import install_nonterminating_reacher
++  env,initial,goal=bind(case,assets['dataset'],assets['dataset_sha256'],before_reset=install_nonterminating_reacher if a.task=='reacher' else None)
++  r3_tracker=None
++  if a.task=='reacher':
++   from REVISION_3_REACHER_RECORDING_PATCH import install_nonterminating_reacher
++   r3_tracker=install_nonterminating_reacher(env.world.envs.envs[0].unwrapped)
++   _native_env_step=env.step
++   def _corrected_env_step(action):
++    obs,reward,terminated,truncated,info=_native_env_step(action)
++    info['_d1_success']=r3_tracker.consume_step()
++    return obs,reward,False,truncated,info
++   env.step=_corrected_env_step
+   try:
+    meter=PlanMeter(model,lambda:torch.cuda.synchronize(a.device))
+    if a.method=='M03':
+@@ -86,6 +97,11 @@
+    assert len(r['steps'])==a.budget or (a.success_mode=='any' and r['success_any'])
+    assert [p['raw_t'] for p in r['plans']]==list(range(0,len(r['steps']),5 if a.method=='M03' else 25))
+    r.update(raw_budget=a.budget,status='COMPLETE',success_block=int(any(x['success'] for x in r['steps'][4::5])),success_mode=a.success_mode,executed_raw_steps=len(r['steps']),method=a.method,train_seed=assets.get('train_seed','official'),history_requested=a.history,phase=a.phase,cohort=case.get('cohort','TECH'),checkpoint_sha256=assets['checkpoint_sha256'],condition_id=a.condition_id,whole_case_wall_seconds=time.monotonic()-started)
++   if r3_tracker is not None:
++    record=r3_tracker.export_record();ends=record['step_end_labels']
++    r.update(reacher_runtime=record,success_block=int(any(ends[4::5])),success_final=int(ends[-1]),success_semantics={'success_any':'OR of all microsteps','success_block':'environment-step-end at 5,10,...,50','success_final':'environment-step-end at 50'})
++    for i,row in enumerate(r['steps']):
++     row.update(success_any_in_step=bool(record['step_any_labels'][i]),success_at_step_end=bool(ends[i]))
+    if a.task=='pusht':r['native_reset_v12']=env.native_reset_v12
+    first=r.pop('first_raw_plan');np.save(out/(case['case_id']+'.first_plan.npy'),first,allow_pickle=False)
+    actions=r.pop('raw_actions');np.save(out/(case['case_id']+'.actions.npy'),actions,allow_pickle=False)

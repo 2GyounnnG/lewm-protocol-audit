@@ -1,0 +1,57 @@
+﻿analysis,task,package,public_runtime,our_runtime,same_version
+post hoc,reacher,torch,2.7.1+cu126,2.7.1+cu128,False
+post hoc,reacher,torchvision,0.22.1+cu126,0.22.1+cu128,False
+post hoc,reacher,stable-worldmodel,0.0.6,0.0.6 (SHA-pinned wheel),True
+post hoc,reacher,stable-pretraining,0.1.6,未找到,False
+post hoc,reacher,mujoco,3.10.0,3.10.0,True
+post hoc,reacher,dm-control,1.0.43,1.0.43,True
+post hoc,reacher,gymnasium,1.3.0,1.3.0,True
+post hoc,reacher,numpy,2.4.2,2.4.2,True
+post hoc,reacher,h5py,3.16.0,3.16.0,True
+post hoc,reacher,hydra-core,1.3.2,未找到,False
+post hoc,reacher,PyOpenGL,3.1.10,3.1.10,True
+post hoc,reacher,pymunk,7.3.0,7.3.0,True
+post hoc,reacher,Python,3.11.14,3.12.3,False
+post hoc,reacher,GPU,NVIDIA H20,RTX 4090,False
+post hoc,pusht,torch,2.7.1+cu126,2.7.1+cu128,False
+post hoc,pusht,torchvision,0.22.1+cu126,0.22.1+cu128,False
+post hoc,pusht,stable-worldmodel,0.0.6,0.0.6 (SHA-pinned wheel),True
+post hoc,pusht,stable-pretraining,0.1.6,未找到,False
+post hoc,pusht,mujoco,3.12.0,3.12.0,True
+post hoc,pusht,dm-control,1.0.44,1.0.44,True
+post hoc,pusht,gymnasium,1.3.0,1.3.0,True
+post hoc,pusht,numpy,2.4.2,2.4.2,True
+post hoc,pusht,h5py,3.16.0,3.16.0,True
+post hoc,pusht,hydra-core,1.3.2,未找到,False
+post hoc,pusht,PyOpenGL,3.1.10,3.1.10,True
+post hoc,pusht,pymunk,7.3.0,7.3.0,True
+post hoc,pusht,Python,3.11.14,3.12.3,False
+post hoc,pusht,GPU,NVIDIA H20,RTX 4090,False
+post hoc,tworoom,torch,2.7.1+cu126,2.7.1+cu128,False
+post hoc,tworoom,torchvision,0.22.1+cu126,0.22.1+cu128,False
+post hoc,tworoom,stable-worldmodel,0.0.6,0.0.6 (SHA-pinned wheel),True
+post hoc,tworoom,stable-pretraining,0.1.6,未找到,False
+post hoc,tworoom,mujoco,3.12.0,3.12.0,True
+post hoc,tworoom,dm-control,1.0.44,1.0.44,True
+post hoc,tworoom,gymnasium,1.3.0,1.3.0,True
+post hoc,tworoom,numpy,2.4.2,2.4.2,True
+post hoc,tworoom,h5py,3.16.0,3.16.0,True
+post hoc,tworoom,hydra-core,1.3.2,未找到,False
+post hoc,tworoom,PyOpenGL,3.1.10,3.1.10,True
+post hoc,tworoom,pymunk,7.3.0,7.3.0,True
+post hoc,tworoom,Python,3.11.14,3.12.3,False
+post hoc,tworoom,GPU,NVIDIA H20,RTX 4090,False
+post hoc,cube,torch,2.7.1+cu126,2.7.1+cu128,False
+post hoc,cube,torchvision,0.22.1+cu126,0.22.1+cu128,False
+post hoc,cube,stable-worldmodel,0.0.6,0.0.6 (SHA-pinned wheel),True
+post hoc,cube,stable-pretraining,0.1.6,未找到,False
+post hoc,cube,mujoco,3.12.0,3.12.0,True
+post hoc,cube,dm-control,1.0.44,1.0.44,True
+post hoc,cube,gymnasium,1.3.0,1.3.0,True
+post hoc,cube,numpy,2.4.2,2.4.2,True
+post hoc,cube,h5py,3.16.0,3.16.0,True
+post hoc,cube,hydra-core,1.3.2,未找到,False
+post hoc,cube,PyOpenGL,3.1.10,3.1.10,True
+post hoc,cube,pymunk,7.3.0,7.3.0,True
+post hoc,cube,Python,3.11.14,3.12.3,False
+post hoc,cube,GPU,NVIDIA H20,RTX 4090,False

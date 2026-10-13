@@ -1,0 +1,23 @@
+{
+ "status": "REGISTERED_BEFORE_GPU",
+ "version": "1.1",
+ "registered_utc": "2026-10-11T22:23:25Z",
+ "supersedes": {
+  "file": "PREREG_D1_V1.md",
+  "sha256": "ab599de6bf9977a350f86e06df6a4822e962e3f3a64cb14550d10339f30a5a66"
+ },
+ "registered_by": "Claude (Anthropic), for the author Ruiqi Wang",
+ "formal_jobs_run_before_registration": 0,
+ "formal_outcomes_seen": false,
+ "technical_evidence_seen": "first-plan comparisons on TECH cases only",
+ "files": {
+  "PREREG_D1_V1_1.md": "1e2c0131650beab6829226bf717558e09a1ee9552e02625026b4a6dfabb6106f",
+  "CHANGES_V1_TO_V1_1.md": "34f7dcd06b0527c27df01529a386a0a6e6be525769e10bf03f3e6635a6726012",
+  "RUN_PLAN_V1.csv": "ff66f9bc26093d8dd0dfcd994396eedb41a8723b5aa64c09dc5b7d1f426cf65d",
+  "UNIFIED_CASES_V1.json": "97936733622282daf8d3d10cf51503fc9502da035df9188f50e33fac46dbb8f5"
+ },
+ "evidence": {
+  "step2/resume_01/evidence/GATE6_BC_REFERENCE_SEARCH.json": "8384adf8150b780ce0e3522b3f0216031855f27dcd3a38639f85e4fa28773138"
+ },
+ "note": "RUN_PLAN_V1.csv and UNIFIED_CASES_V1.json are unchanged from version 1."
+}

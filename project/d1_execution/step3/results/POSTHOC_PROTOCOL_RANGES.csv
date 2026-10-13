@@ -1,0 +1,17 @@
+﻿analysis,task,group,min_pct,max_pct,range_pp,min_setting,max_setting,n_entries,scope
+post hoc,reacher,evaluation_any,78.39999999999999,87.60000000000001,9.200000000000017,P0 n=50 subset low95,P0 n=50 subset high95,23,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,reacher,evaluation_including_block_final,8.5,87.60000000000001,79.10000000000001,success final,P0 n=50 subset high95,26,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,reacher,planner_any,44.33333333333333,97.16666666666667,52.83333333333334,replan3,h3,4,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,reacher,literature_nominal,52.0,96.0,44.0,M17 released n50,M05 main matched LeWM,21,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,pusht,evaluation_any,84.79499999999999,95.4,10.605000000000018,P0 n=50 subset low95,P0 n=50 subset high95,24,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,pusht,evaluation_including_block_final,65.5,95.4,29.900000000000006,success final,P0 n=50 subset high95,27,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,pusht,planner_any,30.0,90.33333333333334,60.33333333333334,replan3,h1,4,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,pusht,literature_nominal,49.3,98.0,48.7,M13 matched one epoch,M15 plain H5,20,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,tworoom,evaluation_any,73.2,89.4,16.200000000000003,P0 n=50 subset low95,P0 n=50 subset high95,23,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,tworoom,evaluation_including_block_final,73.2,89.4,16.200000000000003,P0 n=50 subset low95,P0 n=50 subset high95,26,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,tworoom,planner_any,75.66666666666666,81.16666666666666,5.5,replan1,h1,4,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,tworoom,literature_nominal,82.0,98.0,16.0,M02 Table1 n50,M13 matched one epoch,18,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,cube,evaluation_any,64.4,83.2,18.799999999999997,P0 n=50 subset low95,P0 n=50 subset high95,22,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,cube,evaluation_including_block_final,62.0,83.2,21.200000000000003,success final,P0 n=50 subset high95,25,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,cube,planner_any,70.0,73.83333333333334,3.833333333333343,replan3,h1,4,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges
+post hoc,cube,literature_nominal,62.0,74.8,12.799999999999997,M02 Table1 n50,M16 offset25,18,Observed choice range; not a causal decomposition; subset endpoints are central 95% ranges

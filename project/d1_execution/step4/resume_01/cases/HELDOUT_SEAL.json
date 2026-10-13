@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-12T18:12:15.790699+00:00",
+  "status": "SEALED_BEFORE_ANY_GPU_JOB",
+  "heldout_jobs_started": 0,
+  "gpu_jobs_started": 0,
+  "author_scope_clarification": {
+    "utc": "2026-10-12T17:17:12.557896+00:00",
+    "event": "AUTHOR_HELDOUT_SCOPE_CLARIFICATION_NOT_AMENDMENT",
+    "authority": "Direct author answer to pending HELDOUT question",
+    "author_verbatim": "这是对 V2 中'not in any training or retrieval bank'的澄清，不是改动：指本研究自己的再训练集和检索库。不保证公开 LeWM checkpoint 及 M01/M07 作者训练时未见过这些 episode；LeWM 官方协议本身从训练数据集中抽取评测窗口，主研究的 case 同样如此，因此 HELDOUT 与主研究同分布。HELDOUT 用于防止本研究的分析选择过拟合，不用于检验对未见 episode 的泛化。",
+    "heldout_results_seen": false,
+    "heldout_jobs_started": 0,
+    "scope": "Exclude all R3-R10/D1 case sets, own refit training sets, and AP retrieval bank; all evaluation episodes including HELDOUT excluded from rebuilt AP bank"
+  },
+  "files": {
+    "DATASET_CASE_CHECKS.json": "04191493954a02e2061bb15f71e25d69f347cf98a0ee6ce3d9741db69bcb3dc3",
+    "HELDOUT_CASES_V2.json": "edb17e175a0b8e4e00566c52e5409b2f887fd21013a779381222ee4307f041cd",
+    "HELDOUT_EXCLUSION_PROOF.json": "734c9fff2df3574529872f42628159b55a092c49e9e1c7d4d8b79c2f406015c3",
+    "HELDOUT_METADATA_SELECTION.json": "471d8ba0b7559eb8f89f4ab4e967b098bf2abaa905d8533a9b888e7cd5714c01",
+    "M03_cube_bank.json": "8b743585198d9889ea92c9b58031dcc66ae7035fd4394f458f35ff0ca1c4f145",
+    "M03_pusht_bank.json": "a4ac534451a9aead2b05b41d5d6374ea3089d65c40f767f7b025559a3d349d4e",
+    "M03_reacher_bank.json": "11fa95625681483cc50f943aa5710cb589bcf974d51676090999e713c339727d",
+    "M03_tworoom_bank.json": "1adf474bea249d69139f6b625ae56845da54cab3f981a06b220fac5433846f29",
+    "tech_cube.json": "8d60237736ceb3ff5bb8b4946d6587fe7b744cdf148cc15270c1b9022f7d2b08",
+    "tech_pusht.json": "eaeac8a9eca2f62b24904ca0710ad1d38b10a8ef101503012e9986540ec030dd",
+    "tech_reacher.json": "614390c4048e530f36161ab7540f792d74faf85cbdfbae9ae96fd99861255911",
+    "tech_tworoom.json": "53bbe9a624a98811042494084368a5cbdb0bdfdd531e79e64b6092e39eb9f709"
+  },
+  "case_count": {
+    "reacher": 100,
+    "pusht": 100,
+    "tworoom": 100,
+    "cube": 100
+  }
+}

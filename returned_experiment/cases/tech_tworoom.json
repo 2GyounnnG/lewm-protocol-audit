@@ -1,0 +1,202 @@
+[
+  {
+    "case_id": "R3_tworoom_8159f6ad5388c62967a245fd",
+    "cem_case_seed_uint64": 13404150621266727024,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "episode_id": "tworoom:129a36aa93ea0de4:9464",
+    "episode_sha256": "0689364d883a8bc4b64c79379ad75757fe8207101a71f4bb4ae1de373da50945",
+    "family_id": null,
+    "goal_offset_raw": 25,
+    "goal_raw_index": 88,
+    "length": 101,
+    "open_loop_anchor_raw": 63,
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "open_loop_target_raw": {
+      "1": 68,
+      "2": 73,
+      "5": 88
+    },
+    "open_loop_window_start_raw": 53,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "proprio": [
+          2
+        ]
+      },
+      "goal": {
+        "proprio": [
+          82.69639587402344,
+          101.35814666748047
+        ]
+      },
+      "source_goal_pixel_sha256": "091927f99436f57d138871f8317bda351b0b22c278c71c7f4c55aac143566838",
+      "source_start_pixel_sha256": "60f35d9db78ddafda7f9d8f25e74093390a6b1f84cc4ebcba809e77d3aedf5af",
+      "start": {
+        "proprio": [
+          56.87876510620117,
+          84.79707336425781
+        ]
+      }
+    },
+    "reset_seed": 0,
+    "role": "TECH",
+    "selection_used_model_outputs": false,
+    "source_asset_sha256": "129a36aa93ea0de488d2bcc876e396de9e3907bf66c6aae6394e542ef6a6d623",
+    "source_episode_idx": 9464,
+    "source_seed": null,
+    "start_raw_index": 63,
+    "task": "tworoom",
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "case_id": "R3_tworoom_e82d3f995bf62b7dbde34c56",
+    "cem_case_seed_uint64": 15323833240804586854,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "episode_id": "tworoom:129a36aa93ea0de4:3981",
+    "episode_sha256": "c934bc421298c9b33964f4bee2c15efed3b5aa30ed2d10678d266fd6042ff6e3",
+    "family_id": null,
+    "goal_offset_raw": 25,
+    "goal_raw_index": 36,
+    "length": 101,
+    "open_loop_anchor_raw": 11,
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "open_loop_target_raw": {
+      "1": 16,
+      "2": 21,
+      "5": 36
+    },
+    "open_loop_window_start_raw": 1,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "proprio": [
+          2
+        ]
+      },
+      "goal": {
+        "proprio": [
+          107.24678039550781,
+          60.81915283203125
+        ]
+      },
+      "source_goal_pixel_sha256": "9b7b09d8523f6f66e7e6b3653316e702b1fe209f6a07f8d892a8e538d8ec6560",
+      "source_start_pixel_sha256": "a900224f3aec0a8db04fc4d2426bf5da872b9735bf7381ad3f1542eadd23fa2f",
+      "start": {
+        "proprio": [
+          143.83639526367188,
+          127.15312194824219
+        ]
+      }
+    },
+    "reset_seed": 0,
+    "role": "TECH",
+    "selection_used_model_outputs": false,
+    "source_asset_sha256": "129a36aa93ea0de488d2bcc876e396de9e3907bf66c6aae6394e542ef6a6d623",
+    "source_episode_idx": 3981,
+    "source_seed": null,
+    "start_raw_index": 11,
+    "task": "tworoom",
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "case_id": "R3_tworoom_d1565ee6157750397a9ddda7",
+    "cem_case_seed_uint64": 1192664241497337791,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "episode_id": "tworoom:129a36aa93ea0de4:6593",
+    "episode_sha256": "150c5fa672b68387e893e089e2d31ab298c72ce51271fe999d053c70e1681092",
+    "family_id": null,
+    "goal_offset_raw": 25,
+    "goal_raw_index": 43,
+    "length": 83,
+    "open_loop_anchor_raw": 18,
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "open_loop_target_raw": {
+      "1": 23,
+      "2": 28,
+      "5": 43
+    },
+    "open_loop_window_start_raw": 8,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "proprio": [
+          2
+        ]
+      },
+      "goal": {
+        "proprio": [
+          81.32354736328125,
+          42.7639274597168
+        ]
+      },
+      "source_goal_pixel_sha256": "f78129c6b45cddd1760693a85b51221c1564205c151713f765a401dd3372f7b3",
+      "source_start_pixel_sha256": "c9d796a9da04a6f602e85f1301e764f9ab4fb455566a34dc69e0b84da15b12da",
+      "start": {
+        "proprio": [
+          134.53488159179688,
+          59.499671936035156
+        ]
+      }
+    },
+    "reset_seed": 0,
+    "role": "TECH",
+    "selection_used_model_outputs": false,
+    "source_asset_sha256": "129a36aa93ea0de488d2bcc876e396de9e3907bf66c6aae6394e542ef6a6d623",
+    "source_episode_idx": 6593,
+    "source_seed": null,
+    "start_raw_index": 18,
+    "task": "tworoom",
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  },
+  {
+    "case_id": "R3_tworoom_9f47ae2cd729d9b64ddf09d9",
+    "cem_case_seed_uint64": 15109315774880294414,
+    "cem_replan_seed_rule": "int.from_bytes(SHA256(f'R3_CEM_CASE_20261002/{task}/{case_id}/{replan_index}').digest()[:8], 'big')",
+    "episode_id": "tworoom:129a36aa93ea0de4:1472",
+    "episode_sha256": "9a4855d9128683ad73e8fa6373a707f4b380a8735187b66a640480d424b8b0a9",
+    "family_id": null,
+    "goal_offset_raw": 25,
+    "goal_raw_index": 62,
+    "length": 75,
+    "open_loop_anchor_raw": 37,
+    "open_loop_anchor_relation": "SAME_AS_PLANNING_START",
+    "open_loop_target_raw": {
+      "1": 42,
+      "2": 47,
+      "5": 62
+    },
+    "open_loop_window_start_raw": 27,
+    "requires_validated_reset_fallback": true,
+    "reset_metadata": {
+      "column_shapes": {
+        "proprio": [
+          2
+        ]
+      },
+      "goal": {
+        "proprio": [
+          80.2596664428711,
+          70.20954895019531
+        ]
+      },
+      "source_goal_pixel_sha256": "ef37603f108f4b569be478641b97e6d2dade4860b7cb8d8b0204af0d44460f98",
+      "source_start_pixel_sha256": "3717fa88b2b5fe875337260000bd722f45ee919766f8c6769bacfddf0cf9afd4",
+      "start": {
+        "proprio": [
+          121.29097747802734,
+          52.26918029785156
+        ]
+      }
+    },
+    "reset_seed": 0,
+    "role": "TECH",
+    "selection_used_model_outputs": false,
+    "source_asset_sha256": "129a36aa93ea0de488d2bcc876e396de9e3907bf66c6aae6394e542ef6a6d623",
+    "source_episode_idx": 1472,
+    "source_seed": null,
+    "start_raw_index": 37,
+    "task": "tworoom",
+    "reset_seed_provenance": "same validated fallback as sealed main; TECH revalidation required"
+  }
+]

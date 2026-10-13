@@ -1,0 +1,13 @@
+﻿task,definitions,status,kendall_tau_b,n_models
+reacher,any/block,DEFINED,0.5270462766947299,5
+reacher,any/final,DEFINED,0.10540925533894596,5
+reacher,block/final,DEFINED,0.6,5
+pusht,any/block,INCOMPLETE,,
+pusht,any/final,INCOMPLETE,,
+pusht,block/final,INCOMPLETE,,
+tworoom,any/block,INCOMPLETE,,
+tworoom,any/final,INCOMPLETE,,
+tworoom,block/final,INCOMPLETE,,
+cube,any/block,INCOMPLETE,,
+cube,any/final,INCOMPLETE,,
+cube,block/final,INCOMPLETE,,

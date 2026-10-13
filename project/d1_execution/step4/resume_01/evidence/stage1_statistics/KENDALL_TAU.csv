@@ -1,0 +1,13 @@
+﻿task,definitions,status
+reacher,any/block,INCOMPLETE
+reacher,any/final,INCOMPLETE
+reacher,block/final,INCOMPLETE
+pusht,any/block,INCOMPLETE
+pusht,any/final,INCOMPLETE
+pusht,block/final,INCOMPLETE
+tworoom,any/block,INCOMPLETE
+tworoom,any/final,INCOMPLETE
+tworoom,block/final,INCOMPLETE
+cube,any/block,INCOMPLETE
+cube,any/final,INCOMPLETE
+cube,block/final,INCOMPLETE
