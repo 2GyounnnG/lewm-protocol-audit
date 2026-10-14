@@ -1,0 +1,154 @@
+{
+  "scope": "saved images only; no rendering/model execution",
+  "pixel_scale": "0..255 RGB bytes",
+  "regions": "fixed equally sized3x3 spatial grid; not semantic segmentation",
+  "cases": [
+    {
+      "case": "ap-fresh-reacher-000",
+      "mean_absolute_rgb_byte_difference": 2.590361926020408,
+      "max_absolute_rgb_byte_difference": 48.0,
+      "different_pixels_pct": 90.31210140306123,
+      "spatial_grid_3x3": {
+        "row1_col1": {
+          "mean_absolute_rgb_byte_difference": 2.441380569758948,
+          "share_of_total_absolute_difference_pct": 10.285903334513057
+        },
+        "row1_col2": {
+          "mean_absolute_rgb_byte_difference": 2.1842642642642645,
+          "share_of_total_absolute_difference_pct": 9.326993603848974
+        },
+        "row1_col3": {
+          "mean_absolute_rgb_byte_difference": 3.5933333333333333,
+          "share_of_total_absolute_difference_pct": 15.343837998368903
+        },
+        "row2_col1": {
+          "mean_absolute_rgb_byte_difference": 2.4636636636636635,
+          "share_of_total_absolute_difference_pct": 10.520052728494417
+        },
+        "row2_col2": {
+          "mean_absolute_rgb_byte_difference": 2.1655703703703706,
+          "share_of_total_absolute_difference_pct": 9.372130836423695
+        },
+        "row2_col3": {
+          "mean_absolute_rgb_byte_difference": 2.215051851851852,
+          "share_of_total_absolute_difference_pct": 9.586276229604895
+        },
+        "row3_col1": {
+          "mean_absolute_rgb_byte_difference": 3.592972972972973,
+          "share_of_total_absolute_difference_pct": 15.342299229076584
+        },
+        "row3_col2": {
+          "mean_absolute_rgb_byte_difference": 2.2126814814814817,
+          "share_of_total_absolute_difference_pct": 9.576017767656095
+        },
+        "row3_col3": {
+          "mean_absolute_rgb_byte_difference": 2.46002962962963,
+          "share_of_total_absolute_difference_pct": 10.646488272013377
+        }
+      },
+      "top_decile_pixel_error_share_pct": 28.027143890316523,
+      "inputs": {
+        "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/release_complete/C/outputs/diagnostics/render_probe/osmesa/ap-fresh-reacher-000.npy": "9c69c69c07ef9fc822b70c2e533fa178ea2a56f9218df424c07cbc0ea9252233",
+        "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/release_complete/C/outputs/diagnostics/render_probe/egl/ap-fresh-reacher-000.npy": "b6dad86ad1e89ac7ed76127064fac5a292d1b324fe72cd963bf15f0737a43624"
+      }
+    },
+    {
+      "case": "ap-fresh-reacher-001",
+      "mean_absolute_rgb_byte_difference": 2.5914115646258504,
+      "max_absolute_rgb_byte_difference": 72.0,
+      "different_pixels_pct": 90.19252232142857,
+      "spatial_grid_3x3": {
+        "row1_col1": {
+          "mean_absolute_rgb_byte_difference": 2.441380569758948,
+          "share_of_total_absolute_difference_pct": 10.281737079573421
+        },
+        "row1_col2": {
+          "mean_absolute_rgb_byte_difference": 2.320900900900901,
+          "share_of_total_absolute_difference_pct": 9.906429450369155
+        },
+        "row1_col3": {
+          "mean_absolute_rgb_byte_difference": 3.5933333333333333,
+          "share_of_total_absolute_difference_pct": 15.337623051681707
+        },
+        "row2_col1": {
+          "mean_absolute_rgb_byte_difference": 2.1832432432432434,
+          "share_of_total_absolute_difference_pct": 9.318857670221494
+        },
+        "row2_col2": {
+          "mean_absolute_rgb_byte_difference": 2.3168,
+          "share_of_total_absolute_difference_pct": 10.022559474979492
+        },
+        "row2_col3": {
+          "mean_absolute_rgb_byte_difference": 2.215051851851852,
+          "share_of_total_absolute_difference_pct": 9.582393355209188
+        },
+        "row3_col1": {
+          "mean_absolute_rgb_byte_difference": 3.592972972972973,
+          "share_of_total_absolute_difference_pct": 15.336084905660377
+        },
+        "row3_col2": {
+          "mean_absolute_rgb_byte_difference": 2.2126814814814817,
+          "share_of_total_absolute_difference_pct": 9.572139048400329
+        },
+        "row3_col3": {
+          "mean_absolute_rgb_byte_difference": 2.46002962962963,
+          "share_of_total_absolute_difference_pct": 10.64217596390484
+        }
+      },
+      "top_decile_pixel_error_share_pct": 28.485182526661195,
+      "inputs": {
+        "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/release_complete/C/outputs/diagnostics/render_probe/osmesa/ap-fresh-reacher-001.npy": "a5144543c5a7e5058433e0cfe261f5c3ea85665832f023416a6df4453090860e",
+        "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/release_complete/C/outputs/diagnostics/render_probe/egl/ap-fresh-reacher-001.npy": "0e7b3265fbf7b64e4b5c9fd2a90e0ab21b1def84267624b54c5a688137a57c7e"
+      }
+    },
+    {
+      "case": "ap-fresh-reacher-002",
+      "mean_absolute_rgb_byte_difference": 2.561257706207483,
+      "max_absolute_rgb_byte_difference": 45.0,
+      "different_pixels_pct": 90.1805644132653,
+      "spatial_grid_3x3": {
+        "row1_col1": {
+          "mean_absolute_rgb_byte_difference": 2.441380569758948,
+          "share_of_total_absolute_difference_pct": 10.402784658440996
+        },
+        "row1_col2": {
+          "mean_absolute_rgb_byte_difference": 2.1842642642642645,
+          "share_of_total_absolute_difference_pct": 9.432978593716362
+        },
+        "row1_col3": {
+          "mean_absolute_rgb_byte_difference": 3.5537537537537536,
+          "share_of_total_absolute_difference_pct": 15.347265271397854
+        },
+        "row2_col1": {
+          "mean_absolute_rgb_byte_difference": 2.1832432432432434,
+          "share_of_total_absolute_difference_pct": 9.428569205350405
+        },
+        "row2_col2": {
+          "mean_absolute_rgb_byte_difference": 2.160888888888889,
+          "share_of_total_absolute_difference_pct": 9.458138044980949
+        },
+        "row2_col3": {
+          "mean_absolute_rgb_byte_difference": 2.275851851851852,
+          "share_of_total_absolute_difference_pct": 9.96132707027268
+        },
+        "row3_col1": {
+          "mean_absolute_rgb_byte_difference": 3.592972972972973,
+          "share_of_total_absolute_difference_pct": 15.516637659807905
+        },
+        "row3_col2": {
+          "mean_absolute_rgb_byte_difference": 2.2126814814814817,
+          "share_of_total_absolute_difference_pct": 9.684832482148462
+        },
+        "row3_col3": {
+          "mean_absolute_rgb_byte_difference": 2.46002962962963,
+          "share_of_total_absolute_difference_pct": 10.767467013884385
+        }
+      },
+      "top_decile_pixel_error_share_pct": 31.463060997403648,
+      "inputs": {
+        "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/release_complete/C/outputs/diagnostics/render_probe/osmesa/ap-fresh-reacher-002.npy": "840ae1cc3ffc7575e95c3e44dd3444f5e6c0b60d1c0b5edd607a373941039632",
+        "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/release_complete/C/outputs/diagnostics/render_probe/egl/ap-fresh-reacher-002.npy": "39cf8d21e070e6010365daa7fafa2fb0ed49b2c4f03ae9bce93bf95fe8d40a4c"
+      }
+    }
+  ]
+}

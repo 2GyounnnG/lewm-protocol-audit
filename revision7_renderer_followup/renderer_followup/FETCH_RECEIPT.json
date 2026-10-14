@@ -1,0 +1,91 @@
+{
+  "utc": "2026-10-14T03:41:55.115223+00:00",
+  "sources": [
+    {
+      "name": "hf_dataset_card",
+      "url": "https://huggingface.co/datasets/quentinll/lewm-reacher/raw/e70a080d0d04c6072123c9ebd343acf7fff28dbf/README.md",
+      "status": 200,
+      "github": []
+    },
+    {
+      "name": "hf_model_card",
+      "url": "https://huggingface.co/quentinll/lewm-reacher/raw/62adae4b71dc474ddf8f794c476ebfe737a743ca/README.md",
+      "status": 200,
+      "github": []
+    },
+    {
+      "name": "hf_dataset_api",
+      "url": "https://huggingface.co/api/datasets/quentinll/lewm-reacher",
+      "status": 200,
+      "github": []
+    },
+    {
+      "name": "hf_model_api",
+      "url": "https://huggingface.co/api/models/quentinll/lewm-reacher",
+      "status": 200,
+      "github": []
+    },
+    {
+      "name": "proworld",
+      "url": "https://arxiv.org/html/2608.01926v1",
+      "status": 200,
+      "github": [
+        "https://github.com/arXiv/html_feedback/issues",
+        "https://github.com/brucemiller/LaTeXML/issues",
+        "https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML"
+      ]
+    },
+    {
+      "name": "ppwm",
+      "url": "https://arxiv.org/html/2610.08627v1",
+      "status": 200,
+      "github": [
+        "https://github.com/arXiv/html_feedback/issues",
+        "https://github.com/brucemiller/LaTeXML/issues",
+        "https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML"
+      ]
+    },
+    {
+      "name": "keeping",
+      "url": "https://arxiv.org/html/2610.03137v1",
+      "status": 200,
+      "github": [
+        "https://github.com/arXiv/html_feedback/issues",
+        "https://github.com/brucemiller/LaTeXML/issues",
+        "https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML"
+      ]
+    },
+    {
+      "name": "decisionmetric",
+      "url": "https://arxiv.org/html/2608.18746v1",
+      "status": 200,
+      "github": [
+        "https://github.com/arXiv/html_feedback/issues",
+        "https://github.com/brucemiller/LaTeXML/issues",
+        "https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML"
+      ]
+    },
+    {
+      "name": "singhrepro",
+      "url": "https://arxiv.org/html/2608.10145v1",
+      "status": 200,
+      "github": [
+        "https://github.com/arXiv/html_feedback/issues",
+        "https://github.com/brucemiller/LaTeXML/issues",
+        "https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML",
+        "https://github.com/joyjeet-singh/tinylab",
+        "https://github.com/lucas-maes/le-wm"
+      ]
+    },
+    {
+      "name": "singhobjective",
+      "url": "https://arxiv.org/html/2608.12959v1",
+      "status": 200,
+      "github": [
+        "https://github.com/arXiv/html_feedback/issues",
+        "https://github.com/brucemiller/LaTeXML/issues",
+        "https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML"
+      ]
+    }
+  ]
+}

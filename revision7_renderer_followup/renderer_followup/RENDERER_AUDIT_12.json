@@ -1,0 +1,138 @@
+{
+  "utc": "2026-10-14T03:46:18.198769+00:00",
+  "rows": [
+    {
+      "source": "LeWorldModel",
+      "renderer": "EGL",
+      "file": "eval.py",
+      "line": 3,
+      "commit": "8edfeb336732b5f3ce7b8b210d0ba370a09e2cac",
+      "url": "https://github.com/lucas-maes/le-wm/blob/8edfeb336732b5f3ce7b8b210d0ba370a09e2cac/eval.py#L3",
+      "evidence": "os.environ[\"MUJOCO_GL\"] = \"egl\"",
+      "file_sha256": "6584f009b40550fa0df2f8dee22b9329fbfacdfaf74464aa4fd105f464795245"
+    },
+    {
+      "source": "Fast LeWorldModel",
+      "renderer": "EGL",
+      "file": "eval.py",
+      "line": 3,
+      "commit": "2fc3bcafa4396804b0a747878dfe0ebcf14b3fcd",
+      "url": "https://github.com/Yuntian-Gao/Fast-LeWorldModel/blob/2fc3bcafa4396804b0a747878dfe0ebcf14b3fcd/eval.py#L3",
+      "evidence": "os.environ[\"MUJOCO_GL\"] = \"egl\"",
+      "file_sha256": "36ab8a59aed8e31fdd56bbb92b4ee720830ff6d92b87d03c33ddf6cd039e1f30"
+    },
+    {
+      "source": "Anchored Planning / AP",
+      "renderer": "OSMesa",
+      "file": "code/ap/anchored_planning/runtime.py",
+      "line": 44,
+      "commit": "984327424ca7a2e52c75a8279197750d9d0b7c8e",
+      "url": "https://github.com/daybraeklaxry/Aim-Short-to-Reach-Far/blob/984327424ca7a2e52c75a8279197750d9d0b7c8e/code/ap/anchored_planning/runtime.py#L44",
+      "evidence": "    for key, value in dict(MUJOCO_GL=\"osmesa\", PYOPENGL_PLATFORM=\"osmesa\",",
+      "file_sha256": "601fd7423ae05fe3ece694d7470b489d374937fc3ce8968d5dd5d2c5b18527ad"
+    },
+    {
+      "source": "AD-WM",
+      "renderer": "EGL",
+      "file": "eval.py",
+      "line": 3,
+      "commit": "7c27ebfdc4a2ba8e5a16268f2e4aa852fda72144",
+      "url": "https://github.com/ad-wm/ad-wm-code/blob/7c27ebfdc4a2ba8e5a16268f2e4aa852fda72144/eval.py#L3",
+      "evidence": "os.environ.setdefault(\"MUJOCO_GL\", \"egl\")",
+      "file_sha256": "36bdb261196daa6a067fe33147735d6827d686d6822df676711054107d551090"
+    },
+    {
+      "source": "Temporal-Distance JEPA",
+      "renderer": "EGL",
+      "file": "eval.py",
+      "line": 3,
+      "commit": "b4c17ca4649c9bf47272fa66c38da7a684f2a020",
+      "url": "https://github.com/HKBU-KnowComp/Temporal-Distance-JEPA/blob/b4c17ca4649c9bf47272fa66c38da7a684f2a020/eval.py#L3",
+      "evidence": "os.environ[\"MUJOCO_GL\"] = \"egl\"",
+      "file_sha256": "7e612f712f1bb7dd23bebc118377ff7de28c04e16e13b4cff78c5a2a888fe6f0"
+    },
+    {
+      "source": "PPWM",
+      "renderer": "NS",
+      "reason": "No renderer stated in original paper; released evaluator not found in linked material.",
+      "checked_url": "https://arxiv.org/html/2610.08627v1",
+      "local_evidence": "sources/ppwm.txt",
+      "commit": null,
+      "checked_paths": [
+        "sources/ppwm.txt"
+      ]
+    },
+    {
+      "source": "ProWorld",
+      "renderer": "NS",
+      "reason": "No renderer stated or evaluator linked in original paper.",
+      "checked_url": "https://arxiv.org/html/2608.01926v1",
+      "local_evidence": "sources/proworld.txt",
+      "commit": null,
+      "checked_paths": [
+        "sources/proworld.txt"
+      ]
+    },
+    {
+      "source": "Singh reproduction",
+      "renderer": "NS",
+      "reason": "Paper and linked tinylab evaluator have no MUJOCO_GL/PYOPENGL_PLATFORM; TwoRoom-specific renderer is not classified as EGL.",
+      "checked_url": "https://arxiv.org/html/2608.10145v1",
+      "local_evidence": "sources/singhrepro.txt",
+      "commit": "efa9e5d73f09bae511adac87e3041aa1789f0092",
+      "checked_paths": [
+        "repos/tinylab/realenv_r2_planner_eval.py",
+        "repos/tinylab/tworoom_data.py",
+        "sources/singhrepro.txt"
+      ]
+    },
+    {
+      "source": "Objective bottleneck / Singh",
+      "renderer": "NS",
+      "reason": "No renderer stated in original paper; do not infer from LeWM dependency.",
+      "checked_url": "https://arxiv.org/html/2608.12959v1",
+      "local_evidence": "sources/singhobjective.txt",
+      "commit": null,
+      "checked_paths": [
+        "sources/singhobjective.txt"
+      ]
+    },
+    {
+      "source": "DeepJEPA",
+      "renderer": "NS",
+      "reason": "Repository contains README/assets, no released evaluator at inspected commit.",
+      "checked_url": "https://github.com/deepjepa/DeepJEPA",
+      "local_evidence": "repos/deepjepa/README.md",
+      "commit": "351910f21726112d5c3f2bd4dcd9cee72c9c4c11",
+      "checked_paths": [
+        "repos/deepjepa/README.md",
+        "repos/deepjepa/assets/"
+      ],
+      "note": "No evaluator files in inspected repository tree."
+    },
+    {
+      "source": "Decision-Metric Alignment",
+      "renderer": "NS",
+      "reason": "No renderer stated or evaluator linked in original paper.",
+      "checked_url": "https://arxiv.org/html/2608.18746v1",
+      "local_evidence": "sources/decisionmetric.txt",
+      "commit": null,
+      "checked_paths": [
+        "sources/decisionmetric.txt"
+      ]
+    },
+    {
+      "source": "Keeping JEPA Plannable",
+      "renderer": "NS",
+      "reason": "No renderer stated or evaluator linked in original paper.",
+      "checked_url": "https://arxiv.org/html/2610.03137v1",
+      "local_evidence": "sources/keeping.txt",
+      "commit": null,
+      "checked_paths": [
+        "sources/keeping.txt"
+      ]
+    }
+  ],
+  "NS": "not established from checked source; no guessed backend",
+  "backend_scope": "MuJoCo rendering configuration; does not reclassify non-MuJoCo task renderers"
+}

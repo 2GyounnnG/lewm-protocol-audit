@@ -1,0 +1,89 @@
+SHA PASS
+Episode mapping and bank exclusion PASS
+{
+  "task": "reacher",
+  "dependencies": {
+    "numpy": "2.4.2",
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.1",
+    "einops": "0.8.2",
+    "gymnasium": "1.3.0",
+    "stable-worldmodel": "0.0.6",
+    "scikit-learn": "1.7.2",
+    "h5py": "3.16.0",
+    "hdf5plugin": "5.1.0",
+    "mujoco": "3.10.0",
+    "dm-control": "1.0.43",
+    "pygame": "2.6.1",
+    "pymunk": "7.3.0",
+    "ogbench": "1.2.1"
+  },
+  "files": {
+    "checkpoint": {
+      "path": "/workspace/ap_revision7/assets/official/reacher/weights.pt",
+      "exists": true,
+      "bytes": 72290849
+    },
+    "dataset": {
+      "path": "/workspace/ap_revision7/assets/data/reacher.h5",
+      "exists": true,
+      "bytes": 98905882624
+    },
+    "latent_cache": {
+      "path": "/workspace/ap_revision7/assets/cache/reacher.npy",
+      "exists": true,
+      "bytes": 771840128
+    }
+  },
+  "datasets": {
+    "pixels": {
+      "shape": [
+        2010000,
+        224,
+        224,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "action": {
+      "shape": [
+        2010000,
+        2
+      ],
+      "dtype": "float64"
+    },
+    "ep_len": {
+      "shape": [
+        10000
+      ],
+      "dtype": "int32"
+    },
+    "ep_offset": {
+      "shape": [
+        10000
+      ],
+      "dtype": "int64"
+    },
+    "observation": {
+      "shape": [
+        2010000,
+        6
+      ],
+      "dtype": "float32"
+    }
+  },
+  "latents": {
+    "shape": [
+      2010000,
+      192
+    ],
+    "dtype": "float16"
+  }
+}
+{"task": "reacher", "query": 0, "condition": "clean", "arm": "gaussian_observed", "success": true, "steps": 140, "completed_outcomes": 1}
+{"task": "reacher", "query": 1, "condition": "clean", "arm": "gaussian_observed", "success": false, "steps": 300, "completed_outcomes": 2}
+{"task": "reacher", "query": 2, "condition": "clean", "arm": "gaussian_observed", "success": true, "steps": 199, "completed_outcomes": 3}
+TECH_ENTRY_GATE PASS
+{"status": "PASS", "projected_gpu_hours_upper": 3.3095218618666307, "projection": "2x maximum measured wall seconds/decision * 60 * 278 + full encode-cache wall", "profile_rows": 3, "cache_seconds": 354.98043595207855, "formal_launch_authorized_by_budget": true}

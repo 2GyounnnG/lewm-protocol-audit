@@ -1,0 +1,17 @@
+[
+  {
+    "name": "tdjepa",
+    "url": "https://github.com/HKBU-KnowComp/Temporal-Distance-JEPA",
+    "commit": "b4c17ca4649c9bf47272fa66c38da7a684f2a020"
+  },
+  {
+    "name": "deepjepa",
+    "url": "https://github.com/deepjepa/DeepJEPA",
+    "commit": "351910f21726112d5c3f2bd4dcd9cee72c9c4c11"
+  },
+  {
+    "name": "tinylab",
+    "url": "https://github.com/joyjeet-singh/tinylab",
+    "commit": "efa9e5d73f09bae511adac87e3041aa1789f0092"
+  }
+]

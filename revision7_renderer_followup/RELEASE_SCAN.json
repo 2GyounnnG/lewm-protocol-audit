@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-14T03:48:54.945412+00:00",
+  "files_scanned": 665,
+  "credential_hits": [],
+  "manuscript_included": false,
+  "input_data_weights_cache_body_included": false,
+  "records": 328,
+  "logs_included": 44,
+  "omissions": "Operational auth/credential dumps; paperHTML source pages replaced by sourceURL/status/SHA; modelweights/inputHDF5/cachebody; git databases and AppleDouble files"
+}

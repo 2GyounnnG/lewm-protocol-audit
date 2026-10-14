@@ -1,0 +1,33 @@
+[{"case": "ap-fresh-reacher-000", "backend": "osmesa", "qpos": [-2.9940781593322754, -0.6163480281829834], "qvel": [1.5517137050628662, -4.492523193359375], "physics_time": 0.0, "goal": [-3.2268970012664795, -1.9072978496551514, 0.10200967639684677, -0.18517421185970306, 0.35949134826660156, -0.12317647784948349], "observation": [-2.9940781593322754, -0.6163480281829834, 0.257323294878006, -0.10205187648534775, 1.5517137050628662, -4.492523193359375], "image_shape": [224, 224, 3], "image_sha256": "3b4a19d613fcd3006ff4f3b4ba0ea28ce0cdd70f649cc4c9b187af171547322d", "no_actions": true, "render_does_not_change_state": true}, {"case": "ap-fresh-reacher-001", "backend": "osmesa", "qpos": [2.1305673122406006, -2.0672383308410645], "qvel": [-1.0399667024612427, 0.647875964641571], "physics_time": 0.0, "goal": [1.3131556510925293, -1.6206536293029785, -0.1281708925962448, -0.19827662408351898, 1.3926211595535278, -0.12982842326164246], "observation": [2.1305673122406006, -2.0672383308410645, -0.039264027029275894, -0.2278379499912262, -1.0399667024612427, 0.647875964641571], "image_shape": [224, 224, 3], "image_sha256": "68a3ae711dde64f210266efd12526ff2af6ddf6f2cfad048024e6905bdc5ac05", "no_actions": true, "render_does_not_change_state": true}, {"case": "ap-fresh-reacher-002", "backend": "osmesa", "qpos": [0.25215956568717957, 1.226289987564087], "qvel": [-0.19894526898860931, -2.4375083446502686], "physics_time": 0.0, "goal": [-1.4980844259262085, 1.8344647884368896, -0.04015278071165085, 0.024269597604870796, -0.5828052163124084, 4.172954559326172], "observation": [0.25215956568717957, 1.226289987564087, -0.04543134570121765, -0.20523281395435333, -0.19894526898860931, -2.4375083446502686], "image_shape": [224, 224, 3], "image_sha256": "29e6d1742405e41f27bf64571650e0183bcc3ce300c807a4e07093f253bb5408", "no_actions": true, "render_does_not_change_state": true}]
+Exception ignored in atexit callback: <function ContextBase.__init__.<locals>._free_at_exit at 0x7f70901c9580>
+Traceback (most recent call last):
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/base.py", line 61, in _free_at_exit
+    self_weakref()._free_unconditionally()  # pylint: disable=protected-access
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/base.py", line 117, in _free_unconditionally
+    self._render_executor.terminate(self._free_on_executor_thread)
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/executor/render_executor.py", line 214, in terminate
+    self._call_locked(cleanup_callable)
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/executor/render_executor.py", line 206, in _call_locked
+    return self._executor.submit(func, *args, **kwargs).result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 170, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+Exception ignored in: <function MjrContext.__del__ at 0x7f709b30ccc0>
+Traceback (most recent call last):
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/mujoco/wrapper/core.py", line 638, in __del__
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/mujoco/wrapper/core.py", line 630, in free
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/executor/render_executor.py", line 196, in call
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/executor/render_executor.py", line 206, in _call_locked
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 170, in submit
+RuntimeError: cannot schedule new futures after shutdown
+Exception ignored in: <function ContextBase.__del__ at 0x7f709afd7880>
+Traceback (most recent call last):
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/base.py", line 120, in __del__
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/base.py", line 117, in _free_unconditionally
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/executor/render_executor.py", line 214, in terminate
+  File "/workspace/ap_revision7/venv_ap_linux/lib/python3.12/site-packages/dm_control/_render/executor/render_executor.py", line 206, in _call_locked
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 170, in submit
+RuntimeError: cannot schedule new futures after shutdown
+[{"case": "ap-fresh-reacher-000", "backend": "egl", "qpos": [-2.9940781593322754, -0.6163480281829834], "qvel": [1.5517137050628662, -4.492523193359375], "physics_time": 0.0, "goal": [-3.2268970012664795, -1.9072978496551514, 0.10200967639684677, -0.18517421185970306, 0.35949134826660156, -0.12317647784948349], "observation": [-2.9940781593322754, -0.6163480281829834, 0.257323294878006, -0.10205187648534775, 1.5517137050628662, -4.492523193359375], "image_shape": [224, 224, 3], "image_sha256": "c07bdabd6a7b286819a984b6187bff99a426f969bcab7c8cf3d9bd80a530570d", "no_actions": true, "render_does_not_change_state": true}, {"case": "ap-fresh-reacher-001", "backend": "egl", "qpos": [2.1305673122406006, -2.0672383308410645], "qvel": [-1.0399667024612427, 0.647875964641571], "physics_time": 0.0, "goal": [1.3131556510925293, -1.6206536293029785, -0.1281708925962448, -0.19827662408351898, 1.3926211595535278, -0.12982842326164246], "observation": [2.1305673122406006, -2.0672383308410645, -0.039264027029275894, -0.2278379499912262, -1.0399667024612427, 0.647875964641571], "image_shape": [224, 224, 3], "image_sha256": "485aa9f1b2d8f5536083f9f30cec42c0559722fb82b2773815710b072a13f1f8", "no_actions": true, "render_does_not_change_state": true}, {"case": "ap-fresh-reacher-002", "backend": "egl", "qpos": [0.25215956568717957, 1.226289987564087], "qvel": [-0.19894526898860931, -2.4375083446502686], "physics_time": 0.0, "goal": [-1.4980844259262085, 1.8344647884368896, -0.04015278071165085, 0.024269597604870796, -0.5828052163124084, 4.172954559326172], "observation": [0.25215956568717957, 1.226289987564087, -0.04543134570121765, -0.20523281395435333, -0.19894526898860931, -2.4375083446502686], "image_shape": [224, 224, 3], "image_sha256": "5d6c511e4bd327666c859467878c44d6a2bcb5acea94427281a2f165f43ced80", "no_actions": true, "render_does_not_change_state": true}]

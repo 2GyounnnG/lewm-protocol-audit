@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-14T03:48:54.945412+00:00",
+  "bundle": "/Users/richwang/Documents/ChatGPT/\u70ed/paper_jair/r3_part2_work/revision7/renderer_followup/JAIR_REVISION7_V2_VERIFIED_RECORDS_CODE.tar.gz",
+  "bytes": 7987370,
+  "sha256": "f7303ebbdc6d12d494e562a3de78787a0561a4eea155b3b85ae6a679f023ab4b",
+  "files": 667,
+  "scan": {
+    "utc": "2026-10-14T03:48:54.945412+00:00",
+    "files_scanned": 665,
+    "credential_hits": [],
+    "manuscript_included": false,
+    "input_data_weights_cache_body_included": false,
+    "records": 328,
+    "logs_included": 44,
+    "omissions": "Operational auth/credential dumps; paperHTML source pages replaced by sourceURL/status/SHA; modelweights/inputHDF5/cachebody; git databases and AppleDouble files"
+  }
+}

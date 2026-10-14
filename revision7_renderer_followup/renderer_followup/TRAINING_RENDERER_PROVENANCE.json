@@ -1,0 +1,17 @@
+{
+  "collection_script": {
+    "commit": "63988116d34cde56aea1240d5e58eb158ac67dc0",
+    "file": "scripts/data/collect_reacher.py",
+    "line": 7,
+    "setting": "MUJOCO_GL=glfw",
+    "sha256": "d4a25d42dad5cd8299b1664f3e1e84c46b77fbdcfe730f9da77863c585deb26d",
+    "output": "dmc/reacher_random.lance; not a manifest proving the published HDF5 production invocation"
+  },
+  "dataset_card": "sources/hf_dataset_card.txt",
+  "model_card": "sources/hf_model_card.txt",
+  "training_dataset": "quentinll/lewm-reacher; model-card datasets field confirms this dataset",
+  "training_config": "LeWM config/train/data/dmc.yaml: name reacher.h5",
+  "HF_metadata_renderer_field": "not found in dataset/model cards and API metadata",
+  "local_HDF5_metadata": "Full99GBHDF5 not found locally; not redownloaded; existing asset manifest proves SHA identity, not renderer provenance",
+  "conclusion": "Neither OSMesa nor EGL can be certified as matching the training-image renderer from available evidence; collection script says GLFW, runtime driver/context of the published data unspecified."
+}

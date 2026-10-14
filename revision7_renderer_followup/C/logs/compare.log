@@ -1,0 +1,17 @@
+AP 主表协议 128 [{'seed': None, 'n': 128, 'successes': 97, 'success_pct': np.float64(75.78125)}]
+AP 附录复核 150 [{'seed': 42, 'n': 50, 'successes': 37, 'success_pct': np.float64(74.0)}, {'seed': 43, 'n': 50, 'successes': 33, 'success_pct': np.float64(66.0)}, {'seed': 44, 'n': 50, 'successes': 35, 'success_pct': np.float64(70.0)}]
+Traceback (most recent call last):
+  File "/workspace/ap_revision7/run_ops/run_stage.py", line 3, in <module>
+    W=Path(__file__).resolve().parents[1];name=sys.argv[1];p=W/'run_ops'/('STAGE_'+name+'.json');assert not p.exists(),'Stage already attempted; retain and inspect'
+                                                                                                        ^^^^^^^^^^^^^^
+AssertionError: Stage already attempted; retain and inspect
+Traceback (most recent call last):
+  File "/workspace/ap_revision7/run_ops/run_stage.py", line 3, in <module>
+    W=Path(__file__).resolve().parents[1];name=sys.argv[1];p=W/'run_ops'/('STAGE_'+name+'.json');assert not p.exists(),'Stage already attempted; retain and inspect'
+                                                                                                        ^^^^^^^^^^^^^^
+AssertionError: Stage already attempted; retain and inspect
+Traceback (most recent call last):
+  File "/workspace/ap_revision7/run_ops/run_stage.py", line 3, in <module>
+    W=Path(__file__).resolve().parents[1];name=sys.argv[1];p=W/'run_ops'/('STAGE_'+name+'.json');assert not p.exists(),'Stage already attempted; retain and inspect'
+                                                                                                        ^^^^^^^^^^^^^^
+AssertionError: Stage already attempted; retain and inspect

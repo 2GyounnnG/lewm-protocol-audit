@@ -1,0 +1,1 @@
+{'status': 'PASS', 'prior_gpu_hours': 0.5733025440624786, 'projected_with_renderer50_gpu_hours_upper': 1.0551787253763132, 'projection': 'prior + 2x worst main seconds/decision *60*25 waves*2 GPUs'}

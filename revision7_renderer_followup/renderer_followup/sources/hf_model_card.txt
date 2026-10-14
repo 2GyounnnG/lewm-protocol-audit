@@ -1,0 +1,7 @@
+---
+license: mit
+datasets:
+- quentinll/lewm-reacher
+---
+
+Official pretrained model for the DeepMindControl Reacher task used in [LeWorldModel](https://huggingface.co/papers/2603.19312).

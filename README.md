@@ -68,3 +68,9 @@ Original upstream license texts for redistributed source excerpts are retained i
 Run `python revision7_complete/C/recompute_C.py --root revision7_complete/C --output /tmp/recomputed_C.json` for a CPU-only summary check. Full traces, image probes and historical action references are in the separately prepared records/code archive; this GitHub mirror omits them. The Revision7 new-version Zenodo draft is pending authentication and has not been published. The existing DOI above identifies the published base archive only.
 
 An earlier A/B supplement accidentally tracked a manuscript PDF and TeX. They have been removed from the current tracked version while local copies are preserved. Earlier Git history may still contain them; history rewriting was not performed. This update contains only records and code, not the current manuscript.
+
+## Revision7 renderer provenance follow-up
+
+`revision7_renderer_followup/` adds the12-source renderer column evidence, saved-image pixel differences and A/B/C scientific logs. The Reacher collection script selectsGLFW; official HF metadata confirms LeWM training on the same dataset, but does not specify the productionHDF5 renderer. NeitherEGL norOSMesa is a verified training-renderer match. MeanRGB-byte differences across three saved pairs are2.56–2.59, maximum72. All primary audit formal runs usedEGL configuration; the nativeAP reproduction explicitly distinguishesOSMesa/EGL.
+
+The complete Revision7 records/code archive is prepared for **version2 of the Zenodo record** (draft only; not published). Creation/upload is currently blocked because the task process has no ZENODO_TOKEN. The published base record23350373 is unchanged. Bundle SHA and scan are in PACKAGE_RECEIPT.json and RELEASE_SCAN.json; no manuscript is included.
