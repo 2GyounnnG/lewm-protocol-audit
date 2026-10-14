@@ -1,6 +1,6 @@
 # LeWM protocol audit
 
-The complete audit records are archived at Zenodo, DOI **[10.5281/zenodo.23350373](https://doi.org/10.5281/zenodo.23350373)**, under CC BY 4.0. Audit code is MIT. This repository is the small-file code and summary mirror. It contains no manuscript, model weights or input datasets.
+The complete audit records are archived at Zenodo, concept DOI **[10.5281/zenodo.23350372](https://doi.org/10.5281/zenodo.23350372)** (resolves to the latest version), under CC BY 4.0. Audit code is MIT. This repository is the small-file code and summary mirror. It contains no manuscript, model weights or input datasets.
 
 
 
@@ -65,7 +65,7 @@ Original upstream license texts for redistributed source excerpts are retained i
 
 `revision7_complete/` adds A/B sensitivity and static-code audit records plus the completed C replication. Native OSMesa yields97/128 (75.8%,95%CI68.0–82.8), equal to the paper aggregate; six cases switch each way. On the frozen first50 cases, changing only OSMesa to EGL raises first-arrival success from37/50 to49/50: +24.0pp [12.0,36.0]. All50 EGL action arrays and first-hit steps match the historical EGL run. Appendix seeds42/43/44 separately yield74%,66%,70% under offset24,budget50. These are separate from the common50-step evaluation.
 
-Run `python revision7_complete/C/recompute_C.py --root revision7_complete/C --output /tmp/recomputed_C.json` for a CPU-only summary check. Full traces, image probes and historical action references are in the separately prepared records/code archive; this GitHub mirror omits them. The Revision7 new-version Zenodo draft is uploaded and verified at https://zenodo.org/deposit/23357842; it has not been published. The existing DOI above identifies the published base archive only.
+Run `python revision7_complete/C/recompute_C.py --root revision7_complete/C --output /tmp/recomputed_C.json` for a CPU-only summary check. Full traces, image probes and historical action references are in the separately prepared records/code archive; this GitHub mirror omits them. The Revision7 records are published in [Zenodo version 2](https://zenodo.org/records/23357842). The concept DOI above resolves to the latest version.
 
 An earlier A/B supplement accidentally tracked a manuscript PDF and TeX. They have been removed from the current tracked version while local copies are preserved. Earlier Git history may still contain them; history rewriting was not performed. This update contains only records and code, not the current manuscript.
 
@@ -73,4 +73,4 @@ An earlier A/B supplement accidentally tracked a manuscript PDF and TeX. They ha
 
 `revision7_renderer_followup/` adds the12-source renderer column evidence, saved-image pixel differences and A/B/C scientific logs. The Reacher collection script selectsGLFW; official HF metadata confirms LeWM training on the same dataset, but does not specify the productionHDF5 renderer. NeitherEGL norOSMesa is a verified training-renderer match. MeanRGB-byte differences across three saved pairs are2.56–2.59, maximum72. All primary audit formal runs usedEGL configuration; the nativeAP reproduction explicitly distinguishesOSMesa/EGL.
 
-The complete Revision7 records/code archive is prepared for **version2 of the Zenodo record** (draft only; not published). The version2 draft is uploaded and verified: https://zenodo.org/deposit/23357842 (owner access required). Reserved DOI:10.5281/zenodo.23357842. It is NOT published. The published base record23350373 is unchanged. Bundle SHA and scan are in PACKAGE_RECEIPT.json and RELEASE_SCAN.json; no manuscript is included.
+The complete Revision7 records/code archive is published in **version 2 of the Zenodo record**: https://zenodo.org/records/23357842. Version 1 (10.5281/zenodo.23350373) holds the original audit records; version 2 (10.5281/zenodo.23357842) adds the Revision-7 sensitivity, code-audit, native-AP, and pixel-difference records. Bundle SHA and scan are in PACKAGE_RECEIPT.json and RELEASE_SCAN.json; no manuscript is included.
