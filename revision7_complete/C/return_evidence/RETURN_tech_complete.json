@@ -1,0 +1,12 @@
+{
+  "label": "tech_complete",
+  "files": 99,
+  "bytes": 924494,
+  "sha256": "f8677bd97aff34f61be3422c76f30652efb65903d82c70667c5d90ce265dd670",
+  "remote_archive": "/workspace/c_return_snapshots/tech_complete.tar.gz",
+  "utc_epoch": 1791943424.9014363,
+  "verified_files": 99,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/tech_complete/tech_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:14:22.523065+00:00"
+}

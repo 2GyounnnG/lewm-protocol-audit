@@ -1,0 +1,12 @@
+{
+  "label": "compare_complete",
+  "files": 489,
+  "bytes": 5391588,
+  "sha256": "5ba5b95ac2760b7d3b735da84644d1dc7c2d71b87d674593ef1870b6c002ee75",
+  "remote_archive": "/workspace/c_return_snapshots/compare_complete.tar.gz",
+  "utc_epoch": 1791944575.776426,
+  "verified_files": 489,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/compare_complete/compare_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:23:12.366230+00:00"
+}

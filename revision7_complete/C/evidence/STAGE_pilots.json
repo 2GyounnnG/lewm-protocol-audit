@@ -1,0 +1,11 @@
+{
+  "stage": "pilots",
+  "status": "COMPLETE",
+  "start_epoch": 1791943449.2463408,
+  "command": [
+    "/bin/bash",
+    "/workspace/ap_revision7/run_ops/parallel_pilots.sh"
+  ],
+  "returncode": 0,
+  "end_epoch": 1791943518.2917917
+}

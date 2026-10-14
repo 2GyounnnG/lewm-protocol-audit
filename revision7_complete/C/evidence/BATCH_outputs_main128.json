@@ -1,0 +1,63 @@
+{
+  "status": "COMPLETE",
+  "root": "protocol_main128",
+  "output": "outputs/main128",
+  "workers": 2,
+  "devices": 2,
+  "start_epoch": 1791943556.7948992,
+  "prior_gpu_seconds": 543.2280739748385,
+  "gpu_seconds": 1158.678558315616,
+  "limit": null,
+  "commands": [
+    [
+      "/workspace/ap_revision7/venv_ap_linux/bin/python",
+      "-m",
+      "anchored_planning",
+      "evaluate",
+      "--assets",
+      "assets.remote.json",
+      "--task",
+      "reacher",
+      "--study",
+      "main",
+      "--root",
+      "protocol_main128",
+      "--device",
+      "cuda:0",
+      "--output",
+      "outputs/main128",
+      "--shards",
+      "2",
+      "--shard-index",
+      "0"
+    ],
+    [
+      "/workspace/ap_revision7/venv_ap_linux/bin/python",
+      "-m",
+      "anchored_planning",
+      "evaluate",
+      "--assets",
+      "assets.remote.json",
+      "--task",
+      "reacher",
+      "--study",
+      "main",
+      "--root",
+      "protocol_main128",
+      "--device",
+      "cuda:1",
+      "--output",
+      "outputs/main128",
+      "--shards",
+      "2",
+      "--shard-index",
+      "1"
+    ]
+  ],
+  "elapsed_seconds": 579.33927695686,
+  "end_epoch": 1791944136.1341841,
+  "returncodes": [
+    0,
+    0
+  ]
+}

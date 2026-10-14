@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "reacher": {
+      "checkpoint": "assets/official/reacher/weights.pt",
+      "dataset": "assets/data/reacher.h5",
+      "latent_cache": "assets/cache/reacher.npy",
+      "state_key": "observation"
+    }
+  }
+}

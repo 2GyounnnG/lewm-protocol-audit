@@ -1,0 +1,12 @@
+{
+  "label": "compare_failure",
+  "files": 488,
+  "bytes": 5391064,
+  "sha256": "baf95c237c41704b19ae85d503596549ca8c4c448fadb94463f1bb18cec5c4e8",
+  "remote_archive": "/workspace/c_return_snapshots/compare_failure.tar.gz",
+  "utc_epoch": 1791944509.873932,
+  "verified_files": 488,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/compare_failure/compare_failure.tar.gz",
+  "verified_utc": "2026-10-14T02:21:57.045204+00:00"
+}

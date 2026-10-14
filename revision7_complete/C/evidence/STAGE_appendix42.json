@@ -1,0 +1,12 @@
+{
+  "stage": "appendix42",
+  "status": "COMPLETE",
+  "start_epoch": 1791944167.9454777,
+  "command": [
+    "/bin/bash",
+    "/workspace/ap_revision7/run_ops/formal_one.sh",
+    "42"
+  ],
+  "returncode": 0,
+  "end_epoch": 1791944228.299378
+}

@@ -1,0 +1,12 @@
+{
+  "label": "main_failure",
+  "files": 222,
+  "bytes": 2948173,
+  "sha256": "9806bf295093e1025d2c066b6b424904051bd205a04af26a48858e849b00d96d",
+  "remote_archive": "/workspace/c_return_snapshots/main_failure.tar.gz",
+  "utc_epoch": 1791943862.8596573,
+  "verified_files": 222,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/main_failure/main_failure.tar.gz",
+  "verified_utc": "2026-10-14T02:11:14.544171+00:00"
+}

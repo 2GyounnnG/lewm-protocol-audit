@@ -1,0 +1,12 @@
+{
+  "label": "AP 附录复核",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "cases_per_seed": 50,
+  "offset": 24,
+  "budget": 50,
+  "paper_comparator_pct": null
+}

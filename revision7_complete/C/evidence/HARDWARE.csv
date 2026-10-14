@@ -1,0 +1,3 @@
+index, name, uuid, memory.total [MiB], driver_version
+0, NVIDIA GeForce RTX 4090, GPU-03dfc847-c462-e256-eae5-f885b44376fd, 49140 MiB, 580.126.09
+1, NVIDIA GeForce RTX 4090, GPU-601e6fd8-5e47-7d87-ebaa-38203bd9e9c9, 49140 MiB, 580.126.09

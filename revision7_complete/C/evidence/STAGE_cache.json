@@ -1,0 +1,11 @@
+{
+  "stage": "cache",
+  "status": "COMPLETE",
+  "start_epoch": 1791941971.0626545,
+  "command": [
+    "/bin/bash",
+    "/workspace/ap_revision7/encode_cache.sh"
+  ],
+  "returncode": 0,
+  "end_epoch": 1791942424.4896476
+}

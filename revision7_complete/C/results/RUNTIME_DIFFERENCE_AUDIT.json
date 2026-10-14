@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-14T02:06:17.052592+00:00",
+  "old_source": "d1_execution/step2/remote_sync/resume03_formal_v8_016_20261012T085231Z/workspace/d1/resume_03/formal/D1_082_000_128/run_reacher_shard0of1.json",
+  "new_source": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/tech_complete/files/outputs/tech_profile/run_reacher_shard0of1.json",
+  "dependencies_exact_equal": true,
+  "numeric_protocol_exact_equal": true,
+  "old_renderer": {
+    "MUJOCO_GL": "egl",
+    "PYOPENGL_PLATFORM": "egl",
+    "GALLIUM_DRIVER": "llvmpipe"
+  },
+  "native_renderer": {
+    "MUJOCO_GL": "osmesa",
+    "PYOPENGL_PLATFORM": "osmesa",
+    "GALLIUM_DRIVER": "llvmpipe"
+  },
+  "old_cache_path": "/workspace/d1/latent_cache/reacher_official_latents.npy",
+  "new_cache_path": "/workspace/ap_revision7/assets/cache/reacher.npy",
+  "interpretation": "Renderer differs (old EGL vs native OSMesa). Candidate single-factor diagnostic; no causal claim yet.",
+  "old_native_cache_receipt": "d1_execution/step2/remote_sync/resume03_assets_official_gates/workspace/d1/resume_03/receipts/AP_CACHE_reacher.json",
+  "old_native_cache_receipt_sha256": "8e73dc269272f9a89b18d7b528d155758036e6acaef58bca3fa86e3d97fcfca5",
+  "cache_sha256": "062f3cfe2ea7245b7d99b0e4a35cd69dee25264064435501a6e541e98cf244b7",
+  "new_and_old_native_cache_exact_sha_match": true
+}

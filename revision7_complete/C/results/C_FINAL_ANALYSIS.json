@@ -1,0 +1,95 @@
+{
+  "utc": "2026-10-14T02:23:28.203348+00:00",
+  "main": {
+    "n": 128,
+    "successes": 97,
+    "pct": 75.78125,
+    "ci95_pct": [
+      67.96875,
+      82.8125
+    ]
+  },
+  "appendix_by_case_sampling_seed": {
+    "42": {
+      "n": 50,
+      "successes": 37,
+      "pct": 74.0,
+      "ci95_pct": [
+        62.0,
+        86.0
+      ]
+    },
+    "43": {
+      "n": 50,
+      "successes": 33,
+      "pct": 66.0,
+      "ci95_pct": [
+        54.0,
+        80.0
+      ]
+    },
+    "44": {
+      "n": 50,
+      "successes": 35,
+      "pct": 70.0,
+      "ci95_pct": [
+        57.99999999999999,
+        82.0
+      ]
+    }
+  },
+  "paper_reported_pct": 75.8,
+  "source_recorded_pct": 75.78125,
+  "main_vs_source_paired": {
+    "n_cases": 128,
+    "delta_pp": 0.0,
+    "ci95_low_pp": -5.46875,
+    "ci95_high_pp": 5.46875,
+    "halfwidth_pp": 5.46875,
+    "p_centered_bootstrap": 1.0,
+    "practically_negligible": false,
+    "gain_supported": false,
+    "label": "\u672a\u68c0\u51fa"
+  },
+  "main_vs_old_study_paired": {
+    "n_cases": 128,
+    "delta_pp": -21.875,
+    "ci95_low_pp": -29.6875,
+    "ci95_high_pp": -14.824218750000284,
+    "halfwidth_pp": 7.431640624999858,
+    "p_centered_bootstrap": 0.0001999600079984003,
+    "practically_negligible": false,
+    "gain_supported": false,
+    "label": "\u672a\u68c0\u51fa"
+  },
+  "source_fail_to_new_success": 6,
+  "source_success_to_new_fail": 6,
+  "old_study_success_mismatches": 32,
+  "old_study_first_hit_mismatches": 125,
+  "old_study_first25_action_mismatch_cases": 128,
+  "old_study_first25_max_absolute_action_difference": 2.0,
+  "stat_function_sha256": "58855f7cff9188d6dc0c0f2838f3de6c1a5d6e49793bf0166eabe5a814c6abf3",
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 20261011,
+    "unit": "case within each cohort, appendix seeds separately"
+  },
+  "input_sha256": {
+    "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/compare_complete/files/comparisons/MAIN128.json": "bdc30b51d9bf718ef7e741cc86818072258ec3e2e3e1ae2706c122cf0caa3627",
+    "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/compare_complete/files/comparisons/APPENDIX_42_43_44.json": "f6559df0bafacf35c49fef739166df45f58b240e08dd5cff2dfbd834203cd733"
+  },
+  "source_record_sha256": "d2276c2055312a7721690e8df33f6d9f1cb75194ccd4b92addd93238dcf8888d",
+  "snapshot_receipt": {
+    "label": "compare_complete",
+    "files": 489,
+    "bytes": 5391588,
+    "sha256": "5ba5b95ac2760b7d3b735da84644d1dc7c2d71b87d674593ef1870b6c002ee75",
+    "remote_archive": "/workspace/c_return_snapshots/compare_complete.tar.gz",
+    "utc_epoch": 1791944575.776426,
+    "verified_files": 489,
+    "mismatches": 0,
+    "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/compare_complete/compare_complete.tar.gz",
+    "verified_utc": "2026-10-14T02:23:12.366230+00:00"
+  },
+  "no_existing_numbers_changed": true
+}

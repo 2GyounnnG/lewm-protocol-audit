@@ -1,0 +1,12 @@
+{
+  "label": "final_c_complete",
+  "files": 578,
+  "bytes": 6604993,
+  "sha256": "bcf97bcee7bf35050d2b77774629963b30308cabc6481bf48bb9f7bd6f2f9d54",
+  "remote_archive": "/workspace/c_return_snapshots/final_c_complete.tar.gz",
+  "utc_epoch": 1791945383.3835192,
+  "verified_files": 578,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/final_c_complete/final_c_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:36:57.265498+00:00"
+}

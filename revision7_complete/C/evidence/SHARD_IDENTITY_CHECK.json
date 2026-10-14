@@ -1,0 +1,94 @@
+{
+  "utc": "2026-10-14T01:42:55.520074+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "cohort": "protocol_main128",
+      "workers": 2,
+      "case_counts": [
+        64,
+        64
+      ],
+      "exact_ordinal_partition": true,
+      "query_seed_inputs_unchanged": true
+    },
+    {
+      "cohort": "protocol_main128",
+      "workers": 4,
+      "case_counts": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "exact_ordinal_partition": true,
+      "query_seed_inputs_unchanged": true
+    },
+    {
+      "cohort": "protocol_seed42",
+      "workers": 2,
+      "case_counts": [
+        25,
+        25
+      ],
+      "exact_ordinal_partition": true,
+      "query_seed_inputs_unchanged": true
+    },
+    {
+      "cohort": "protocol_seed42",
+      "workers": 4,
+      "case_counts": [
+        13,
+        13,
+        12,
+        12
+      ],
+      "exact_ordinal_partition": true,
+      "query_seed_inputs_unchanged": true
+    },
+    {
+      "cohort": "protocol_seed43",
+      "workers": 2,
+      "case_counts": [
+        25,
+        25
+      ],
+      "exact_ordinal_partition": true,
+      "query_seed_inputs_unchanged": true
+    },
+    {
+      "cohort": "protocol_seed43",
+      "workers": 4,
+      "case_counts": [
+        13,
+        13,
+        12,
+        12
+      ],
+      "exact_ordinal_partition": true,
+      "query_seed_inputs_unchanged": true
+    },
+    {
+      "cohort": "protocol_seed44",
+      "workers": 2,
+      "case_counts": [
+        25,
+        25
+      ],
+      "exact_ordinal_partition": true,
+      "query_seed_inputs_unchanged": true
+    },
+    {
+      "cohort": "protocol_seed44",
+      "workers": 4,
+      "case_counts": [
+        13,
+        13,
+        12,
+        12
+      ],
+      "exact_ordinal_partition": true,
+      "query_seed_inputs_unchanged": true
+    }
+  ]
+}

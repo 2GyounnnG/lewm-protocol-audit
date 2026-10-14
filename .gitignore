@@ -1,0 +1,5 @@
+
+# Manuscripts stay local; preserve local copies while excluding tracking.
+revision7_supplement/paper/
+**/__pycache__/
+**/._*

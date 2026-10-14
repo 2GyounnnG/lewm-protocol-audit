@@ -1,0 +1,12 @@
+{
+  "label": "pilots_complete",
+  "files": 142,
+  "bytes": 1190221,
+  "sha256": "ab38dca09eeb50f5d9445a06124aa2cd3ce951ac25de0e10084d61788c8d77a9",
+  "remote_archive": "/workspace/c_return_snapshots/pilots_complete.tar.gz",
+  "utc_epoch": 1791943526.294838,
+  "verified_files": 142,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/pilots_complete/pilots_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:14:26.751382+00:00"
+}

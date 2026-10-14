@@ -1,0 +1,8 @@
+{"id": "4067e194-82a7-4b84-aca1-e3daee8c50e1", "event": "start", "utc_epoch": 1791942062.5861099, "command": ["/workspace/ap_revision7/venv_ap_linux/bin/python", "-m", "anchored_planning", "encode-cache", "--assets", "assets.remote.json", "--task", "reacher", "--device", "cuda:0", "--batch-size", "128"], "remaining_seconds": 21600}
+{"id": "4067e194-82a7-4b84-aca1-e3daee8c50e1", "event": "end", "seconds": 361.2051090479363, "returncode": 0}
+{"id": "49cd9e38-3b20-4885-a2d0-ee7765f0ed52", "event": "start", "utc_epoch": 1791943374.6426752, "command": ["/workspace/ap_revision7/venv_ap_linux/bin/python", "-m", "anchored_planning", "evaluate", "--task", "reacher", "--assets", "assets.remote.json", "--device", "cuda:0", "--root", "protocol_main128", "--study", "main", "--limit", "3", "--output", "outputs/tech_profile"], "remaining_seconds": 21238.794890952064}
+{"id": "49cd9e38-3b20-4885-a2d0-ee7765f0ed52", "event": "end", "seconds": 44.41876469692215, "returncode": 0}
+{"id": "95d96784-244c-47f4-90f9-80fb3e2e2523", "event": "start", "utc_epoch": 1791944814.3014705, "command": ["/workspace/ap_revision7/venv_ap_linux/bin/python", "run_ops/render_probe.py"], "remaining_seconds": 21194.37612625514}
+{"id": "95d96784-244c-47f4-90f9-80fb3e2e2523", "event": "end", "seconds": 4.974842177005485, "returncode": 0}
+{"id": "905bd285-2c84-4da1-b8ca-60b5f2a8d271", "event": "start", "utc_epoch": 1791944819.3144996, "command": ["/workspace/ap_revision7/venv_ap_linux/bin/python", "run_ops/render_probe.py"], "remaining_seconds": 21189.401284078136}
+{"id": "905bd285-2c84-4da1-b8ca-60b5f2a8d271", "event": "end", "seconds": 4.6737922499887645, "returncode": 0}

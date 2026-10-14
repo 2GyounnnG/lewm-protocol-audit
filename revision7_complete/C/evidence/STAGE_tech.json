@@ -1,0 +1,11 @@
+{
+  "stage": "tech",
+  "status": "COMPLETE",
+  "start_epoch": 1791943281.9545994,
+  "command": [
+    "/bin/bash",
+    "/workspace/ap_revision7/run_gpu_tech_profile.sh"
+  ],
+  "returncode": 0,
+  "end_epoch": 1791943419.2154303
+}

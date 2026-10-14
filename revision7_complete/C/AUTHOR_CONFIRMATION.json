@@ -1,0 +1,26 @@
+{
+  "utc_recorded": "2026-10-14T00:23:00.917980+00:00",
+  "source": "Author confirmation in this conversation",
+  "cpu_preparation": "real saved-case replay + model component CPU smoke",
+  "full_retrieval_entry_gate": "after SSH and before formal execution",
+  "main": {
+    "label": "AP 主表协议",
+    "cases": 128,
+    "offset": 150,
+    "budget": 300,
+    "paper_comparator_pct": 75.8
+  },
+  "appendix": {
+    "label": "AP 附录复核",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "cases_per_seed": 50,
+    "offset": 24,
+    "budget": 50,
+    "paper_comparator_pct": null
+  },
+  "no_gpu_before_ssh": true
+}

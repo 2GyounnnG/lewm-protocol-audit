@@ -1,0 +1,12 @@
+{
+  "label": "renderprobe_complete",
+  "files": 572,
+  "bytes": 6592325,
+  "sha256": "d0f7d97c19a969f899901946e4bca3513ec91f6b42892ded49b963400af5c8fe",
+  "remote_archive": "/workspace/c_return_snapshots/renderprobe_complete.tar.gz",
+  "utc_epoch": 1791944829.0395234,
+  "verified_files": 572,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/renderprobe_complete/renderprobe_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:27:31.553061+00:00"
+}

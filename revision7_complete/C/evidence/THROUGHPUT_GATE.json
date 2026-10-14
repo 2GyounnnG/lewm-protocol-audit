@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "projected_gpu_hours_upper": 3.3095218618666307,
+  "projection": "2x maximum measured wall seconds/decision * 60 * 278 + full encode-cache wall",
+  "profile_rows": 3,
+  "cache_seconds": 354.98043595207855,
+  "formal_launch_authorized_by_budget": true
+}

@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-14T01:40:18.332712+00:00",
+  "source_commit": "984327424ca7a2e52c75a8279197750d9d0b7c8e",
+  "exact_preserved_fields": {
+    "studies": true,
+    "bank_train_episodes": true,
+    "removed_memory_episodes": true,
+    "numeric_protocol": true,
+    "gaussian": true,
+    "prefix_sources": true,
+    "targets": true
+  },
+  "selection_only": {
+    "conditions": [
+      "clean"
+    ],
+    "arms": [
+      "gaussian_observed"
+    ]
+  },
+  "source_protocol_sha256": "3243f4ec7c55d349a3f7a73b093664ca7ae695d369f6f718824b54ea47b894b6",
+  "active_protocol_sha256": "37d44f5f2ab99bbdc52966254d3efd3fc9abe029bfbf84011d3a5ea5bf5d9ea1",
+  "REPRODUCING_md_sha256": "b8bf6e6bae49e085f803650959460d644797b578fdaeab302fec8573c8e97452",
+  "REPRODUCING_read": true,
+  "environment_difference_disclosed": "Original paper Python3.11.14 CUDA12.6; current author-approved Python3.12.3 torch2.7.1+cu128. Not a bitwise environment reproduction."
+}

@@ -1,0 +1,12 @@
+{
+  "label": "main_complete",
+  "files": 288,
+  "bytes": 4462600,
+  "sha256": "4350ad27dbd169095b286e7a8fd8ffd63422a3df2c4530b6869abcef3a976b88",
+  "remote_archive": "/workspace/c_return_snapshots/main_complete.tar.gz",
+  "utc_epoch": 1791944149.1349876,
+  "verified_files": 288,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/main_complete/main_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:16:03.197266+00:00"
+}

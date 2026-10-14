@@ -1,0 +1,12 @@
+{
+  "label": "appendix42_complete",
+  "files": 352,
+  "bytes": 4718559,
+  "sha256": "f02f8720a50ec7ed8c72a53ab019e1048a77582c7ddff1bb8dd06edcfef604ff",
+  "remote_archive": "/workspace/c_return_snapshots/appendix42_complete.tar.gz",
+  "utc_epoch": 1791944238.3020012,
+  "verified_files": 352,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/appendix42_complete/appendix42_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:17:35.928908+00:00"
+}

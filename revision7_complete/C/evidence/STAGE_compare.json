@@ -1,0 +1,11 @@
+{
+  "stage": "compare",
+  "status": "COMPLETE",
+  "start_epoch": 1791944504.5639665,
+  "command": [
+    "/bin/bash",
+    "/workspace/ap_revision7/compare_groups.sh"
+  ],
+  "returncode": 0,
+  "end_epoch": 1791944505.0769553
+}

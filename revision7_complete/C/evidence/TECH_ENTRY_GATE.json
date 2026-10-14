@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": [
+    "pinned runtime versions",
+    "three exact main identities",
+    "finite bounded actions and budget",
+    "31 predictor batches / 9002 candidate blocks per decision",
+    "no source prediction misses",
+    "complete native-entry outputs"
+  ],
+  "records": [
+    {
+      "case": "ap-fresh-reacher-000",
+      "success": true,
+      "steps": 140,
+      "decisions": 28
+    },
+    {
+      "case": "ap-fresh-reacher-001",
+      "success": false,
+      "steps": 300,
+      "decisions": 60
+    },
+    {
+      "case": "ap-fresh-reacher-002",
+      "success": true,
+      "steps": 199,
+      "decisions": 40
+    }
+  ]
+}

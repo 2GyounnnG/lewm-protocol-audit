@@ -1,0 +1,12 @@
+{
+  "label": "cache_complete",
+  "files": 89,
+  "bytes": 592535625,
+  "sha256": "3b05536fafca1460c57cab3389574d7919b0ba1fca6d4338139d13a1edccfd55",
+  "remote_archive": "/workspace/c_return_snapshots/cache_complete.tar.gz",
+  "utc_epoch": 1791942506.7099245,
+  "verified_files": 89,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/cache_complete/cache_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:14:18.633935+00:00"
+}

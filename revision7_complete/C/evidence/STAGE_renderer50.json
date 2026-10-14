@@ -1,0 +1,11 @@
+{
+  "stage": "renderer50",
+  "status": "COMPLETE",
+  "start_epoch": 1791944611.1963418,
+  "command": [
+    "/bin/bash",
+    "/workspace/ap_revision7/run_ops/run_renderer50.sh"
+  ],
+  "returncode": 0,
+  "end_epoch": 1791944785.2445917
+}

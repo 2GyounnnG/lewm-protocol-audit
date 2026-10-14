@@ -1,0 +1,12 @@
+{
+  "label": "setup_complete",
+  "files": 78,
+  "bytes": 828641,
+  "sha256": "e7fbd7185bf69e5d9f7bd8091ea0c91783af6ea03609b2f80a8a069f737d99b9",
+  "remote_archive": "/workspace/c_return_snapshots/setup_complete.tar.gz",
+  "utc_epoch": 1791941937.8153684,
+  "verified_files": 78,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/setup_complete/setup_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:14:07.369259+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "label": "renderer50_complete",
+  "files": 554,
+  "bytes": 6413872,
+  "sha256": "7c19c64e76060e1395258477ea495faa8c3c81d08041fb3c24452f40c00b46b4",
+  "remote_archive": "/workspace/c_return_snapshots/renderer50_complete.tar.gz",
+  "utc_epoch": 1791944790.378172,
+  "verified_files": 554,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/renderer50_complete/renderer50_complete.tar.gz",
+  "verified_utc": "2026-10-14T02:26:49.864044+00:00"
+}

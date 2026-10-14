@@ -1,0 +1,12 @@
+{
+  "label": "cache_failure",
+  "files": 83,
+  "bytes": 829686,
+  "sha256": "315ea423a4732c3c2802199391b7f553439cd75e97dc0f307c6baf6c701ad739",
+  "remote_archive": "/workspace/c_return_snapshots/cache_failure.tar.gz",
+  "utc_epoch": 1791942110.052432,
+  "verified_files": 83,
+  "mismatches": 0,
+  "local_archive": "/Volumes/MyProj/d1_jair_revision7_C_20261014/returns/cache_failure/cache_failure.tar.gz",
+  "verified_utc": "2026-10-14T01:50:22.808683+00:00"
+}

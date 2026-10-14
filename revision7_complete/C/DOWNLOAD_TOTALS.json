@@ -1,0 +1,50 @@
+{
+  "assets": [
+    {
+      "task": "reacher",
+      "kind": "weights",
+      "method": "LeWM_OFFICIAL",
+      "repo": "quentinll/lewm-reacher",
+      "revision": "62adae4b71dc474ddf8f794c476ebfe737a743ca",
+      "filename": "config.json",
+      "url": "https://huggingface.co/quentinll/lewm-reacher/resolve/62adae4b71dc474ddf8f794c476ebfe737a743ca/config.json",
+      "sha256": "2564086e961e7b5c7c04dffc451091115b389a590645ff19653c64fd0bc16e09",
+      "bytes": 1313,
+      "destination": "official/reacher/config.json"
+    },
+    {
+      "task": "reacher",
+      "kind": "weights",
+      "method": "LeWM_OFFICIAL",
+      "repo": "quentinll/lewm-reacher",
+      "revision": "62adae4b71dc474ddf8f794c476ebfe737a743ca",
+      "filename": "weights.pt",
+      "url": "https://huggingface.co/quentinll/lewm-reacher/resolve/62adae4b71dc474ddf8f794c476ebfe737a743ca/weights.pt",
+      "sha256": "eb70b1fd5409f8f81875d62f5ee5a20dd220a3128a477de66b5760f475f0f469",
+      "bytes": 72290849,
+      "destination": "official/reacher/weights.pt"
+    },
+    {
+      "task": "reacher",
+      "kind": "dataset",
+      "repo": "quentinll/lewm-reacher",
+      "revision": "e70a080d0d04c6072123c9ebd343acf7fff28dbf",
+      "filename": "reacher.tar.zst",
+      "url": "https://huggingface.co/datasets/quentinll/lewm-reacher/resolve/e70a080d0d04c6072123c9ebd343acf7fff28dbf/reacher.tar.zst",
+      "sha256": "4ff2385e49712caa89f21b8e0a246e2614b621d3f22cf2d1224d845e879a1cc2",
+      "bytes": 23750614946,
+      "destination": "data/archives/reacher.tar.zst",
+      "unpacked_destination": "data/reacher.h5",
+      "unpacked_sha256": "85a7dddfa1801302abcb175a80a23bb69c78291dd977ce40d69aedcb9123da06",
+      "unpacked_bytes": 98905882624
+    }
+  ],
+  "download_bytes": 23822907108,
+  "unpacked_dataset_bytes": 98905882624,
+  "cache_bytes_expected": 771840128,
+  "environment_wheels_bytes": "not yet resolved for Linux CUDA; extra download",
+  "minimum_work_disk_recommendation_GB": 160,
+  "linux_wheel_bytes": 4186597820,
+  "HF_plus_python_wheels_bytes": 28009504928,
+  "extra_unmeasured": "OS apt packages and small source/return transfer; Docker image supplied by rented host"
+}

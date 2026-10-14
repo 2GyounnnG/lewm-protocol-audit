@@ -1,0 +1,63 @@
+{
+  "status": "COMPLETE",
+  "root": "protocol_seed44",
+  "output": "outputs/appendix/seed44",
+  "workers": 2,
+  "devices": 2,
+  "start_epoch": 1791944344.6823142,
+  "prior_gpu_seconds": 1951.604370630579,
+  "gpu_seconds": 112.28478799434379,
+  "limit": null,
+  "commands": [
+    [
+      "/workspace/ap_revision7/venv_ap_linux/bin/python",
+      "-m",
+      "anchored_planning",
+      "evaluate",
+      "--assets",
+      "assets.remote.json",
+      "--task",
+      "reacher",
+      "--study",
+      "main",
+      "--root",
+      "protocol_seed44",
+      "--device",
+      "cuda:0",
+      "--output",
+      "outputs/appendix/seed44",
+      "--shards",
+      "2",
+      "--shard-index",
+      "0"
+    ],
+    [
+      "/workspace/ap_revision7/venv_ap_linux/bin/python",
+      "-m",
+      "anchored_planning",
+      "evaluate",
+      "--assets",
+      "assets.remote.json",
+      "--task",
+      "reacher",
+      "--study",
+      "main",
+      "--root",
+      "protocol_seed44",
+      "--device",
+      "cuda:1",
+      "--output",
+      "outputs/appendix/seed44",
+      "--shards",
+      "2",
+      "--shard-index",
+      "1"
+    ]
+  ],
+  "elapsed_seconds": 56.14239183720201,
+  "end_epoch": 1791944400.8247156,
+  "returncodes": [
+    0,
+    0
+  ]
+}

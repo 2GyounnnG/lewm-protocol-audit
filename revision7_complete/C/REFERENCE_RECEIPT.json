@@ -1,0 +1,538 @@
+{
+  "source": "Step 2 original-protocol D1_082_000_128, not Step 4 HELDOUT",
+  "n": 128,
+  "successes": 125,
+  "reference_sha256": "221d3003b54fecbf92a69e9856672301f12d26045f96bdc065a08cec0936256b",
+  "code_identity_with_step1_native_AP": {
+    "native_adapter.py": true,
+    "analysis.py": true,
+    "evaluation_helpers.py": true,
+    "__init__.py": true,
+    "runtime.py": true,
+    "model.py": true,
+    "observation_bank.py": true,
+    "action_domain.py": true,
+    "lifecycle.py": true,
+    "environments.py": true,
+    "jepa.py": true,
+    "gaussian_cem.py": true,
+    "statistics.py": true,
+    "module.py": true,
+    "__main__.py": true,
+    "planners.py": true
+  },
+  "inputs": [
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-000_clean_gaussian_observed.json",
+      "sha256": "be5d018cdbebc3139714bd6fdf3ac172a2cfb85f85d698ff47092931f13092c0"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-001_clean_gaussian_observed.json",
+      "sha256": "3b752201a29881b6d3fa3d8d65c8393ec47bcde775822b51d258250954597f27"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-002_clean_gaussian_observed.json",
+      "sha256": "c6e53c9e90b05f788bfc87250a1dd09168488a697589c45c3802fd19eb0b94cf"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-003_clean_gaussian_observed.json",
+      "sha256": "df698e7e176084da3c768b37004fd5befaad0b8b1a861f8651cd2e68789cb823"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-004_clean_gaussian_observed.json",
+      "sha256": "c5ed5251386309ccb0bede9fff72b1f4f74cebd4cd53f162d5f09828f58da68c"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-005_clean_gaussian_observed.json",
+      "sha256": "8f0a37cbb632489fac3b55bedb537548d2f49f79015d46e11213ef2d2862d37d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-006_clean_gaussian_observed.json",
+      "sha256": "fde41793b9d9065d81865dcf40cd7d080e2f2b274e7b6bde69b3493fab2dd7f2"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-007_clean_gaussian_observed.json",
+      "sha256": "890479b4ed7a36a8728c8af242045e314b762821b6fd4a0547cee9718bd86ec6"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-008_clean_gaussian_observed.json",
+      "sha256": "94926635903a2d148c853aba570c306c18e1c30a469c5b6d8194c37386489459"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-009_clean_gaussian_observed.json",
+      "sha256": "f6427ce0cd9e2a86b73656fd70a07faf8afb18d7f1fac33ce63e4c738c571eb1"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-010_clean_gaussian_observed.json",
+      "sha256": "7f2e006f2664839c5be439d76986f92ce4ab3945f676b8052b6f9cc989cb0e6e"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-011_clean_gaussian_observed.json",
+      "sha256": "bb95d0fe98dffff5b4ad55298b35e7c7dbe6e8c2278e7a0315aabe13522f7267"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-012_clean_gaussian_observed.json",
+      "sha256": "96621c0a730b799a676d6309bc7d7feb1c4ca7c4b8a98facb939e89875d0e38d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-013_clean_gaussian_observed.json",
+      "sha256": "cd3e1401310215d52f0eaaea2ad921a088e644abcdff68bcdca260e9f6a1ec99"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-014_clean_gaussian_observed.json",
+      "sha256": "155ad92fea2ff6482f8653421f3882b9087dc42522fe9099147ba0fdc97af42d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-015_clean_gaussian_observed.json",
+      "sha256": "734167f012b89dc3aecfb3309bcc029dccfb399fcce9f0b29281780a5bb8f97e"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-016_clean_gaussian_observed.json",
+      "sha256": "bc5368d7a9645e985e44722e4a886971a6f09ac8155836395f44863eebc9ea02"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-017_clean_gaussian_observed.json",
+      "sha256": "4148dd5ec3bf10e374e137578097408253559ddfb514ee82f11e9e03ca98d0d8"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-018_clean_gaussian_observed.json",
+      "sha256": "a6cae2bf1e0c1a099775b68757ce28d5daeab8abb881138551ed5032f6540f58"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-019_clean_gaussian_observed.json",
+      "sha256": "d79edef0c3840aa91cd9a69279335a08b37907697691d3b71aaf0cb146f5a8e1"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-020_clean_gaussian_observed.json",
+      "sha256": "0deba1f3fe2f095eb593fd9477261dcd75570cde63c030419d7d23ba5b0e99c8"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-021_clean_gaussian_observed.json",
+      "sha256": "d399b494865ccffd421c1767fa00443203f65bc33a36c39e984ef7af7e9f64cf"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-022_clean_gaussian_observed.json",
+      "sha256": "36bc7237735a16dd66c55fc8e7f8e4db6139ead49b07b87e9de582cdea912b3a"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-023_clean_gaussian_observed.json",
+      "sha256": "d6a08dd4b95bb54de92a2f57cb319deb8b756933588909a3a31e58389d86a1d9"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-024_clean_gaussian_observed.json",
+      "sha256": "16328923a8bd4ddd93f1a763ccc586d8406064c6f06f11b7ae131b408a384aa6"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-025_clean_gaussian_observed.json",
+      "sha256": "192dcfd917a401ea1a54734bebb94009173c8eb46bb068dae6ed88611987563e"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-026_clean_gaussian_observed.json",
+      "sha256": "9d0e5b904ce4934fa00e1126d4e00d4352b506e5f806a3d166946c1b388a2173"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-027_clean_gaussian_observed.json",
+      "sha256": "f4703517459c9df38d4f86f1aecb049ae2b61a531b93057de96b19fe48e037fb"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-028_clean_gaussian_observed.json",
+      "sha256": "d90da18fee84d2b189212b2e789ab7e3fcffe846dce07bb5768881c074106a26"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-029_clean_gaussian_observed.json",
+      "sha256": "99fab3d04f7e1c918d761d53c57f419803edb0df555db9e8f400d8ea2a1ecad3"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-030_clean_gaussian_observed.json",
+      "sha256": "744ee6cb47779a4ca23267fee329721efdc3498c12e6080afd18dbe5cd5d4b07"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-031_clean_gaussian_observed.json",
+      "sha256": "81d1d07f7e5c2af8a2f826ad6c57118eb14ed51dbc575bd1de9b480dc197dc85"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-032_clean_gaussian_observed.json",
+      "sha256": "e6cbe1a0aa59d2f0c03be60ccf6aba65f4d0450e3091e7ff5d80954456678e8b"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-033_clean_gaussian_observed.json",
+      "sha256": "8eae04e2d6ba1ba94c6a05b89e129c90c329dc865eef9af596bf93a41a8160a8"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-034_clean_gaussian_observed.json",
+      "sha256": "1c71e9047c062b1787ad876b366bab03e94a2d81dc49043b280128e47778f111"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-035_clean_gaussian_observed.json",
+      "sha256": "cfdb69fee3002fd9c9af1578b8bd3e7a3acc9f83f505fd747551e4a351af63f0"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-036_clean_gaussian_observed.json",
+      "sha256": "837ac456c2fe707f4a53e1bb2cf8d563c89c7b1ed73ce65e4ca9fe874656c0bd"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-037_clean_gaussian_observed.json",
+      "sha256": "a16ffa6b18945559514b07ce675e783a197b4f6cb792b7a2e1296c3010b72b8e"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-038_clean_gaussian_observed.json",
+      "sha256": "61565673033402ac20b16c559504ab27f59345e1ecef1fda78c9164f835a225d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-039_clean_gaussian_observed.json",
+      "sha256": "1d7014e47bb4856600a24c2adec5049c4321d8c0caa64a584facb6a29a7cc5ae"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-040_clean_gaussian_observed.json",
+      "sha256": "70746519c871005f11debbbbe636f7f192005eaeb95b911f35815ea559c37db9"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-041_clean_gaussian_observed.json",
+      "sha256": "30d518298ee03a017986edd4644095f21bcd59a88bcdc516c0ab676d141ae177"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-042_clean_gaussian_observed.json",
+      "sha256": "05b110b86ee31d54a676d7f589cde1e3a16e6dc64a26dc34d4e3d29666b92dfc"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-043_clean_gaussian_observed.json",
+      "sha256": "23fc1b0310d44337bef0e54db744a02e5b0e0370fdea2ae398ccf910c119322c"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-044_clean_gaussian_observed.json",
+      "sha256": "e916723e5f51e483722e5f533575aac3b077f030ec6fc7e1360518ece67f1588"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-045_clean_gaussian_observed.json",
+      "sha256": "448a46d6290076e5f4736aa093d809f802f71ba993757dc8ba26f00fa1f90846"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-046_clean_gaussian_observed.json",
+      "sha256": "4cb2c8d2529043e70e8251ed38e6cbf3f35d9dafd7f42906b188552302004d15"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-047_clean_gaussian_observed.json",
+      "sha256": "d35c4317833ce25961870017c04763acb72532eaa94028cd6a3c2c3fb0d3d199"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-048_clean_gaussian_observed.json",
+      "sha256": "d51c0cf18b8efcaa990e446031a8efadcf8bbc6804447d26257619d6c1e88439"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-049_clean_gaussian_observed.json",
+      "sha256": "cd7e23d5d949d62d0ec48c3b2bbf137ace49dadab9ae9ff16723c4b069bf848f"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-050_clean_gaussian_observed.json",
+      "sha256": "c5961cb3ffb278337bc57151efff374e06fb560fe06cb27040bc008d1209832a"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-051_clean_gaussian_observed.json",
+      "sha256": "c52350dd691a8a8ff23930002ee29cacef0d2812f799fb68118f7a2cf5571c01"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-052_clean_gaussian_observed.json",
+      "sha256": "2ffa0073d3a74bd944c63832cfbfdee9598209222c5732780d6be53b23e5e82d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-053_clean_gaussian_observed.json",
+      "sha256": "e533466855c722945aaebae4dd45587e246681a456ff34f2ed7d012b3268eb75"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-054_clean_gaussian_observed.json",
+      "sha256": "7788ca794fb563419250ae1ec3399e99c51b7b25b8b06fab24502b8a258ee609"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-055_clean_gaussian_observed.json",
+      "sha256": "a7e155f637f4fb7da12479265eca889c8e64a5751c205494b075614b13ed69dc"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-056_clean_gaussian_observed.json",
+      "sha256": "c3a6993f46645a295c72be0ea3d215c81c903bcf090b374184e412be9871b3c6"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-057_clean_gaussian_observed.json",
+      "sha256": "6513f23c29026ecec82fb5c59fb8aaed779af1a92b0b8456d664e5df65622bc8"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-058_clean_gaussian_observed.json",
+      "sha256": "dcff8e14f7db9b18f28431c2162511851974826ffab6829341fe33689784cc6f"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-059_clean_gaussian_observed.json",
+      "sha256": "f46b306e522e2fd336664f3889d8481b8b2c86d31b81738a5b74e4d8cbff7326"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-060_clean_gaussian_observed.json",
+      "sha256": "d51ab99a7022de60a500c9e707b508f1ce632a3fae3d21067945d9b660433a09"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-061_clean_gaussian_observed.json",
+      "sha256": "ced3e83b9b70e8ce08c41ad06a52154906c4f1d2e1d925f2051a01663d9c4e13"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-062_clean_gaussian_observed.json",
+      "sha256": "7f932b5cabdc8ddd82982f0cf0afadf5a0566c17e6f85bdeb44d7ec0543dd90c"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-063_clean_gaussian_observed.json",
+      "sha256": "8bcc1ddbeac451bfc6574a9e689ffd591df247d86504f863f0899b4fea7f02da"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-064_clean_gaussian_observed.json",
+      "sha256": "fbb1dff6a8e3804d960c342ff9016463096e028866c3bc52d09ea142c7ef788d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-065_clean_gaussian_observed.json",
+      "sha256": "09715184606907b0506ea034ebc46fef438161a488b43ae392b28f5ee53a85c4"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-066_clean_gaussian_observed.json",
+      "sha256": "66b7b13b582cb1e6c9a4de3a896d3580d28167408217e7a0b2619affc25d02d9"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-067_clean_gaussian_observed.json",
+      "sha256": "ff3d6d9e6f7dab89823cacf0f226ab524443a2f6cea4405e52fd0cb5764d399b"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-068_clean_gaussian_observed.json",
+      "sha256": "a0850b0eee6dd4c2114e3d023dd0572250fc060a93fa4da3d583bdb2dcb0e4ba"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-069_clean_gaussian_observed.json",
+      "sha256": "394e467889dd83cdc95e48467696e1e1c302bc66394e31a79aafcef805d80381"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-070_clean_gaussian_observed.json",
+      "sha256": "5c82dc5ec286cdd51509ed03961439db3137b65bea139f0912a0267dc3f88f85"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-071_clean_gaussian_observed.json",
+      "sha256": "aacfc600cfe594172c1bd6b008da9c324715d77473f1b46b73b97e5c8d0b531b"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-072_clean_gaussian_observed.json",
+      "sha256": "29102c7ffdebe1bdb57a137f525e55b8f1b45d94cf9e7735cb73fb7aaa7c939b"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-073_clean_gaussian_observed.json",
+      "sha256": "72d84d0ef7b506481daf797c5d28b30d2ddb10b8f6e6540a5bcb7070e04b2ddc"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-074_clean_gaussian_observed.json",
+      "sha256": "f247aab1e3574198dafa21e4545b902e662f5652e4a3a8ad07717663c909f697"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-075_clean_gaussian_observed.json",
+      "sha256": "0b96ced97ef5cde8e4c748fef6724898fb5507387c18102dc005174525cba7a9"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-076_clean_gaussian_observed.json",
+      "sha256": "85a1a34121c0f31bfe6ab0b45ea4ae995e38b4800f10ad815dc54c0bfcf5a9a1"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-077_clean_gaussian_observed.json",
+      "sha256": "faa33ffd23664a8f8d8667fa8dff237094a537bf1c7316bfacbe5210974c4cd4"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-078_clean_gaussian_observed.json",
+      "sha256": "c7cb59deb5548ed928090d97258eb9d23a50bab33be821e656903f176f9e657d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-079_clean_gaussian_observed.json",
+      "sha256": "ff8ab02b2d61c77bf66d19f75b4fd78595118e02a81df0b31de128309c6d5646"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-080_clean_gaussian_observed.json",
+      "sha256": "f388ca3d2200f314639036a25aeb9b74c4d06f3114b5ffb1767c81fe13de84ca"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-081_clean_gaussian_observed.json",
+      "sha256": "a23a4283ef7b4a147b038fd6f966400be45afe12ec6d083f03d0347dad8f6eaf"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-082_clean_gaussian_observed.json",
+      "sha256": "90809e58363fe18b35cfded40d16d3c637eeb2ffc8f9ae524630a379046bf7b5"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-083_clean_gaussian_observed.json",
+      "sha256": "023f762c1338a10d0fa28aedaac12a24c5a15d05aa30a0a6c2a813dc4e32e267"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-084_clean_gaussian_observed.json",
+      "sha256": "d4cedbb0d67fd4c61ee3ba2c3499392d4a8ee2870d8cf4501dcf884d0bada1a0"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-085_clean_gaussian_observed.json",
+      "sha256": "ce1c5d994fa4dc4523d4da9302438c68d22629d7bb50631c4ac9074aed6ac2db"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-086_clean_gaussian_observed.json",
+      "sha256": "7b9a69694e03ebb4cba035d454d8377246c2923d4f35fbc87e22151f37136980"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-087_clean_gaussian_observed.json",
+      "sha256": "cd739d80ba403dad614098c67310af6b6bbec538f1de5c7b317c61647932d7f6"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-088_clean_gaussian_observed.json",
+      "sha256": "781c256cab0a0b910bfb8a9d6c811dadb1ef0395f945078b7f8e1c2513aa24b2"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-089_clean_gaussian_observed.json",
+      "sha256": "b437d976b3dcbeb5198f0875a0389780d7235459d0c02380fdb938b6175e2a36"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-090_clean_gaussian_observed.json",
+      "sha256": "9c6481bf10e1237c43232047f532e3b10a3127101b083f6a034b80eac7c28627"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-091_clean_gaussian_observed.json",
+      "sha256": "99a288b5d3bf743525a7c0e387a076033d76a0cafd2ddd07a8c1bb24a289226f"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-092_clean_gaussian_observed.json",
+      "sha256": "71af2a44e6c208485079d28063081f20e77bf32815ad48c78333bc92349b124d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-093_clean_gaussian_observed.json",
+      "sha256": "a71d4152c5ad5afde3e54a6c2a732e6b90377e9aab20fc4c8c4dae8e297beb3e"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-094_clean_gaussian_observed.json",
+      "sha256": "0445875448ec2b3c0b47b3d44e5e1706722c4adb8da194c48b3173eccc3c2cb5"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-095_clean_gaussian_observed.json",
+      "sha256": "59aee63f9cf165ef3cfaf2be70416ecb6c1fa927a9d4c2108e443f9adef1d0ca"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-096_clean_gaussian_observed.json",
+      "sha256": "829787699c00bdc8217c1e64b611d9b805cbc692f2e8beda6b42c9601363322a"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-097_clean_gaussian_observed.json",
+      "sha256": "886e9e817bd9efae858fa9012d96b16ef8b4ce4b99184dfd8be0efd676dfd347"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-098_clean_gaussian_observed.json",
+      "sha256": "2b01e65c6cd28c1d458a4ce5daa91d872bfc8a94f3f02842d53be3ba5353f979"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-099_clean_gaussian_observed.json",
+      "sha256": "40ff0c239534d1b17c504b57f6ef9eb2959fb4cb84d2f3341b968f03ee02918a"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-100_clean_gaussian_observed.json",
+      "sha256": "e29e80c7e3398ca0b8dc983de85a8665a2c4ca9c842cd353d7a38a8ceaccbe4d"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-101_clean_gaussian_observed.json",
+      "sha256": "e97aac3b7d0b8fca1be6c835eff9b009c8aa9632a6a04f7264fca38e434feb60"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-102_clean_gaussian_observed.json",
+      "sha256": "6715f6819aa21b3bb8552af6f782930f20500bb37bb168e1e17f46f5f5441097"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-103_clean_gaussian_observed.json",
+      "sha256": "300d4a1fb77e0799a1f47e113b369508c9735d1fb9d291ebbf0232be48f4e84b"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-104_clean_gaussian_observed.json",
+      "sha256": "b1476ca4e7a5f03cca66b4c6fd5e72880553ba3816fc1b41d12b22323573418e"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-105_clean_gaussian_observed.json",
+      "sha256": "4c4c14f9955274c9dae3429c1b47a0d7b0adaf31f679116cdf9a3441bfc253ee"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-106_clean_gaussian_observed.json",
+      "sha256": "3ed0451a3211c865a06ddb9c970cda31cce06371d217aa78a671db24d3df9eeb"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-107_clean_gaussian_observed.json",
+      "sha256": "3a1b568c3606fb9a941d340ac92cf217df6a84e472ae31057d34438d86ca0347"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-108_clean_gaussian_observed.json",
+      "sha256": "407c541ab9e7ceb6a57f773bd1a2549d5955b6b9b7fe81413e4e47770899fa70"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-109_clean_gaussian_observed.json",
+      "sha256": "e365b1ab1839571764e1a2f4bb297f712661c7e424147d934bcc83f0b7f147db"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-110_clean_gaussian_observed.json",
+      "sha256": "8f5256a8fd68931293a3b4afd4ba3be8972c045baec0abd07fc30f231c1f7d12"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-111_clean_gaussian_observed.json",
+      "sha256": "35b1cb0bdbfdb1ea5665e5111f0846b05a3a361603165d9b2b77689afd5565e2"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-112_clean_gaussian_observed.json",
+      "sha256": "a552fdb037212965dffc56dd543a6ca93b97d256b081cababe81efdbceed60f9"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-113_clean_gaussian_observed.json",
+      "sha256": "e68bba051ef5f33b368e5fd5629423396253ef1624f29d509e1276d5c91dc5ce"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-114_clean_gaussian_observed.json",
+      "sha256": "02fcabd9da066940fa9602376eda097c09715ab2c8b884b32605cff1b497a9d0"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-115_clean_gaussian_observed.json",
+      "sha256": "f2870bac3c4d2e1ca5fa6df0ab6a7d8429819723fc3533d94dd3464653d1e8f5"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-116_clean_gaussian_observed.json",
+      "sha256": "67e5064fc0b8f8a71d178a7bf86424695d96622a6793b74e576fbbf0416817f0"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-117_clean_gaussian_observed.json",
+      "sha256": "8aa5ee11d2fa871ac898bbcfcd8e5d5033d04d4c731945df2ec0b40afa65eb42"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-118_clean_gaussian_observed.json",
+      "sha256": "197e2eb8afbd17670ee3591eb319e7e0fec1cf2f80673e4ad31998353b3b5d79"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-119_clean_gaussian_observed.json",
+      "sha256": "310b145d34642fb2b7fde8247e885fc38e3ad827e223667befce0ec38c0a31ca"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-120_clean_gaussian_observed.json",
+      "sha256": "8c3b319696ef4fd467c10e5a80f3fe370ed6eb3189514eb81bdeaf50bcfd2cba"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-121_clean_gaussian_observed.json",
+      "sha256": "2221ff224e991dfb72fb24d92589e85a0a13a21349b556e22931ad45846f12a7"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-122_clean_gaussian_observed.json",
+      "sha256": "6c1e74aec7dab47d0b6e9f36c8e94a33f9f805ae8c991dccd90c347fbf6ee2e9"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-123_clean_gaussian_observed.json",
+      "sha256": "27523013025611b0cf7f016798b067d4dc488b0ac82b4bd5bc4fa0863c14f1d0"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-124_clean_gaussian_observed.json",
+      "sha256": "7b28a751779207e8ef0ffed509db491eec1e7a8fd7c0e55c2842207b8d71c4a1"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-125_clean_gaussian_observed.json",
+      "sha256": "cad016dc49fa6658f1fc36eba2ee1aba963b98057971a80b9edd287c8c6123b1"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-126_clean_gaussian_observed.json",
+      "sha256": "1305671e6124ea58386320e889ef4e3cacab94c92dc1ec79f9fa40a3a1c17522"
+    },
+    {
+      "source": "/workspace/d1/resume_03/formal/D1_082_000_128/traces/reacher/ap-fresh-reacher-127_clean_gaussian_observed.json",
+      "sha256": "6dc7b557b40397c394113f81993f66b9e61bbedfc0469681190f3b3a9fecefe2"
+    }
+  ]
+}
