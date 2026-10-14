@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-14T05:41:41.974110+00:00",
+  "evidence": "User-run authenticated uploader final GET; local independent size/MD5/SHA check",
+  "status": "UPLOADED_NOT_PUBLISHED",
+  "draft_url": "https://zenodo.org/deposit/23357842",
+  "reserved_doi": "10.5281/zenodo.23357842",
+  "sha256": "f7303ebbdc6d12d494e562a3de78787a0561a4eea155b3b85ae6a679f023ab4b",
+  "bytes": 7987370,
+  "md5": "ff587b611c7db89187e31deec3b73792",
+  "published": false
+}
